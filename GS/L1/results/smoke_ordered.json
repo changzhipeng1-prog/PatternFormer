@@ -1,0 +1,24 @@
+{
+  "n_params": 1,
+  "K": 24,
+  "det_distinct_mean": 17.0,
+  "coverage_mean": 0.65,
+  "Ktrue_mean": 20.0,
+  "init_residual": {
+    "mean": 0.4327341471925905,
+    "median": 0.4166914946815221,
+    "p90": 0.5231963433475868,
+    "max": 0.6183904613461264
+  },
+  "recs": [
+    {
+      "ti": 786,
+      "Kt": 20,
+      "conv": 20,
+      "distinct": 17,
+      "cov": 0.65
+    }
+  ],
+  "noise_std": 0.0,
+  "baseline_det": 2.53
+}

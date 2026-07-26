@@ -1,0 +1,15 @@
+{
+  "version": "v2_dual_head",
+  "num_epochs": 100,
+  "best_val_mse": 0.003730913158506155,
+  "config": {
+    "batch_size": 8,
+    "grad_accum": 4,
+    "lr_projector": 2e-05,
+    "lr_lora": 5e-06,
+    "lambda_pde": 0.05,
+    "lambda_ce": 1.0,
+    "latent_dim": 256,
+    "max_seq_len": 256
+  }
+}

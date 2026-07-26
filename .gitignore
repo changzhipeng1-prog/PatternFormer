@@ -1,0 +1,34 @@
+# Large binary artifacts — hosted externally, see DATA.md
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.bin
+
+# Rendered figures (regenerate with the figure scripts)
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+env/
+
+# Run logs / scratch
+*.log
+*.out
+*.err
+slurm-*.out
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "mode": "rescue",
+    "n_targets": 3,
+    "n_with_solution": 3,
+    "rescue_rate": 1.0,
+    "mean_solutions": 1.3333333333333333,
+    "sigmas": [
+      0.2
+    ],
+    "N": 1,
+    "tol": 1e-06
+  },
+  "rows": [
+    {
+      "ti": 72,
+      "rho": 0.04050000011920929,
+      "mu": 0.06750000268220901,
+      "Kt": 12,
+      "n_solutions": 1,
+      "n_cover_gt": 0,
+      "min_residual": 1.0258209437973009e-07,
+      "extrap": false
+    },
+    {
+      "ti": 87,
+      "rho": 0.04100000113248825,
+      "mu": 0.06800000369548798,
+      "Kt": 10,
+      "n_solutions": 2,
+      "n_cover_gt": 1,
+      "min_residual": 9.944740655964956e-10,
+      "extrap": false
+    },
+    {
+      "ti": 97,
+      "rho": 0.04149999842047691,
+      "mu": 0.06849999725818634,
+      "Kt": 10,
+      "n_solutions": 1,
+      "n_cover_gt": 1,
+      "min_residual": 9.933428558872581e-10,
+      "extrap": false
+    }
+  ]
+}

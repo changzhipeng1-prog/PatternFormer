@@ -1,0 +1,300 @@
+{
+  "band": [
+    -0.1964584120837502,
+    0.07644590793149098
+  ],
+  "box": [
+    0.03799999877810478,
+    0.10400000214576721
+  ],
+  "rows": [
+    {
+      "rho": 0.02149999886751175,
+      "mu": 0.07222205229417719,
+      "inside": false,
+      "model_only": 0,
+      "model_only_range": 0.3936564028263092,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.418701171875,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.418701171875
+    },
+    {
+      "rho": 0.025624999000380438,
+      "mu": 0.07141166131822854,
+      "inside": false,
+      "model_only": 0,
+      "model_only_range": 0.3911946713924408,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.4258626401424408,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.4256998598575592
+    },
+    {
+      "rho": 0.029749999133249126,
+      "mu": 0.0706012703422799,
+      "inside": false,
+      "model_only": 0,
+      "model_only_range": 0.3899942934513092,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.4253336489200592,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.4253336489200592
+    },
+    {
+      "rho": 0.03387499926611781,
+      "mu": 0.06979087936633127,
+      "inside": false,
+      "model_only": 0,
+      "model_only_range": 0.3923136293888092,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.4307047426700592,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.4307047426700592
+    },
+    {
+      "rho": 0.0379999993989865,
+      "mu": 0.06898048839038262,
+      "inside": true,
+      "model_only": 0,
+      "model_only_range": 0.3902791440486908,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.4276529848575592,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.4276529848575592
+    },
+    {
+      "rho": 0.04212499953185519,
+      "mu": 0.06817009741443399,
+      "inside": true,
+      "model_only": 2,
+      "model_only_range": 0.3960367739200592,
+      "latentopt_pure": 2,
+      "latentopt_pure_range": 0.42333984375,
+      "latentopt_nt": 2,
+      "latentopt_nt_range": 0.42333984375
+    },
+    {
+      "rho": 0.04624999966472387,
+      "mu": 0.06735970643848535,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.39532470703125,
+      "latentopt_pure": 3,
+      "latentopt_pure_range": 0.4321695864200592,
+      "latentopt_nt": 3,
+      "latentopt_nt_range": 0.4321695864200592
+    },
+    {
+      "rho": 0.050374999797592565,
+      "mu": 0.0665493154625367,
+      "inside": true,
+      "model_only": 2,
+      "model_only_range": 0.4165445864200592,
+      "latentopt_pure": 7,
+      "latentopt_pure_range": 0.4467366635799408,
+      "latentopt_nt": 7,
+      "latentopt_nt_range": 0.4467366635799408
+    },
+    {
+      "rho": 0.05449999993046125,
+      "mu": 0.06573892448658807,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.4095052182674408,
+      "latentopt_pure": 14,
+      "latentopt_pure_range": 0.4451090395450592,
+      "latentopt_nt": 14,
+      "latentopt_nt_range": 0.4451090395450592
+    },
+    {
+      "rho": 0.058625000063329935,
+      "mu": 0.06492853351063942,
+      "inside": true,
+      "model_only": 4,
+      "model_only_range": 0.3910115659236908,
+      "latentopt_pure": 13,
+      "latentopt_pure_range": 0.4430745542049408,
+      "latentopt_nt": 13,
+      "latentopt_nt_range": 0.4430745542049408
+    },
+    {
+      "rho": 0.06275000019619863,
+      "mu": 0.06411814253469078,
+      "inside": true,
+      "model_only": 5,
+      "model_only_range": 0.40252685546875,
+      "latentopt_pure": 13,
+      "latentopt_pure_range": 0.4729817807674408,
+      "latentopt_nt": 13,
+      "latentopt_nt_range": 0.4729817807674408
+    },
+    {
+      "rho": 0.06687500032906732,
+      "mu": 0.06330775155874213,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.4145101010799408,
+      "latentopt_pure": 9,
+      "latentopt_pure_range": 0.4804280698299408,
+      "latentopt_nt": 9,
+      "latentopt_nt_range": 0.4804280698299408
+    },
+    {
+      "rho": 0.071000000461936,
+      "mu": 0.062497360582793496,
+      "inside": true,
+      "model_only": 2,
+      "model_only_range": 0.403564453125,
+      "latentopt_pure": 8,
+      "latentopt_pure_range": 0.4741617739200592,
+      "latentopt_nt": 8,
+      "latentopt_nt_range": 0.4727376401424408
+    },
+    {
+      "rho": 0.07512500059480469,
+      "mu": 0.06168696960684486,
+      "inside": true,
+      "model_only": 1,
+      "model_only_range": 0.4192708432674408,
+      "latentopt_pure": 9,
+      "latentopt_pure_range": 0.48345947265625,
+      "latentopt_nt": 9,
+      "latentopt_nt_range": 0.4848836362361908
+    },
+    {
+      "rho": 0.07925000072767338,
+      "mu": 0.06087657863089621,
+      "inside": true,
+      "model_only": 1,
+      "model_only_range": 0.4356485903263092,
+      "latentopt_pure": 4,
+      "latentopt_pure_range": 0.4872029721736908,
+      "latentopt_nt": 4,
+      "latentopt_nt_range": 0.4872029721736908
+    },
+    {
+      "rho": 0.08337500086054206,
+      "mu": 0.060066187654947575,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.4332682192325592,
+      "latentopt_pure": 5,
+      "latentopt_pure_range": 0.4962972104549408,
+      "latentopt_nt": 5,
+      "latentopt_nt_range": 0.4962972104549408
+    },
+    {
+      "rho": 0.08750000099341075,
+      "mu": 0.05925579667899893,
+      "inside": true,
+      "model_only": 5,
+      "model_only_range": 0.5651448369026184,
+      "latentopt_pure": 4,
+      "latentopt_pure_range": 0.50103759765625,
+      "latentopt_nt": 4,
+      "latentopt_nt_range": 0.52294921875
+    },
+    {
+      "rho": 0.09162500112627944,
+      "mu": 0.05844540570305029,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.5103352665901184,
+      "latentopt_pure": 5,
+      "latentopt_pure_range": 0.48919677734375,
+      "latentopt_nt": 6,
+      "latentopt_nt_range": 0.5332438349723816
+    },
+    {
+      "rho": 0.09575000125914812,
+      "mu": 0.057635014727101655,
+      "inside": true,
+      "model_only": 4,
+      "model_only_range": 0.5124918818473816,
+      "latentopt_pure": 4,
+      "latentopt_pure_range": 0.44512939453125,
+      "latentopt_nt": 5,
+      "latentopt_nt_range": 0.5333659052848816
+    },
+    {
+      "rho": 0.09987500139201681,
+      "mu": 0.05682462375115301,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.5243733525276184,
+      "latentopt_pure": 3,
+      "latentopt_pure_range": 0.4564005434513092,
+      "latentopt_nt": 3,
+      "latentopt_nt_range": 0.5450032353401184
+    },
+    {
+      "rho": 0.1040000015248855,
+      "mu": 0.05601423277520437,
+      "inside": true,
+      "model_only": 3,
+      "model_only_range": 0.54931640625,
+      "latentopt_pure": 5,
+      "latentopt_pure_range": 0.5469563603401184,
+      "latentopt_nt": 5,
+      "latentopt_nt_range": 0.5469563603401184
+    },
+    {
+      "rho": 0.10812500165775418,
+      "mu": 0.055203841799255735,
+      "inside": false,
+      "model_only": 3,
+      "model_only_range": 0.4912109375,
+      "latentopt_pure": 7,
+      "latentopt_pure_range": 0.49481201171875,
+      "latentopt_nt": 7,
+      "latentopt_nt_range": 0.5614420771598816
+    },
+    {
+      "rho": 0.11225000179062287,
+      "mu": 0.054393450823307085,
+      "inside": false,
+      "model_only": 2,
+      "model_only_range": 0.4698893129825592,
+      "latentopt_pure": 3,
+      "latentopt_pure_range": 0.47052001953125,
+      "latentopt_nt": 4,
+      "latentopt_nt_range": 0.5816650390625
+    },
+    {
+      "rho": 0.11637500192349157,
+      "mu": 0.05358305984735845,
+      "inside": false,
+      "model_only": 0,
+      "model_only_range": 0.5036824345588684,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.5025227665901184,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.5687255859375
+    },
+    {
+      "rho": 0.12050000205636024,
+      "mu": 0.05277266887140981,
+      "inside": false,
+      "model_only": 0,
+      "model_only_range": 0.5315348505973816,
+      "latentopt_pure": 0,
+      "latentopt_pure_range": 0.5092976689338684,
+      "latentopt_nt": 0,
+      "latentopt_nt_range": 0.5751546025276184
+    }
+  ],
+  "cfg": {
+    "ckpt": "./checkpoints_final/epoch_60",
+    "npts": 25,
+    "sigma": 0.2,
+    "nstep": 200,
+    "lr": 0.05,
+    "lam_nt": 0.3,
+    "rfloor": 0.35,
+    "maxiter": 18000,
+    "early_iter": 5000,
+    "L2": true,
+    "out": "./experiments/latent_opt_extrap_L2.json"
+  }
+}
