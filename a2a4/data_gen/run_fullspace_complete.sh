@@ -11,8 +11,8 @@
 
 set -euo pipefail
 
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1
 

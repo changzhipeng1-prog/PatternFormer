@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=gs_example
-#SBATCH --output=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/example_%j.out
-#SBATCH --error=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/example_%j.err
+#SBATCH --output=/path/to/PatternFormer/GS/example_%j.out
+#SBATCH --error=/path/to/PatternFormer/GS/example_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -14,9 +14,9 @@
 # Fig1 (sigma=0.1 union) and noise-curve (per-sigma curves) from ONE run.
 set -u
 source activate torch124
-cd /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
-ROOT=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS
+cd /path/to/PatternFormer/GS
+PY=/path/to/envs/torch124/bin/python
+ROOT=/path/to/PatternFormer/GS
 echo "=== example gen start $(date) ==="
 CUDA_VISIBLE_DEVICES=0 $PY _example_gen.py --setup L1 --ti 576 \
     --ckpt $ROOT/L1/ckpt/epoch_60 > example_L1.log 2>&1 &

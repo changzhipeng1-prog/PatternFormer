@@ -15,11 +15,11 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle, ConnectionPatch
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 from matplotlib.tri import Triangulation
-sys.path.insert(0, "/home/zfc5231/work/BBBB_qwen_pde_branch/paper")
+sys.path.insert(0, "/path/to/PatternFormer")
 from test_plot_style import apply_style
 apply_style()
 
-ROOT = "/home/zfc5231/work/BBBB_qwen_pde_branch/paper"
+ROOT = "/path/to/PatternFormer"
 ABL1D = os.path.join(ROOT, "1D_p/ablation_pretrain")
 PRE_C, RND_C, GT_C = "#0066CC", "#E8730C", "0.55"
 C_SOL, C_COV = "#3C6E9C", "#E0892B"

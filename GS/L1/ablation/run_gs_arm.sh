@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=gsabl
-#SBATCH --output=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/logs/gsabl_%j.out
-#SBATCH --error=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/logs/gsabl_%j.err
+#SBATCH --output=/path/to/PatternFormer/GS/L1/ablation/logs/gsabl_%j.out
+#SBATCH --error=/path/to/PatternFormer/GS/L1/ablation/logs/gsabl_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
@@ -16,9 +16,9 @@ set -euo pipefail
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export NCCL_IB_DISABLE=1 NCCL_P2P_DISABLE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-ABL=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation
-CODE=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/code
-AE=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ckpt/epoch_60/autoencoder2d.pt
+ABL=/path/to/PatternFormer/GS/L1/ablation
+CODE=/path/to/PatternFormer/GS/L1/code
+AE=/path/to/PatternFormer/GS/L1/ckpt/epoch_60/autoencoder2d.pt
 cd "$CODE"
 RAND=${RAND:-0}; TAG=${TAG:-arm}; PORT=${PORT:-29560}
 OUT2="$ABL/ckpt_${TAG}_p2"; OUT3="$ABL/ckpt_${TAG}_p3"

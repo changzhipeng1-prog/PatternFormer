@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=gsablEv
-#SBATCH --output=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/logs/gsablEv_%j.out
-#SBATCH --error=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/logs/gsablEv_%j.err
+#SBATCH --output=/path/to/PatternFormer/GS/L1/ablation/logs/gsablEv_%j.out
+#SBATCH --error=/path/to/PatternFormer/GS/L1/ablation/logs/gsablEv_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -15,9 +15,9 @@ set -euo pipefail
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-ABL=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation
+ABL=/path/to/PatternFormer/GS/L1/ablation
 EVOUT="$ABL/eval"; mkdir -p "$EVOUT"
-cd /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/code
+cd /path/to/PatternFormer/GS/L1/code
 
 for arm in arm1_pretrained arm2_random; do
   echo "===== $arm  DET (noise=0) $(date) ====="

@@ -13,9 +13,9 @@
 # det = full_chunks_L2 ; noise already done. Same patient refiner 30000/0.
 set -u
 source activate torch124
-TRY=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L2/try
+TRY=/path/to/PatternFormer/GS/L2/try
 cd "$TRY"
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
+PY=/path/to/envs/torch124/bin/python
 N=292; SH=8; STEP=$(( (N + SH - 1) / SH ))
 MI="--maxiter 30000 --early_iter 0"
 

@@ -12,11 +12,11 @@ import os, sys, json, numpy as np
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter
-sys.path.insert(0, "/home/zfc5231/work/BBBB_qwen_pde_branch/paper")
+sys.path.insert(0, "/path/to/PatternFormer")
 from test_plot_style import apply_style
 apply_style()
 
-ROOT = "/home/zfc5231/work/BBBB_qwen_pde_branch/paper"
+ROOT = "/path/to/PatternFormer"
 TIERS = ["random", "pretrained", "stop"]
 MLAB = {"random": "untrained LLM", "pretrained": "pretrained LLM", "stop": "warm-start"}
 XLAB = {"random": "untrained\nLLM", "pretrained": "pretrained\nLLM", "stop": "warm-start"}

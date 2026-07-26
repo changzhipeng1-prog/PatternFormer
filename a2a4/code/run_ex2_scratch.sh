@@ -19,14 +19,14 @@
 #   Compare against the delivered warm model a2a4/best_ckpt/best_model (eval via
 #   a2a4/test/run_generate_test.sh + run_compute_stats.sh).
 set -euo pipefail
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export NCCL_IB_DISABLE=1 NCCL_P2P_DISABLE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export EARLY_STOP_PATIENCE=15
 
-WORK_DIR="/home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code"
+WORK_DIR="/path/to/PatternFormer/a2a4/code"
 cd "${WORK_DIR}"
 mkdir -p logs checkpoints_scratch_s1 checkpoints_scratch outputs/logs outputs/test_results
 

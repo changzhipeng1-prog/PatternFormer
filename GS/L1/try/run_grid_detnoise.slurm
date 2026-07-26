@@ -13,8 +13,8 @@
 # Phase 1: ordered-det (fixed-K=24).  Phase 2: ordered+noise (det + 5 noise passes).
 set -u
 source activate torch124
-cd /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/try
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
+cd /path/to/PatternFormer/GS/L1/try
+PY=/path/to/envs/torch124/bin/python
 N=1083; SH=8; STEP=$(( (N + SH - 1) / SH ))
 
 run () {  # $1=method  $2..=extra

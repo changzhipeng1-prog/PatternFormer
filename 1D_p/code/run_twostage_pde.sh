@@ -15,8 +15,8 @@
 # Early stopping (EARLY_STOP_PATIENCE, default 15) auto-stops each stage.  Stage2's
 # best_model is the chain's 1D_p deliverable that a2a4 warm-starts from.
 set -euo pipefail
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export NCCL_IB_DISABLE=1 NCCL_P2P_DISABLE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

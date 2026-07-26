@@ -12,12 +12,12 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle, ConnectionPatch
-sys.path.insert(0, "/home/zfc5231/work/BBBB_qwen_pde_branch/paper")
+sys.path.insert(0, "/path/to/PatternFormer")
 from test_plot_style import apply_style
 apply_style()   # Nature-style big bold fonts, matching the other paper figures
 
-ABL1D = "/home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain"
-ROOT = "/home/zfc5231/work/BBBB_qwen_pde_branch/paper"
+ABL1D = "/path/to/PatternFormer/1D_p/ablation_pretrain"
+ROOT = "/path/to/PatternFormer"
 PRE_C, RND_C, GT_C = "#0066CC", "#E8730C", "0.55"
 LOG = {"pretrained": "logs/arm1_pretrained_45991.out", "random": "logs/arm2_random_45990.out"}
 GEN = {"pretrained": "gen_arm1_pretrained.pt", "random": "gen_arm2_random.pt"}

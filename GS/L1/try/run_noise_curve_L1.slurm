@@ -12,8 +12,8 @@
 # L=1 noise-sweep curve: TEST 163 params, sigmas 0.05/0.1/0.2, 6 noise passes.
 set -u
 source activate torch124
-cd /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/try
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
+cd /path/to/PatternFormer/GS/L1/try
+PY=/path/to/envs/torch124/bin/python
 N=163; SH=8; STEP=$(( (N + SH - 1) / SH ))
 echo "=== L1 noise curve, TEST $N, step=$STEP $(date) ==="
 for g in $(seq 0 7); do

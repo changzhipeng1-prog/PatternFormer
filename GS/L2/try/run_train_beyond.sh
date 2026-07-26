@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=gsTB
-#SBATCH --output=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L2/try/logs/gsTB_%j.out
-#SBATCH --error=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L2/try/logs/gsTB_%j.err
+#SBATCH --output=/path/to/PatternFormer/GS/L2/try/logs/gsTB_%j.out
+#SBATCH --error=/path/to/PatternFormer/GS/L2/try/logs/gsTB_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -14,7 +14,7 @@ set -euo pipefail
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-TRY=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L2/try
+TRY=/path/to/PatternFormer/GS/L2/try
 mkdir -p "$TRY/logs" "$TRY/results"
 cd "$TRY"
 python eval_train_beyond.py \

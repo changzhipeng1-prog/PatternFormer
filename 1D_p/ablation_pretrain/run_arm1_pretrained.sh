@@ -15,8 +15,8 @@
 #   epochs, same code). If you trust the existing 8-GPU deliverable as the control, you
 #   can skip this and compare Arm 2 directly against paper/1D_p/test/stats.csv.
 set -euo pipefail
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export NCCL_IB_DISABLE=1 NCCL_P2P_DISABLE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

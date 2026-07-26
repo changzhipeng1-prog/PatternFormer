@@ -14,9 +14,9 @@
 # At the end: plot BOTH L1 and L2 grid figures (L1 grid data is ready — this job depends on it).
 set -u
 source activate torch124
-TRY=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L2/try
+TRY=/path/to/PatternFormer/GS/L2/try
 cd "$TRY"
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
+PY=/path/to/envs/torch124/bin/python
 N=292; SH=8; STEP=$(( (N + SH - 1) / SH ))   # L=2 noise on the 292 TEST params (option 2)
 MI="--maxiter 30000 --early_iter 0"   # same patient refiner as fig1 L=2 noise (full consistency)
 
@@ -38,6 +38,6 @@ run () {  # $1=method  $2..=extra
 run noise --code ../code --ckpt ../ckpt/epoch_60 --passes 5 --noise 0.1
 
 echo "=== ALL L2 GRID DONE $(date); plotting L1 + L2 figures ==="
-cd /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/try && $PY make_grid_figs.py || echo "L1 plot failed"
+cd /path/to/PatternFormer/GS/L1/try && $PY make_grid_figs.py || echo "L1 plot failed"
 cd "$TRY" && $PY make_grid_figs.py || echo "L2 plot failed"
 echo "=== PLOTTING DONE $(date) ==="

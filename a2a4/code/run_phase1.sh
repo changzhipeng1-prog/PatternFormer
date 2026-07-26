@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=a2a4_phase1
-#SBATCH --output=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/logs/phase1_%j.out
-#SBATCH --error=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/logs/phase1_%j.err
+#SBATCH --output=/path/to/PatternFormer/a2a4/code/logs/phase1_%j.out
+#SBATCH --error=/path/to/PatternFormer/a2a4/code/logs/phase1_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
@@ -12,8 +12,8 @@
 # dataset (paper/a2a4/data).  Must precede the two-stage Qwen training, whose
 # frozen AE is this UNet.  Output: paper/a2a4/code/checkpoints/unet_best.pt
 set -euo pipefail
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false
 export NCCL_IB_DISABLE=1 NCCL_P2P_DISABLE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

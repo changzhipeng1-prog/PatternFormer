@@ -18,15 +18,15 @@
 #   Compare against the delivered warm model 2D/best_ckpt/best_model (eval via
 #   2D/test/run_generate_test.sh + run_compute_stats.sh).
 set -euo pipefail
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=4
 export NCCL_IB_DISABLE=1 NCCL_P2P_DISABLE=1 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 # 2D lr_plateau_patience=25 (config.py); EARLY_STOP must exceed it (same as warm).
 export EARLY_STOP_PATIENCE=50
 
-WORK_DIR="/home/zfc5231/work/BBBB_qwen_pde_branch/paper/2D/code"
+WORK_DIR="/path/to/PatternFormer/2D/code"
 cd "${WORK_DIR}"
 mkdir -p logs checkpoints_scratch_s1 checkpoints_scratch outputs/logs outputs/test_results
 

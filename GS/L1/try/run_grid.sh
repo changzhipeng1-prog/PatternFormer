@@ -3,7 +3,7 @@
 # distribution figure (stop/det/noise) and the random-vs-ours comparison.
 # Usage: bash run_grid.sh <method> [extra args...]
 set -u
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
+PY=/path/to/envs/torch124/bin/python
 N=1083; SH=8; STEP=$(( (N + SH - 1) / SH ))
 M=$1; shift
 EXTRA="$@"

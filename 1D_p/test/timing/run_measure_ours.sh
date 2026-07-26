@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=time_ours_1Dp
-#SBATCH --output=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/test/timing/time_ours_%j.out
-#SBATCH --error=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/test/timing/time_ours_%j.err
+#SBATCH --output=/path/to/PatternFormer/1D_p/test/timing/time_ours_%j.out
+#SBATCH --error=/path/to/PatternFormer/1D_p/test/timing/time_ours_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -9,8 +9,8 @@
 #SBATCH --mem=64G
 #SBATCH --time=2:00:00
 set -euo pipefail
-export PATH=/home/zfc5231/anaconda3/bin:$PATH
-export LD_LIBRARY_PATH=/home/zfc5231/anaconda3/lib:$LD_LIBRARY_PATH
+export PATH=/path/to/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/path/to/anaconda3/lib:$LD_LIBRARY_PATH
 source activate torch124
 export PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=8
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

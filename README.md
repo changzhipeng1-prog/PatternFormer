@@ -81,7 +81,7 @@ quasi‑Newton tensor‑product solver for Gray–Scott).
 
 ## Before making this repository public
 
-- **Absolute paths:** ~41 scripts contain machine‑specific paths (`/home/…`). Replace with
+- **Paths:** scripts reference the project through a `/path/to/PatternFormer` placeholder (the repo root); set it to your clone location, and likewise point `/path/to/envs/torch124` / `/path/to/anaconda3` at your Python environment.
   paths relative to the repo root or a configurable data directory before release.
 - **Data & checkpoints:** deposit the large artifacts listed in [`DATA.md`](DATA.md) to a
   public archive (e.g. Zenodo) and update the download links / paths.

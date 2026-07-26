@@ -36,6 +36,6 @@ axs[1].legend(handles=[Line2D([0],[0],color="0.6",lw=4,label="ground truth (cont
                        Line2D([0],[0],color=COL[3],lw=1.8,ls="--",label="model seed + stepped march")],
               fontsize=11,loc="upper right",framealpha=1.0)
 fig.tight_layout()
-OUT="/home/zfc5231/work/BBBB_qwen_pde_branch/manuscript_NMI/Figures/fig_farp_continuation.pdf"
+OUT="/path/to/PatternFormer/manuscript_NMI/Figures/fig_farp_continuation.pdf"
 fig.savefig(OUT,bbox_inches="tight"); fig.savefig(OUT.replace(".pdf",".png"),dpi=160,bbox_inches="tight")
 print("saved",OUT)

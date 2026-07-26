@@ -13,8 +13,8 @@
 # 8-GPU sharded. Writes results_grid/noise_shard{0..7}.json (total/matched/beyond per param).
 set -u
 source activate torch124
-cd /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/try
-PY=/home/zfc5231/.conda/envs/torch124/bin/python
+cd /path/to/PatternFormer/GS/L1/try
+PY=/path/to/envs/torch124/bin/python
 N=1083; SH=8; STEP=$(( (N + SH - 1) / SH ))
 echo "=== noise grid (det+5 noise) over $N params, step=$STEP $(date) ==="
 for g in $(seq 0 7); do
