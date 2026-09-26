@@ -53,3 +53,9 @@ Evaluation entry points: [test/generate_test.py](test/generate_test.py), [test/c
 | [eval_scratch_46113.err](../logs/historical/a2a4/test/eval_scratch_46113.err) | 96555 |
 | [eval_scratch_46113.out](../logs/historical/a2a4/test/eval_scratch_46113.out) | 1710 |
 
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-two-parameter-data.tar.gz) · [Evaluation-to-figure commands](../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle elliptic-two-parameter-data` from the repository root.

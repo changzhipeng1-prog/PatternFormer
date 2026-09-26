@@ -29,7 +29,7 @@ LOG = {"pretrained": "logs/arm1_pretrained_45991.out", "random": "logs/arm2_rand
 GEN = {"pretrained": "gen_arm1_pretrained.pt", "random": "gen_arm2_random.pt"}
 def parse_curve(path):
     stage, s1, s2 = 0, [], []
-    for ln in open(os.path.join(ABL1D, path)):
+    for ln in open(os.path.join(ROOT, "logs/historical/1D_p/ablation_pretrain", path)):
         if "STAGE 1" in ln: stage = 1
         if "STAGE 2" in ln: stage = 2
         m = re.search(r"Epoch\s+(\d+)/\d+.*val_mse=([\d.eE+-]+)", ln)
@@ -75,8 +75,8 @@ VMAX = 15
 # appears in row 1). So each method reads as one colour across the whole figure.
 M_WARM, M_SCR = "#009E73", "#0066CC"
 SEL_IDX, SEL_S, SEL_J = 873, 735.0, 2           # test param/branch with the clearest contrast
-EX_WARM_LOG = os.path.join(ROOT, "2D/train_log/2d_2stage_45773.out")
-EX_SCR_LOG = os.path.join(ROOT, "2D/code/logs/ex3_scratch_46112.out")
+EX_WARM_LOG = os.path.join(ROOT, "logs/historical/2D/train_log/2d_2stage_45773.out")
+EX_SCR_LOG = os.path.join(ROOT, "logs/historical/2D/code/logs/ex3_scratch_46112.out")
 EX_WARM_STATS = os.path.join(ROOT, "2D/test/stats.pt")
 EX_SCR_STATS = os.path.join(ROOT, "2D/test/scratch/stats.pt")
 EX_WARM_GEN = os.path.join(ROOT, "2D/test/generated_solutions.pt")

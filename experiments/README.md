@@ -22,3 +22,13 @@ See [the figure recipes](../docs/FIGURE_RECIPES.md) for preparing individual pan
 are stored in [training.json](training.json). Follow [TRAINING.md](../docs/TRAINING.md)
 for input checkpoints, execution order and stage outputs. `prepare_init.py` assembles
 transfer inputs in a new directory without replacing existing weights.
+
+## Evaluation and plotting
+
+`evaluate.py` runs elliptic checkpoint inference and refinement into a new output
+directory. `evaluate_gs.py` runs Gray–Scott fixed-K evaluation. Both default to
+small subsets; `--limit 0` selects the complete test partition.
+
+`plot.py` accepts the chosen evaluation outputs and creates figures in a separate
+workspace. Use [REVIEWER_WORKFLOW.md](../docs/REVIEWER_WORKFLOW.md) for download,
+evaluation and figure commands and the auxiliary inputs of composite figures.

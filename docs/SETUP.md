@@ -7,8 +7,13 @@ uses CPU; some figure-preparation scripts also perform CPU numerical refinement.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install torch transformers peft accelerate safetensors numpy scipy matplotlib pillow pypdf tqdm tensorboard
+python -m pip install -r requirements.txt
 ```
+
+The dependency versions are pinned in `requirements.txt`. GPU evaluation uses
+CUDA PyTorch; install a wheel compatible with your driver before the other packages.
+The 7B backbone is loaded in bfloat16. The original environment uses CUDA 12.8
+on A100 80 GB GPUs; memory needs also depend on batch and solution counts.
 
 For the model, obtain `Qwen/Qwen2.5-7B-Instruct` through Hugging Face or place its files
 in a local directory and set `model_name` in the relevant `code/config.py` to that
@@ -29,3 +34,12 @@ again can overwrite its corresponding generated files. Use a separate working co
 when comparing configurations.
 
 Training commands and stage dependencies are in [TRAINING.md](TRAINING.md).
+
+For a fixed Qwen snapshot, the source checkpoint revision is
+`a09a35458c702b33eeacc393d103063234e8bc28`:
+
+```bash
+python -c "from huggingface_hub import snapshot_download; print(snapshot_download('Qwen/Qwen2.5-7B-Instruct', revision='a09a35458c702b33eeacc393d103063234e8bc28'))"
+```
+
+Use the printed directory as `model_name` in the problem configuration.

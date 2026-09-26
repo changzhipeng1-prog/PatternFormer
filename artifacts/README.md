@@ -21,3 +21,19 @@ Each command downloads its bundle, checks SHA-256 hashes, and installs files at 
 ## Experiment links
 
 [Code, original logs and final checkpoints by experiment](../docs/ARTIFACTS.md).
+
+## Evaluation data and figure inputs
+
+The [evaluation inputs release](https://github.com/changzhipeng1-prog/PatternFormer/releases/tag/evaluation-inputs-v1) provides five `*-data` bundles and `paper-figure-inputs`.
+
+```bash
+python artifacts/download.py --bundle elliptic-1d-data
+python artifacts/download.py --bundle elliptic-two-parameter-data
+python artifacts/download.py --bundle elliptic-2d-data
+python artifacts/download.py --bundle gray-scott-l1-data
+python artifacts/download.py --bundle gray-scott-l2-data
+python artifacts/download.py --bundle paper-figure-inputs
+```
+
+The [data manifest](data-manifest.json) and [figure-input manifest](figure-inputs-manifest.json) list the exact files. No weights are included in these six input bundles.
+Follow [evaluation → plotting](../docs/REVIEWER_WORKFLOW.md) to generate new evaluation outputs and select them for the figure panels.

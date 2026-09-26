@@ -17,7 +17,7 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.normpath(os.path.join(HERE, "..")))
 import make_fig1
 import make_fig5_atlas as F5
-from _gridload import load_m, test_set, DIFF, METHODS, EXAMPLE_TI
+from _gridload import load_m, test_set, DIFF, METHODS, EXAMPLE_TI, deterministic_records
 from test_plot_style import apply_style, COLORS
 apply_style()
 
@@ -36,9 +36,7 @@ def draw_atlas(fig, spec, setup):
     p = F5.PATHS[setup]
     lk = torch.load(f"{HERE}/{p['look']}", weights_only=False)
     params, sols = lk["p_values"], lk["solutions_by_p"]
-    recs = []
-    for f in glob.glob(f"{HERE}/{setup}/results/full_chunks_*/chunk_*.json"):
-        recs += json.load(open(f)).get("recs", [])
+    recs = deterministic_records(setup)
     detm = {r["ti"]: r["distinct"] for r in recs}
     tis = sorted(detm.keys())
     rho = np.array([float(params[ti, 0]) for ti in tis]); mu = np.array([float(params[ti, 1]) for ti in tis])

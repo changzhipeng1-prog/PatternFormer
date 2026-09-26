@@ -149,10 +149,10 @@
       "2D/test/scratch/stats.pt",
       "2D/test/generated_solutions.pt",
       "2D/test/scratch/generated_solutions.pt",
-      "1D_p/ablation_pretrain/logs/arm1_pretrained_45991.out",
-      "1D_p/ablation_pretrain/logs/arm2_random_45990.out",
-      "2D/train_log/2d_2stage_45773.out",
-      "2D/code/logs/ex3_scratch_46112.out",
+      "logs/historical/1D_p/ablation_pretrain/logs/arm1_pretrained_45991.out",
+      "logs/historical/1D_p/ablation_pretrain/logs/arm2_random_45990.out",
+      "logs/historical/2D/train_log/2d_2stage_45773.out",
+      "logs/historical/2D/code/logs/ex3_scratch_46112.out",
       "GS/L1/ablation/eval/arm2_random_det.json",
       "GS/L1/ablation/eval/arm1_pretrained_det.json",
       "GS/L1/results/ord_eval_L1.json"
@@ -289,7 +289,9 @@
       {
         "script": "1D_p/extension/make_farp_p100.py",
         "cwd": "1D_p/extension",
-        "args": []
+        "args": [
+          "--from-cache"
+        ]
       }
     ],
     "outputs": [
@@ -299,8 +301,7 @@
       "1D_p/extension/experiment_p18seed.py"
     ],
     "primary_inputs": [
-      "1D_p/extension/p18seed_result.pt",
-      "1D_p/data_gen/cbmfem/initial_S2.npy"
+      "1D_p/extension/farp_fields_p100.pt"
     ]
   },
   {
@@ -335,13 +336,22 @@
     "id": "supp-fig-08",
     "paper": "Supplementary Figure S8",
     "title": "Gray–Scott generation at training parameters",
-    "figure_steps": [],
+    "figure_steps": [
+      {
+        "script": "GS/make_train_beyond.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
     "outputs": [
-      "GS/L2/try/results/train_beyond.pt"
+      "GS/fig_train_beyond.pdf",
+      "GS/fig_train_beyond.png"
     ],
     "experiment_sources": [
       "GS/L2/try/eval_train_beyond.py"
     ],
-    "primary_inputs": []
+    "primary_inputs": [
+      "GS/L2/try/results/train_beyond.pt"
+    ]
   }
 ]

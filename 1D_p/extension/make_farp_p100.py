@@ -12,16 +12,23 @@ def dedup(s):
     for u in s:
         if u is not None and not any(rl2(u,v)<DEDUP for v in o): o.append(u)
     return o
-S=np.load("../data_gen/cbmfem/initial_S2.npy")
-true18=[np.real(S[:,b]).astype(np.float64) for b in range(S.shape[1]) if np.linalg.norm(np.real(S[:,b]))>ZERO_NORM]
-gen18=np.asarray(torch.load("p18seed_result.pt",map_location="cpu",weights_only=False)["gen18"],np.float64)
-data={}
-for P in [50.0,100.0]:
-    gt=dedup([march(u,18.0,P,dp0=1.0) for u in true18])
-    step=dedup([march(np.asarray(u,np.float64),18.0,P,dp0=1.0) for u in gen18])
-    data[P]={"gt":gt,"step":step}; print(f"p={P:.0f}: GT={len(gt)} model-seed={len(step)}",flush=True)
-torch.save(data, "farp_fields_p100.pt")
-x=np.linspace(0,1,gen18.shape[1]); COL=plt.cm.viridis(np.linspace(0.05,0.9,7))
+import argparse
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--from-cache", action="store_true", help="Plot saved continuation fields")
+a = parser.parse_args()
+if a.from_cache:
+    data = torch.load("farp_fields_p100.pt", map_location="cpu", weights_only=False)
+else:
+    S=np.load("../data_gen/cbmfem/initial_S2.npy")
+    true18=[np.real(S[:,b]).astype(np.float64) for b in range(S.shape[1]) if np.linalg.norm(np.real(S[:,b]))>ZERO_NORM]
+    gen18=np.asarray(torch.load("p18seed_result.pt",map_location="cpu",weights_only=False)["gen18"],np.float64)
+    data={}
+    for P in [50.0,100.0]:
+        gt=dedup([march(u,18.0,P,dp0=1.0) for u in true18])
+        step=dedup([march(np.asarray(u,np.float64),18.0,P,dp0=1.0) for u in gen18])
+        data[P]={"gt":gt,"step":step}; print(f"p={P:.0f}: GT={len(gt)} model-seed={len(step)}",flush=True)
+    torch.save(data, "farp_fields_p100.pt")
+x=np.linspace(0,1,len(data[50.0]["gt"][0])); COL=plt.cm.viridis(np.linspace(0.05,0.9,7))
 plt.rcParams.update({"font.size":15,"axes.linewidth":1.4})
 fig,axs=plt.subplots(1,2,figsize=(11,4.0))
 for ax,P in zip(axs,[50.0,100.0]):

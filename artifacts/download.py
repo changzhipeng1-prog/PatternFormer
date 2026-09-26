@@ -76,7 +76,7 @@ def main():
     bundle = next((x for x in manifest['bundles'] if x['id'] == a.bundle), None)
     if bundle is None:
         p.error('Unknown bundle: ' + a.bundle)
-    base_url = manifest.get('base_url', '')
+    base_url = bundle.get('base_url', manifest.get('base_url', ''))
     if not base_url.startswith('https://'):
         p.error('The manifest must contain an HTTPS release base_url.')
     destination = a.dest.expanduser().resolve()

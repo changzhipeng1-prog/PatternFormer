@@ -1,6 +1,8 @@
 # Data, checkpoints and figure inputs
 
 Download the five final main-model checkpoint bundles using [the artifact installer](artifacts/README.md).
+Evaluation datasets and figure inputs are available through the same installer; see
+[the reviewer workflow](docs/REVIEWER_WORKFLOW.md#download-inputs).
 Original experiment logs are indexed in [logs/](logs/README.md).
 
 Place artifact files under the repository root using the paths below. Keep checkpoint

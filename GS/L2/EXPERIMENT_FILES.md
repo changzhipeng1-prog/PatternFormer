@@ -65,3 +65,9 @@ Evaluation entry points: [code/eval_ord.py](code/eval_ord.py).
 | [gsTB_46026.err](../../logs/historical/GS/L2/try/logs/gsTB_46026.err) | 96337 |
 | [gsTB_46026.out](../../logs/historical/GS/L2/try/logs/gsTB_46026.out) | 1019 |
 
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-gray-scott-l2-data.tar.gz) · [Evaluation-to-figure commands](../../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle gray-scott-l2-data` from the repository root.

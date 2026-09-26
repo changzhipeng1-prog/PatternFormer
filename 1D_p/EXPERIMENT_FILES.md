@@ -57,3 +57,9 @@ Evaluation entry points: [test/generate_test.py](test/generate_test.py), [test/c
 | [1dp_2stage_45759.err](../logs/historical/1D_p/train_log/1dp_2stage_45759.err) | 1552084 |
 | [1dp_2stage_45759.out](../logs/historical/1D_p/train_log/1dp_2stage_45759.out) | 40222 |
 
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-1d-data.tar.gz) · [Evaluation-to-figure commands](../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle elliptic-1d-data` from the repository root.

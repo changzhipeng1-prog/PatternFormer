@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    {
+      "id": "elliptic-1d-data",
+      "archive": "patternformer-elliptic-1d-data.tar.gz",
+      "archive_sha256": "2fa00952bb602d62d3f29d58dce8a0cde91679f74689655bb5b1bc5c947b5fd0",
+      "parts": [
+        {
+          "name": "patternformer-elliptic-1d-data.tar.gz",
+          "bytes": 203967428,
+          "sha256": "2fa00952bb602d62d3f29d58dce8a0cde91679f74689655bb5b1bc5c947b5fd0"
+        }
+      ],
+      "members": [
+        {
+          "path": "1D_p/data/p_solutions_lookup.pt",
+          "bytes": 234084170,
+          "sha256": "47167290d1b544a088174ec640114ade9c54a4182c5a35ccd57ba241da3b7e18"
+        },
+        {
+          "path": "1D_p/data/p_solutions_meta.pt",
+          "bytes": 1827,
+          "sha256": "b0b6b71af53478165b1a8fc298ba9dc9b4a691cec39045b5a96f474156ee13eb"
+        },
+        {
+          "path": "1D_p/data/test_p_idx.pt",
+          "bytes": 23166,
+          "sha256": "929e954c6caf93f2c759a0883d4501c4e17348ce588f2178e3c6a8b599ce53e6"
+        },
+        {
+          "path": "1D_p/data/train_p_idx.pt",
+          "bytes": 102405,
+          "sha256": "e2bcbbb143275bba11d01060c88a45b65a9a9805cc797804b783758f2d566b18"
+        },
+        {
+          "path": "1D_p/data/val_p_idx.pt",
+          "bytes": 23159,
+          "sha256": "5ef4544ca492921b0ba9a6f4dbcdd7341b9652869ededbff29fc47fd84a21268"
+        }
+      ],
+      "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1"
+    },
+    {
+      "id": "elliptic-two-parameter-data",
+      "archive": "patternformer-elliptic-two-parameter-data.tar.gz",
+      "archive_sha256": "afa7aca27cb2f115805a01c1cb1232adc911bba43bfd60bf053737e57b8dd5fc",
+      "parts": [
+        {
+          "name": "patternformer-elliptic-two-parameter-data.tar.gz",
+          "bytes": 74917317,
+          "sha256": "afa7aca27cb2f115805a01c1cb1232adc911bba43bfd60bf053737e57b8dd5fc"
+        }
+      ],
+      "members": [
+        {
+          "path": "a2a4/data/bvp_region_test.pt",
+          "bytes": 102381405,
+          "sha256": "f1ebdcb9d94fdd06ed975608d46bec63dc7dff72f1b0f3bf1b3cc6e9cdaeebc3"
+        }
+      ],
+      "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1"
+    },
+    {
+      "id": "elliptic-2d-data",
+      "archive": "patternformer-elliptic-2d-data.tar.gz",
+      "archive_sha256": "4d830bc4be972b74130dfaef5bee90f5fd3f25d89f5c479db0d2f6814a530a00",
+      "parts": [
+        {
+          "name": "patternformer-elliptic-2d-data.tar.gz",
+          "bytes": 7379508,
+          "sha256": "4d830bc4be972b74130dfaef5bee90f5fd3f25d89f5c479db0d2f6814a530a00"
+        }
+      ],
+      "members": [
+        {
+          "path": "2D/data/p_solutions_lookup_2d.pt",
+          "bytes": 13470843,
+          "sha256": "16e469260e74c86e3a5df6d459e5b3968b4371c65d71228cbd9409c9231c51a0"
+        },
+        {
+          "path": "2D/data/p_solutions_lookup_2d_filtered.pt",
+          "bytes": 6752769,
+          "sha256": "523e5fd4d599c43d8e6a667c05f14a297ac83919a473119a517c15dd39997ae1"
+        },
+        {
+          "path": "2D/data/split_info.pt",
+          "bytes": 23227,
+          "sha256": "e65d4210da1c08901bdb8708af63a8d1b5936ce0e344f1183a2f83689be00882"
+        },
+        {
+          "path": "2D/data/test_p_idx.pt",
+          "bytes": 3646,
+          "sha256": "3a5c9fc570180fb8ef788ff449aec6d952bf48cd828d37df1b3d09fd27de0f79"
+        },
+        {
+          "path": "2D/data/train_p_idx.pt",
+          "bytes": 11333,
+          "sha256": "3a03b0cc9608651d6ed2a5da6da9391a7c83826aa34654fac1a142adfe808a81"
+        },
+        {
+          "path": "2D/data/val_p_idx.pt",
+          "bytes": 3639,
+          "sha256": "d3f48aa52e97caee24f57732e6d0168f7472d02154cd5996eaaf49b4a7d92e6b"
+        }
+      ],
+      "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1"
+    },
+    {
+      "id": "gray-scott-l1-data",
+      "archive": "patternformer-gray-scott-l1-data.tar.gz",
+      "archive_sha256": "c24563cd5ba755f3587b04f0615f4818f812020606e600a6f46de050905dcfc5",
+      "parts": [
+        {
+          "name": "patternformer-gray-scott-l1-data.tar.gz",
+          "bytes": 1028596947,
+          "sha256": "c24563cd5ba755f3587b04f0615f4818f812020606e600a6f46de050905dcfc5"
+        }
+      ],
+      "members": [
+        {
+          "path": "GS/L1/data/gs_lookup_big.pt",
+          "bytes": 1352065831,
+          "sha256": "28be2166e3a7905a0f53b355c5e9e9d351b0147d90e79fb65c3fc590e9bc38ea"
+        },
+        {
+          "path": "GS/L1/data/norm_stats_big.pt",
+          "bytes": 2403,
+          "sha256": "a777c43888745f234f50c25b986670ed74abc0c14a46e918f2c1f6753874761c"
+        },
+        {
+          "path": "GS/L1/data/split_info_big.pt",
+          "bytes": 1431,
+          "sha256": "a3f056bb4259fcfd64a7418abfc5dc8a8ac3db98857e6cf44796187b41fc24e2"
+        },
+        {
+          "path": "GS/L1/data/test_p_idx_big.pt",
+          "bytes": 2906,
+          "sha256": "80126b73bd8e0d35a60c28efff8b39f3bb1eee0fa0d97ebbfa8071bff2611338"
+        },
+        {
+          "path": "GS/L1/data/train_p_idx_big.pt",
+          "bytes": 7649,
+          "sha256": "4d31b3d95911a21b3cee01bacf6d4db2439f5ec4542e88f8dd03cbae86719364"
+        },
+        {
+          "path": "GS/L1/data/val_p_idx_big.pt",
+          "bytes": 2899,
+          "sha256": "5f3f2a0ccde835ed68c46d789639ec416d9c5654628b9c3752cac243d1832c59"
+        },
+        {
+          "path": "GS/L1/code/op_n128.mat",
+          "bytes": 114946,
+          "sha256": "a2b36ea364a419557e87ce50bf711f75c4554990b10a96f37884c64a747795cc"
+        }
+      ],
+      "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1"
+    },
+    {
+      "id": "gray-scott-l2-data",
+      "archive": "patternformer-gray-scott-l2-data.tar.gz",
+      "archive_sha256": "509dbe3f98b59db9bdf868ad2c2b1032d56df0a28da64982031e977e63a09db7",
+      "parts": [
+        {
+          "name": "patternformer-gray-scott-l2-data.tar.gz",
+          "bytes": 1122716157,
+          "sha256": "509dbe3f98b59db9bdf868ad2c2b1032d56df0a28da64982031e977e63a09db7"
+        }
+      ],
+      "members": [
+        {
+          "path": "GS/L2/data/gs_lookup_L2.pt",
+          "bytes": 2341253025,
+          "sha256": "fd0c317cd2d552994bdbc50d00ddb2fee07f7b5f868c0405c3c5debcc8d02320"
+        },
+        {
+          "path": "GS/L2/data/norm_stats_L2.pt",
+          "bytes": 2393,
+          "sha256": "c936251db5d931cd8a17fd4eb86c6f947078c07e26c632e61a5e74450cc02f8f"
+        },
+        {
+          "path": "GS/L2/data/split_info_L2.pt",
+          "bytes": 1489,
+          "sha256": "2d50818b916b429913af6f8bf0f528ccf97af5e999aadbe2c351f26db11aecba"
+        },
+        {
+          "path": "GS/L2/data/test_p_idx_L2.pt",
+          "bytes": 3923,
+          "sha256": "98ee0944766915d3749d7815fd8c08e763cd62d2f93575842167748e77d8e2e4"
+        },
+        {
+          "path": "GS/L2/data/train_p_idx_L2.pt",
+          "bytes": 12378,
+          "sha256": "9624a3b35fde05317453178fba0f5da5df1e0882a5dfa07edd95975f7e950ef9"
+        },
+        {
+          "path": "GS/L2/data/val_p_idx_L2.pt",
+          "bytes": 3916,
+          "sha256": "ff02eafa60f7289643e59f36de1b7dae305458b837ff3b888eb3c7c3a41eaf64"
+        },
+        {
+          "path": "GS/L2/code/op_n128.mat",
+          "bytes": 114946,
+          "sha256": "a2b36ea364a419557e87ce50bf711f75c4554990b10a96f37884c64a747795cc"
+        }
+      ],
+      "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1"
+    }
+  ],
+  "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1"
+}

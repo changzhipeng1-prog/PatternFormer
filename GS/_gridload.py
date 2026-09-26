@@ -23,19 +23,36 @@ def test_set(setup):
     return set(torch.load(f"{HERE}/{CFG[setup]['te']}").tolist())
 
 
+def deterministic_records(setup):
+    """Read atlas records, optionally replacing the entire test subset with a new evaluation."""
+    files = sorted(glob.glob(f"{HERE}/{setup}/results/full_chunks_*/chunk_*.json"))
+    records = {}
+    for path in files:
+        for row in json.load(open(path)).get("recs", []):
+            records[row["ti"]] = row
+    replacement = os.environ.get(f"PF_GS_{setup}_EVAL")
+    if replacement:
+        rows = json.load(open(replacement))["recs"]
+        ids = [row["ti"] for row in rows]
+        expected = test_set(setup)
+        if len(ids) != len(set(ids)) or set(ids) != expected:
+            raise ValueError(f"{setup} plotting requires exactly the complete test set; "
+                             f"expected {len(expected)} unique indices, got {len(ids)}.")
+        records.update({row["ti"]: row for row in rows})
+    return list(records.values())
+
+
 def load_m(setup, m, TE=None):
     """det -> from the existing full_chunks eval (rho/mu from lookup); others -> grid shards."""
     base = f"{HERE}/{setup}"
     if m == "det":
-        fc = sorted(glob.glob(f"{base}/results/full_chunks_*"))
         P = torch.load(f"{HERE}/{CFG[setup]['look']}", weights_only=False)["p_values"]
         rs = {}
-        for f in glob.glob(f"{fc[0]}/chunk_*.json"):
-            for r in json.load(open(f)).get("recs", []):
-                ti, Kt, di, cov = r["ti"], r["Kt"], r["distinct"], r.get("cov", 0.0)
-                mt = round(cov * Kt)
-                rs[ti] = dict(ti=ti, rho=float(P[ti, 0]), mu=float(P[ti, 1]),
-                              total=di, matched=mt, beyond=max(di - mt, 0))
+        for r in deterministic_records(setup):
+            ti, Kt, di, cov = r["ti"], r["Kt"], r["distinct"], r.get("cov", 0.0)
+            mt = round(cov * Kt)
+            rs[ti] = dict(ti=ti, rho=float(P[ti, 0]), mu=float(P[ti, 1]),
+                          total=di, matched=mt, beyond=max(di - mt, 0))
     else:
         rs = {}
         for f in glob.glob(f"{base}/try/results_grid/{m}_shard*.json"):

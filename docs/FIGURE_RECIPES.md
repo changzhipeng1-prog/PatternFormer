@@ -109,15 +109,20 @@ Reads `a2a4/extension/grid_direct.pt` and `grid_gt_cont.pt` and writes
 python experiments/run.py supp-fig-06 --run
 ```
 
-The launcher selects `1D_p/extension/` as the working directory. The script reads
-`p18seed_result.pt` and `../data_gen/cbmfem/initial_S2.npy`, performs CPU continuation,
-and writes `farp_fields_p100.pt` and `fig_farp_continuation.pdf` there.
+The launcher plots the saved continuation fields in `farp_fields_p100.pt` and writes
+`fig_farp_continuation.pdf`. To recompute continuation, run `make_farp_p100.py` without
+`--from-cache` from `1D_p/extension/`, with `p18seed_result.pt` and the original
+`../data_gen/cbmfem/initial_S2.npy` seed array present.
 
 ## Supplementary Figure S8: training-parameter fields
 
-Use the [training-parameter evaluation command](INFERENCE.md#gray-scott-training-parameter-examples)
+Use the [training-parameter evaluation command](INFERENCE.md#grayscott-training-parameter-examples)
 to produce `GS/L2/try/results/train_beyond.pt`. The records contain `sols` (solution
 fields), `is_gt` (membership flags), `param` (parameter values), and `gt_count`.
 The gallery displays the activator component `sols[:, 0]`, with frame colours
 indicating the saved membership flag. The shared tile renderer is
 [`GS/make_fig1.py`](../GS/make_fig1.py), function `panel`.
+
+Render the S8 fields with `python experiments/run.py supp-fig-08 --run`.
+The default paper parameter indices are 638 and 482; use
+`python GS/make_train_beyond.py --indices 638 482` to select them explicitly.

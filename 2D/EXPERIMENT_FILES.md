@@ -51,3 +51,9 @@ Evaluation entry points: [test/generate_test.py](test/generate_test.py), [test/c
 | [ours_2d_45855.err](../logs/historical/2D/test/timing/ours_2d_45855.err) | 96291 |
 | [ours_2d_45855.out](../logs/historical/2D/test/timing/ours_2d_45855.out) | 544 |
 
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-2d-data.tar.gz) · [Evaluation-to-figure commands](../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle elliptic-2d-data` from the repository root.

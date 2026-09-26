@@ -6,6 +6,9 @@ Start with the [paper figure guide](docs/EXPERIMENTS.md) to find an experiment b
 main-text or supplementary figure number. Use saved experiment outputs to assemble
 figures, or load trained checkpoints to run inference and numerical refinement.
 
+Follow the [download → evaluation → plotting workflow](docs/REVIEWER_WORKFLOW.md)
+for executable commands and the input dependencies of each figure.
+
 ## Getting started
 
 1. Follow [environment setup](docs/SETUP.md).

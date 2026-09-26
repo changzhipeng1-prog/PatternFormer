@@ -27,3 +27,9 @@ and [figure recipes](../docs/FIGURE_RECIPES.md). Model/data placement is in [DAT
 [Experiment-by-experiment log index](EXPERIMENT_FILES.md) · [Download final evaluation checkpoint](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/research-artifacts-v1/patternformer-elliptic-2d.tar.gz)
 
 Install with `python artifacts/download.py --bundle elliptic-2d` from the repository root. Files are placed in `2D/best_ckpt/best_model/`.
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-2d-data.tar.gz) · [Evaluation-to-figure commands](../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle elliptic-2d-data` from the repository root.

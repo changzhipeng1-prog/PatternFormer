@@ -17,11 +17,11 @@ Run commands from the repository root. `experiments/run.py` displays the working
 | Supplementary Figure S5 | Two-parameter extrapolation maps | `python experiments/run.py supp-fig-05 --run` | `a2a4/extension/fig_a2a4_appendix.pdf` |
 | Supplementary Figure S6 | Far extrapolation with continuation | `python experiments/run.py supp-fig-06 --run` | `1D_p/extension/fig_farp_continuation.pdf` |
 | Supplementary Figure S7 | Gray–Scott, larger diffusion | `python experiments/run.py supp-fig-07 --run` | `GS/combined_L1.pdf` |
-| Supplementary Figure S8 | Gray–Scott generation at training parameters | [Training-parameter evaluation](INFERENCE.md#grayscott-training-parameter-examples) | `GS/L2/try/results/train_beyond.pt` |
+| Supplementary Figure S8 | Gray–Scott generation at training parameters | `python experiments/run.py supp-fig-08 --run` | `GS/fig_train_beyond.pdf` |
 
 Main Figure 1 is the conceptual architecture illustration; its implementation is in [v2_model.py](../1D_p/code/model/v2_model.py), [v3_model.py](../GS/L1/code/model/v3_model.py) and [sequence_builder.py](../GS/L1/code/data/sequence_builder.py).
 
-Main Figure 6 is exported by the script as `fig_ablation_full.pdf`; the manuscript asset is named `fig_ablation.pdf`. `GS/make_combined.py` builds both diffusion regimes in one invocation. Supplementary Figure S6 runs CPU continuation before plotting. For S8, the evaluation entry writes the solution fields and membership flags used for the gallery.
+Main Figure 6 is exported by the script as `fig_ablation_full.pdf`; the manuscript asset is named `fig_ablation.pdf`. `GS/make_combined.py` builds both diffusion regimes in one invocation. Supplementary Figure S6 plots the saved continuation fields by default. For S8, evaluation writes solution fields and membership flags; `GS/make_train_beyond.py` renders the gallery.
 
 ## Experiment sources
 

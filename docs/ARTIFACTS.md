@@ -13,3 +13,13 @@ The checkpoint links select one final main-model checkpoint per problem. Each pr
 Shared Gray–Scott data construction: [code](../GS) · [original build log](../logs/historical/GS/build.log).
 
 See [paper figure guide](EXPERIMENTS.md) for the figure-to-code mapping.
+
+## Evaluation datasets
+
+- [elliptic-1d-data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-1d-data.tar.gz)
+- [elliptic-two-parameter-data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-two-parameter-data.tar.gz)
+- [elliptic-2d-data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-elliptic-2d-data.tar.gz)
+- [gray-scott-l1-data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-gray-scott-l1-data.tar.gz)
+- [gray-scott-l2-data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-gray-scott-l2-data.tar.gz)
+
+[Download, evaluate and plot](REVIEWER_WORKFLOW.md) connects these inputs to the figure commands.

@@ -59,3 +59,9 @@ Evaluation entry points: [code/eval_ord.py](code/eval_ord.py).
 | [ordA_L1_45396.err](../../logs/historical/GS/L1/logs/ordA_L1_45396.err) | 385428 |
 | [ordA_L1_45396.out](../../logs/historical/GS/L1/logs/ordA_L1_45396.out) | 39179 |
 
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-gray-scott-l1-data.tar.gz) · [Evaluation-to-figure commands](../../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle gray-scott-l1-data` from the repository root.

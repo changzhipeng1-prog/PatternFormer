@@ -18,3 +18,9 @@ root to locate the corresponding figure.
 [Experiment-by-experiment log index](EXPERIMENT_FILES.md) · [Download final evaluation checkpoint](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/research-artifacts-v1/patternformer-gray-scott-l1.tar.gz)
 
 Install with `python artifacts/download.py --bundle gray-scott-l1` from the repository root. Files are placed in `GS/L1/ckpt/epoch_60/`.
+
+## Evaluation data and plotting
+
+[Download evaluation data](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/evaluation-inputs-v1/patternformer-gray-scott-l1-data.tar.gz) · [Evaluation-to-figure commands](../../docs/REVIEWER_WORKFLOW.md)
+
+Install with `python artifacts/download.py --bundle gray-scott-l1-data` from the repository root.
