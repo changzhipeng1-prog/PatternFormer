@@ -12,3 +12,9 @@ Use the [inference guide](../../docs/INFERENCE.md) for commands and the
 [figure recipes](../../docs/FIGURE_RECIPES.md) for assembly. Input paths are listed
 in [DATA.md](../../DATA.md). Run `python experiments/run.py --list` from the repository
 root to locate the corresponding figure.
+
+## Code, logs and checkpoint
+
+[Experiment-by-experiment log index](EXPERIMENT_FILES.md) · [Download final evaluation checkpoint](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/research-artifacts-v1/patternformer-gray-scott-l2.tar.gz)
+
+Install with `python artifacts/download.py --bundle gray-scott-l2` from the repository root. Files are placed in `GS/L2/ckpt/epoch_60/`.

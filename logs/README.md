@@ -8,3 +8,7 @@ Original experiment logs are in [historical/](historical/), with the original pr
 - `GS/`: Gray–Scott data generation, training and evaluation.
 
 Use the [experiment guide](../docs/EXPERIMENTS.md) to locate the corresponding source scripts. These logs retain their original filenames and contents, including execution paths and scheduler messages.
+
+## Experiment links
+
+[Code, original logs and final checkpoints by experiment](../docs/ARTIFACTS.md).

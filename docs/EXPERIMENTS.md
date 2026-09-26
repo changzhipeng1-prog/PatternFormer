@@ -94,3 +94,7 @@ Main Figure 6 is exported by the script as `fig_ablation_full.pdf`; the manuscri
 | S7 | Initialization comparison | `GS/L1/ablation/eval/*.json` and `GS/L1/ablation/run_eval.sh` |
 
 Table S1 is notation, S3–S4 describe data/configuration, and the other tables summarize experiment outputs. They are typeset in the manuscript.
+
+## Experiment links
+
+[Code, original logs and final checkpoints by experiment](ARTIFACTS.md).

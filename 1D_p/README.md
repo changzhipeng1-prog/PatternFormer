@@ -21,3 +21,9 @@ python 1D_p/test/compute_stats.py
 
 For figure assembly and its saved inputs, follow the [paper figure guide](../docs/EXPERIMENTS.md)
 and [figure recipes](../docs/FIGURE_RECIPES.md). Model/data placement is in [DATA.md](../DATA.md).
+
+## Code, logs and checkpoint
+
+[Experiment-by-experiment log index](EXPERIMENT_FILES.md) · [Download final evaluation checkpoint](https://github.com/changzhipeng1-prog/PatternFormer/releases/download/research-artifacts-v1/patternformer-elliptic-1d.tar.gz)
+
+Install with `python artifacts/download.py --bundle elliptic-1d` from the repository root. Files are placed in `1D_p/best_ckpt/best_model/`.

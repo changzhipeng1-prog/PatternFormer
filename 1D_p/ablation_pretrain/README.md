@@ -44,3 +44,7 @@ sbatch run_arm3_scratch.sh       # Arm 3 (size control; lr may need tuning)
 ```
 Compare arms on the SAME metrics as the paper: val_mse, M1 direct rel-L2, exact
 count-matching, M2 Newton steps. Report all numbers from the final on-disk checkpoints.
+
+## Related experiment files
+
+[Original logs for this experiment](../EXPERIMENT_FILES.md#1d_pablation_pretrain) · [Problem overview](../README.md).
