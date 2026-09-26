@@ -1,0 +1,347 @@
+[
+  {
+    "id": "main-fig-01",
+    "paper": "Main Figure 1",
+    "title": "Model architecture and sequence construction",
+    "figure_steps": [],
+    "outputs": [],
+    "experiment_sources": [
+      "1D_p/code/model/v2_model.py",
+      "GS/L1/code/data/sequence_builder.py"
+    ],
+    "primary_inputs": []
+  },
+  {
+    "id": "main-fig-02",
+    "paper": "Main Figure 2",
+    "title": "Single-parameter elliptic equation",
+    "figure_steps": [
+      {
+        "script": "1D_p/make_panel_1Dp.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "1D_p/fig_1Dp_panel.pdf"
+    ],
+    "experiment_sources": [
+      "1D_p/test/generate_test.py",
+      "1D_p/test/compute_stats.py"
+    ],
+    "primary_inputs": [
+      "1D_p/test/fig_1Dp_examples_2x5.pdf",
+      "1D_p/test/fig_1Dp_examples_2x5.png",
+      "1D_p/test/fig_1Dp_box4.pdf",
+      "1D_p/test/fig_1Dp_box4.png",
+      "1D_p/data_gen/fig_1Dp_bifurcation.pdf",
+      "1D_p/data_gen/fig_1Dp_bifurcation.png",
+      "1D_p/test/timing/fig_1dp_efficiency_main.pdf",
+      "1D_p/test/timing/fig_1dp_efficiency_main.png"
+    ]
+  },
+  {
+    "id": "main-fig-03",
+    "paper": "Main Figure 3",
+    "title": "Gray–Scott, smaller diffusion",
+    "figure_steps": [
+      {
+        "script": "GS/make_combined.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "GS/combined_L2.pdf"
+    ],
+    "experiment_sources": [
+      "GS/L2/code/eval_ord.py",
+      "GS/L2/try/eval_grid.py",
+      "GS/_example_gen.py"
+    ],
+    "primary_inputs": [
+      "GS/L1/data/gs_lookup_big.pt",
+      "GS/L1/data/test_p_idx_big.pt",
+      "GS/L1/results/fig1_L1_ti576_noise.pt",
+      "GS/L2/data/gs_lookup_L2.pt",
+      "GS/L2/data/test_p_idx_L2.pt",
+      "GS/L2/results/fig1_L2_ti595_noise.pt"
+    ]
+  },
+  {
+    "id": "main-fig-04",
+    "paper": "Main Figure 4",
+    "title": "Extrapolation across three elliptic problems",
+    "figure_steps": [
+      {
+        "script": "plot_extension_2x3.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "fig_extension_2x3.pdf"
+    ],
+    "experiment_sources": [
+      "1D_p/extension/compute_1dp_three_methods.py",
+      "2D/extension/experiment_three_methods_2d.py",
+      "a2a4/extension/compute_a2a4_cov_M3_bfs.py"
+    ],
+    "primary_inputs": [
+      "1D_p/extension/three_methods_1dp.pt",
+      "2D/extension/three_methods_2d.pt",
+      "a2a4/extension/a2a4_cov_M3_bfs.pt",
+      "a2a4/extension/grid_gt_cont.pt",
+      "1D_p/extension/sols_row2.pt",
+      "2D/extension/gt_extension.pt",
+      "a2a4/extension/sols_row2.pt"
+    ]
+  },
+  {
+    "id": "main-fig-05",
+    "paper": "Main Figure 5",
+    "title": "Direct generation and numerical refinement",
+    "figure_steps": [
+      {
+        "script": "fig5_who_solves.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "fig5_who_solves.pdf"
+    ],
+    "experiment_sources": [
+      "1D_p/test/_who_npz.py",
+      "a2a4/test/_who_npz.py",
+      "2D/test/_who_npz.py"
+    ],
+    "primary_inputs": [
+      "1D_p/test/who_npz.npz",
+      "a2a4/test/who_npz.npz",
+      "2D/test/who_npz.npz"
+    ]
+  },
+  {
+    "id": "main-fig-06",
+    "paper": "Main Figure 6",
+    "title": "Pretraining and cross-equation initialization",
+    "figure_steps": [
+      {
+        "script": "fig_ablation_full.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "fig_ablation_full.pdf"
+    ],
+    "experiment_sources": [
+      "1D_p/ablation_pretrain/generate_arm.py",
+      "2D/test/compare_warm_scratch.py",
+      "GS/L1/ablation/run_eval.sh"
+    ],
+    "primary_inputs": [
+      "1D_p/ablation_pretrain/gen_arm1_pretrained.pt",
+      "1D_p/ablation_pretrain/gen_arm2_random.pt",
+      "gs_map_data.npz",
+      "2D/test/stats.pt",
+      "2D/test/scratch/stats.pt",
+      "2D/test/generated_solutions.pt",
+      "2D/test/scratch/generated_solutions.pt",
+      "1D_p/ablation_pretrain/logs/arm1_pretrained_45991.out",
+      "1D_p/ablation_pretrain/logs/arm2_random_45990.out",
+      "2D/train_log/2d_2stage_45773.out",
+      "2D/code/logs/ex3_scratch_46112.out",
+      "GS/L1/ablation/eval/arm2_random_det.json",
+      "GS/L1/ablation/eval/arm1_pretrained_det.json",
+      "GS/L1/results/ord_eval_L1.json"
+    ]
+  },
+  {
+    "id": "supp-fig-01",
+    "paper": "Supplementary Figure S1",
+    "title": "Two-parameter elliptic equation",
+    "figure_steps": [
+      {
+        "script": "a2a4/make_panel_a2a4.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "a2a4/fig_a2a4_panel.pdf"
+    ],
+    "experiment_sources": [
+      "a2a4/test/generate_test.py",
+      "a2a4/test/compute_stats.py"
+    ],
+    "primary_inputs": [
+      "a2a4/test/fig_a2a4_examples_2x5.pdf",
+      "a2a4/test/fig_a2a4_examples_2x5.png",
+      "a2a4/test/fig_a2a4_box4.pdf",
+      "a2a4/test/fig_a2a4_box4.png",
+      "a2a4/data_gen/fig_a2a4_bifurcation.pdf",
+      "a2a4/data_gen/fig_a2a4_bifurcation.png",
+      "a2a4/test/timing/fig_a2a4_efficiency_main.pdf",
+      "a2a4/test/timing/fig_a2a4_efficiency_main.png"
+    ]
+  },
+  {
+    "id": "supp-fig-02",
+    "paper": "Supplementary Figure S2",
+    "title": "Two-dimensional elliptic equation",
+    "figure_steps": [
+      {
+        "script": "2D/make_panel_2D.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "2D/fig_2D_panel.pdf"
+    ],
+    "experiment_sources": [
+      "2D/test/generate_test.py",
+      "2D/test/compute_stats.py"
+    ],
+    "primary_inputs": [
+      "2D/test/fig_2D_examples.pdf",
+      "2D/test/fig_2D_examples.png",
+      "2D/test/fig_2D_box4.pdf",
+      "2D/test/fig_2D_box4.png",
+      "2D/data_gen/fig_2D_bifurcation.pdf",
+      "2D/data_gen/fig_2D_bifurcation.png",
+      "2D/test/timing/fig_2d_efficiency_main.pdf",
+      "2D/test/timing/fig_2d_efficiency_main.png"
+    ]
+  },
+  {
+    "id": "supp-fig-03",
+    "paper": "Supplementary Figure S3",
+    "title": "Near-zero two-dimensional solutions",
+    "figure_steps": [
+      {
+        "script": "2D/test/plot_examples.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "2D/test/fig_2D_examples_nearzero.pdf"
+    ],
+    "experiment_sources": [
+      "2D/test/generate_test.py"
+    ],
+    "primary_inputs": [
+      "2D/test/generated_solutions.pt"
+    ]
+  },
+  {
+    "id": "supp-fig-04",
+    "paper": "Supplementary Figure S4",
+    "title": "Nearby two-dimensional solution branches",
+    "figure_steps": [
+      {
+        "script": "2D/test/plot_examples.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "2D/test/fig_2D_examples_notcollapse.pdf"
+    ],
+    "experiment_sources": [
+      "2D/test/generate_test.py"
+    ],
+    "primary_inputs": [
+      "2D/test/generated_solutions.pt"
+    ]
+  },
+  {
+    "id": "supp-fig-05",
+    "paper": "Supplementary Figure S5",
+    "title": "Two-parameter extrapolation maps",
+    "figure_steps": [
+      {
+        "script": "a2a4/extension/plot_a2a4_appendix.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "a2a4/extension/fig_a2a4_appendix.pdf"
+    ],
+    "experiment_sources": [
+      "a2a4/extension/grid_generate_a2a4.py",
+      "a2a4/extension/grid_gt_continuation.py"
+    ],
+    "primary_inputs": [
+      "a2a4/extension/grid_direct.pt",
+      "a2a4/extension/grid_gt_cont.pt"
+    ]
+  },
+  {
+    "id": "supp-fig-06",
+    "paper": "Supplementary Figure S6",
+    "title": "Far extrapolation with continuation",
+    "figure_steps": [
+      {
+        "script": "1D_p/extension/make_farp_p100.py",
+        "cwd": "1D_p/extension",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "1D_p/extension/fig_farp_continuation.pdf"
+    ],
+    "experiment_sources": [
+      "1D_p/extension/experiment_p18seed.py"
+    ],
+    "primary_inputs": [
+      "1D_p/extension/p18seed_result.pt",
+      "1D_p/data_gen/cbmfem/initial_S2.npy"
+    ]
+  },
+  {
+    "id": "supp-fig-07",
+    "paper": "Supplementary Figure S7",
+    "title": "Gray–Scott, larger diffusion",
+    "figure_steps": [
+      {
+        "script": "GS/make_combined.py",
+        "cwd": ".",
+        "args": []
+      }
+    ],
+    "outputs": [
+      "GS/combined_L1.pdf"
+    ],
+    "experiment_sources": [
+      "GS/L1/code/eval_ord.py",
+      "GS/L1/try/eval_grid.py",
+      "GS/_example_gen.py"
+    ],
+    "primary_inputs": [
+      "GS/L1/data/gs_lookup_big.pt",
+      "GS/L1/data/test_p_idx_big.pt",
+      "GS/L1/results/fig1_L1_ti576_noise.pt",
+      "GS/L2/data/gs_lookup_L2.pt",
+      "GS/L2/data/test_p_idx_L2.pt",
+      "GS/L2/results/fig1_L2_ti595_noise.pt"
+    ]
+  },
+  {
+    "id": "supp-fig-08",
+    "paper": "Supplementary Figure S8",
+    "title": "Gray–Scott generation at training parameters",
+    "figure_steps": [],
+    "outputs": [
+      "GS/L2/try/results/train_beyond.pt"
+    ],
+    "experiment_sources": [
+      "GS/L2/try/eval_train_beyond.py"
+    ],
+    "primary_inputs": []
+  }
+]

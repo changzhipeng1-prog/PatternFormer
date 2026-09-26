@@ -19,9 +19,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "code"))
 from model.traditional_refine import refine_with_newton_trace
 
-GEN = os.path.join(HERE, "generated_solutions.pt")
-OUT = os.path.join(HERE, "stats.pt")
-CSV = os.path.join(HERE, "stats.csv")
+GEN = os.environ.get("GEN_OUT", os.path.join(HERE, "generated_solutions.pt"))
+OUT = os.environ.get("STATS_OUT", os.path.join(HERE, "stats.pt"))
+CSV = os.environ.get("STATS_CSV", os.path.join(HERE, "stats.csv"))
 NEWTON_TOL = 1e-9
 NEWTON_MAX = 30
 

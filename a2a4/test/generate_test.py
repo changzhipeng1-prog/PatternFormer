@@ -22,7 +22,7 @@ CKPT = os.environ.get("CKPT_DIR", os.path.join(HERE, "..", "best_ckpt", "best_mo
 OUT = os.environ.get("GEN_OUT", os.path.join(HERE, "generated_solutions.pt"))
 
 
-def main():
+def main(limit=0):
     print(f"Loading {CKPT} ...", flush=True)
     model = V2PDEModel.from_pretrained(CKPT, C)
     model.eval()
@@ -35,6 +35,8 @@ def main():
     EXCLUDE_NZK = {4}
     results = []
     for n, e in enumerate(test):
+        if limit and n >= limit:
+            break
         a4, a2 = float(e["params"][0]), float(e["params"][1])
         gt = torch.stack([torch.as_tensor(s, dtype=torch.float32).reshape(-1) for s in e["solutions"]])
         if int((gt.norm(dim=1) > 1e-6).sum()) in EXCLUDE_NZK:
@@ -53,4 +55,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--limit", type=int, default=0, help="First N test entries; 0 uses the full test list")
+    args = parser.parse_args()
+    if args.limit < 0:
+        parser.error("--limit must be nonnegative")
+    main(args.limit)

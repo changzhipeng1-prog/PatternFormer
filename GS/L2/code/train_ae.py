@@ -79,12 +79,12 @@ def main(a):
                   f"lr {sched.get_last_lr()[0]:.2e}  {time.time()-t0:.0f}s")
             if vr < best:
                 best = vr
-                os.makedirs(f"{HERE}/checkpoints", exist_ok=True)
-                torch.save(model.state_dict(), f"{HERE}/checkpoints/autoencoder2d.pt")
-    print(f"best val rel_l2 = {best:.4f}  -> checkpoints/autoencoder2d.pt")
+                os.makedirs(a.output_dir, exist_ok=True)
+                torch.save(model.state_dict(), os.path.join(a.output_dir, "autoencoder2d.pt"))
+    print(f"best val rel_l2 = {best:.4f} -> {os.path.join(a.output_dir, 'autoencoder2d.pt')}")
 
     # reconstruction viz on a few val solutions
-    model.load_state_dict(torch.load(f"{HERE}/checkpoints/autoencoder2d.pt"))
+    model.load_state_dict(torch.load(os.path.join(a.output_dir, "autoencoder2d.pt")))
     model.eval()
     with torch.no_grad():
         xb = Xva[torch.randperm(Xva.shape[0], generator=torch.Generator().manual_seed(1))[:6]]
@@ -98,13 +98,14 @@ def main(a):
         ax[3, j].imshow(rec[j, 1], cmap="magma"); ax[3, j].set_title("S rec", fontsize=8)
         for r in range(4): ax[r, j].axis("off")
     fig.suptitle(f"AE reconstruction (val), rel_l2={best:.4f}")
-    os.makedirs(f"{HERE}/outputs", exist_ok=True)
-    fig.tight_layout(); fig.savefig(f"{HERE}/outputs/ae_recon.png", dpi=110)
-    print("wrote outputs/ae_recon.png")
+    os.makedirs(os.path.join(a.output_dir, "figures"), exist_ok=True)
+    fig.tight_layout(); fig.savefig(os.path.join(a.output_dir, "figures", "ae_recon.png"), dpi=110)
+    print("wrote", os.path.join(a.output_dir, "figures", "ae_recon.png"))
 
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
+    p.add_argument("--output_dir", default=os.path.join(HERE, "checkpoints"))
     p.add_argument("--epochs", type=int, default=600)
     p.add_argument("--bs", type=int, default=64)
     p.add_argument("--lr", type=float, default=1e-3)

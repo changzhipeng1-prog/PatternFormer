@@ -1,0 +1,902 @@
+[
+  {
+    "id": "ae-1d",
+    "script": "1D_p/code/train.py",
+    "gpus": 8,
+    "args": [
+      "--phase",
+      "phase1",
+      "--phase1_epochs",
+      "200",
+      "--unet_checkpoint",
+      "{output}/unet.pt"
+    ],
+    "products": [
+      "unet.pt"
+    ],
+    "requires": [],
+    "source_recipe": "1D_p/code/train.py",
+    "environment": {}
+  },
+  {
+    "id": "ae-two-param",
+    "script": "a2a4/code/train.py",
+    "gpus": 8,
+    "args": [
+      "--phase",
+      "phase1",
+      "--phase1_epochs",
+      "200",
+      "--unet_checkpoint",
+      "{output}/unet.pt"
+    ],
+    "products": [
+      "unet.pt"
+    ],
+    "requires": [],
+    "source_recipe": "a2a4/code/train.py",
+    "environment": {}
+  },
+  {
+    "id": "ae-2d",
+    "script": "2D/code/train_unet.py",
+    "gpus": 1,
+    "args": [],
+    "products": [
+      "checkpoints/best_model/autoencoder2d.pt"
+    ],
+    "requires": [],
+    "source_recipe": "2D/code/train_unet.py",
+    "environment": {}
+  },
+  {
+    "id": "ae-gs-l1",
+    "script": "GS/L1/code/train_ae.py",
+    "gpus": 1,
+    "args": [
+      "--output_dir",
+      "{output}/checkpoints"
+    ],
+    "products": [
+      "checkpoints/autoencoder2d.pt"
+    ],
+    "requires": [],
+    "source_recipe": "GS/L1/code/train_ae.py",
+    "environment": {}
+  },
+  {
+    "id": "ae-gs-l2",
+    "script": "GS/L2/code/train_ae.py",
+    "gpus": 1,
+    "args": [
+      "--output_dir",
+      "{output}/checkpoints"
+    ],
+    "products": [
+      "checkpoints/autoencoder2d.pt"
+    ],
+    "requires": [],
+    "source_recipe": "GS/L2/code/train_ae.py",
+    "environment": {}
+  },
+  {
+    "id": "1d-context",
+    "script": "1D_p/code/train.py",
+    "gpus": 8,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "2",
+      "--num_epochs",
+      "100",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "0.0",
+      "--val_no_context_prob",
+      "0.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae"
+    ],
+    "source_recipe": "1D_p/code/run_twostage_pde.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "1d-nocontext",
+    "script": "1D_p/code/train.py",
+    "gpus": 8,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "2",
+      "--num_epochs",
+      "100",
+      "--lr_projector",
+      "2e-5",
+      "--lr_lora",
+      "5e-6",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "1D_p/code/run_twostage_pde.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "two-param-context",
+    "script": "a2a4/code/train.py",
+    "gpus": 8,
+    "args": [
+      "--batch_size",
+      "4",
+      "--grad_accum",
+      "2",
+      "--num_epochs",
+      "60",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "0.0",
+      "--val_no_context_prob",
+      "0.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--pretrained_1dp",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "a2a4/code/run_twostage_pde.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "two-param-nocontext",
+    "script": "a2a4/code/train.py",
+    "gpus": 8,
+    "args": [
+      "--batch_size",
+      "4",
+      "--grad_accum",
+      "2",
+      "--num_epochs",
+      "60",
+      "--lr_projector",
+      "2e-5",
+      "--lr_lora",
+      "5e-6",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "a2a4/code/run_twostage_pde.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "2d-context",
+    "script": "2D/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "200",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "10",
+      "--no_context_prob",
+      "0.0",
+      "--val_no_context_prob",
+      "0.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--lambda_mse",
+      "0.5",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "2D/code/run_twostage_chain.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "50"
+    }
+  },
+  {
+    "id": "2d-nocontext",
+    "script": "2D/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "200",
+      "--lr_projector",
+      "2e-5",
+      "--lr_lora",
+      "5e-6",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "10",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--lambda_mse",
+      "0.5",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "2D/code/run_twostage_chain.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "50"
+    }
+  },
+  {
+    "id": "gs-l1-ordered",
+    "script": "GS/L1/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "60",
+      "--lr_projector",
+      "3e-5",
+      "--lr_lora",
+      "1e-5",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--context_mode",
+      "local",
+      "--unet_checkpoint",
+      "{ae}",
+      "--resume_from",
+      "{parent}",
+      "--output_dir",
+      "{output}/checkpoints"
+    ],
+    "products": [
+      "checkpoints/epoch_60",
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "GS/L1/scripts/run_train_L1.slurm",
+    "environment": {}
+  },
+  {
+    "id": "gs-l2-ordered",
+    "script": "GS/L2/code/train.py",
+    "gpus": 2,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "60",
+      "--lr_projector",
+      "3e-5",
+      "--lr_lora",
+      "1e-5",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--context_mode",
+      "local",
+      "--unet_checkpoint",
+      "{ae}",
+      "--resume_from",
+      "{parent}",
+      "--output_dir",
+      "{output}/checkpoints"
+    ],
+    "products": [
+      "checkpoints/epoch_60",
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "GS/L2/scripts/run_train_L2.slurm",
+    "environment": {}
+  },
+  {
+    "id": "1d-pretrained-context",
+    "script": "1D_p/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "100",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "0.0",
+      "--val_no_context_prob",
+      "0.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--random_init_backbone",
+      "0"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae"
+    ],
+    "source_recipe": "1D_p/ablation_pretrain/run_arm1_pretrained.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "1d-pretrained-nocontext",
+    "script": "1D_p/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "100",
+      "--lr_projector",
+      "2e-5",
+      "--lr_lora",
+      "5e-6",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--resume_from",
+      "{parent}",
+      "--random_init_backbone",
+      "0"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "1D_p/ablation_pretrain/run_arm1_pretrained.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "1d-random-context",
+    "script": "1D_p/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "100",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "0.0",
+      "--val_no_context_prob",
+      "0.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--random_init_backbone",
+      "1"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae"
+    ],
+    "source_recipe": "1D_p/ablation_pretrain/run_arm2_random.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "1d-random-nocontext",
+    "script": "1D_p/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "100",
+      "--lr_projector",
+      "2e-5",
+      "--lr_lora",
+      "5e-6",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "1",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--phase",
+      "phase2",
+      "--pde_warmup_start",
+      "5",
+      "--pde_warmup_end",
+      "30",
+      "--resume_from",
+      "{parent}",
+      "--random_init_backbone",
+      "1"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "1D_p/ablation_pretrain/run_arm2_random.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "15"
+    }
+  },
+  {
+    "id": "2d-fresh-context",
+    "script": "2D/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "200",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "10",
+      "--no_context_prob",
+      "0.0",
+      "--val_no_context_prob",
+      "0.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--lambda_mse",
+      "0.5"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae"
+    ],
+    "source_recipe": "2D/code/run_ex3_scratch.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "50"
+    }
+  },
+  {
+    "id": "2d-fresh-nocontext",
+    "script": "2D/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "200",
+      "--lr_projector",
+      "2e-5",
+      "--lr_lora",
+      "5e-6",
+      "--lambda_pde",
+      "0.05",
+      "--pde_use_gt_ref",
+      "1",
+      "--target_repeat_per_epoch",
+      "10",
+      "--no_context_prob",
+      "1.0",
+      "--val_no_context_prob",
+      "1.0",
+      "--unet_checkpoint",
+      "{ae}",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--lambda_mse",
+      "0.5",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "2D/code/run_ex3_scratch.sh",
+    "environment": {
+      "EARLY_STOP_PATIENCE": "50"
+    }
+  },
+  {
+    "id": "gs-l1-pretrained-context",
+    "script": "GS/L1/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "80",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--no_context_prob",
+      "0.0",
+      "--context_mode",
+      "local",
+      "--unet_checkpoint",
+      "{ae}",
+      "--random_init_backbone",
+      "0",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--ss_prob",
+      "0.25",
+      "--ss_warmup_start",
+      "0",
+      "--ss_warmup_end",
+      "15"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae"
+    ],
+    "source_recipe": "GS/L1/ablation/run_gs_arm.sh",
+    "environment": {}
+  },
+  {
+    "id": "gs-l1-pretrained-nocontext",
+    "script": "GS/L1/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "60",
+      "--lr_projector",
+      "3e-5",
+      "--lr_lora",
+      "1e-5",
+      "--no_context_prob",
+      "1.0",
+      "--context_mode",
+      "local",
+      "--unet_checkpoint",
+      "{ae}",
+      "--random_init_backbone",
+      "0",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--val_no_context_prob",
+      "1.0",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "GS/L1/ablation/run_gs_arm.sh",
+    "environment": {}
+  },
+  {
+    "id": "gs-l1-random-context",
+    "script": "GS/L1/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "80",
+      "--lr_projector",
+      "1e-4",
+      "--lr_lora",
+      "2e-5",
+      "--no_context_prob",
+      "0.0",
+      "--context_mode",
+      "local",
+      "--unet_checkpoint",
+      "{ae}",
+      "--random_init_backbone",
+      "1",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--ss_prob",
+      "0.25",
+      "--ss_warmup_start",
+      "0",
+      "--ss_warmup_end",
+      "15"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae"
+    ],
+    "source_recipe": "GS/L1/ablation/run_gs_arm.sh",
+    "environment": {}
+  },
+  {
+    "id": "gs-l1-random-nocontext",
+    "script": "GS/L1/code/train.py",
+    "gpus": 4,
+    "args": [
+      "--batch_size",
+      "8",
+      "--grad_accum",
+      "4",
+      "--num_epochs",
+      "60",
+      "--lr_projector",
+      "3e-5",
+      "--lr_lora",
+      "1e-5",
+      "--no_context_prob",
+      "1.0",
+      "--context_mode",
+      "local",
+      "--unet_checkpoint",
+      "{ae}",
+      "--random_init_backbone",
+      "1",
+      "--output_dir",
+      "{output}/checkpoints",
+      "--val_no_context_prob",
+      "1.0",
+      "--resume_from",
+      "{parent}"
+    ],
+    "products": [
+      "checkpoints/best_model"
+    ],
+    "requires": [
+      "ae",
+      "parent"
+    ],
+    "source_recipe": "GS/L1/ablation/run_gs_arm.sh",
+    "environment": {}
+  }
+]

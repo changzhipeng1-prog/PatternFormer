@@ -22,7 +22,7 @@ CKPT = os.environ.get("CKPT_DIR", os.path.join(HERE, "..", "best_ckpt", "best_mo
 OUT = os.environ.get("GEN_OUT", os.path.join(HERE, "generated_solutions.pt"))
 
 
-def main():
+def main(limit=0):
     lk = torch.load(C.data_lookup_path, weights_only=False)
     coord, elem, free_nodes = lk["coord"].float(), lk["elem"].long(), lk["free_nodes"].long()
     pv, sols = lk["p_values"], lk["solutions_by_p"]
@@ -37,6 +37,8 @@ def main():
 
     results = []
     for n, i in enumerate(test_idx):
+        if limit and n >= limit:
+            break
         s = sols[i]
         if s is None or len(s) == 0:
             continue
@@ -59,4 +61,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--limit", type=int, default=0, help="First N test entries; 0 uses the full test list")
+    args = parser.parse_args()
+    if args.limit < 0:
+        parser.error("--limit must be nonnegative")
+    main(args.limit)
