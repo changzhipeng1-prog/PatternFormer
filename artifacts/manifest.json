@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "bundles": [
+    {
+      "id": "elliptic-1d",
+      "archive": "patternformer-elliptic-1d.tar.gz",
+      "archive_sha256": "484015c58f51f9c1fd53f8fc6848839f5ff5b7e7c90e20feea4d4f71ddf689ff",
+      "parts": [
+        {
+          "name": "patternformer-elliptic-1d.tar.gz",
+          "bytes": 69011157,
+          "sha256": "484015c58f51f9c1fd53f8fc6848839f5ff5b7e7c90e20feea4d4f71ddf689ff"
+        }
+      ],
+      "members": [
+        {
+          "path": "1D_p/best_ckpt/best_model/adapter_config.json",
+          "bytes": 1006,
+          "sha256": "c9cb32024948842eb73f8e62dad3afc5605a5f3f90a76184ab27f09245de8ead"
+        },
+        {
+          "path": "1D_p/best_ckpt/best_model/adapter_model.safetensors",
+          "bytes": 40400200,
+          "sha256": "029607f30a0195aba77b19dd7822bf8ce6f93bb9cbd6b8ccd952f059b4906cf6"
+        },
+        {
+          "path": "1D_p/best_ckpt/best_model/dual_head.pt",
+          "bytes": 1873905,
+          "sha256": "84c072f19419815bc3e7d344af8f81dcf7803c325c4a978a3a91075c0bcdb027"
+        },
+        {
+          "path": "1D_p/best_ckpt/best_model/input_projector.pt",
+          "bytes": 14763117,
+          "sha256": "f4969848b8ef83d34b9f6e2647edde39b777c7c08eafff22c91b1403a50f7843"
+        },
+        {
+          "path": "1D_p/best_ckpt/best_model/output_projector.pt",
+          "bytes": 14752631,
+          "sha256": "0020db6e33127fddd8c99e2d0b247a9059b4bb665b8643c84da94285ea23c458"
+        },
+        {
+          "path": "1D_p/best_ckpt/best_model/special_tokens.pt",
+          "bytes": 37853,
+          "sha256": "44f030b218c5735f77305ae647634302dfea417cf31fdcba1dba02cb750bf2f6"
+        },
+        {
+          "path": "1D_p/best_ckpt/best_model/unet.pt",
+          "bytes": 9267351,
+          "sha256": "2ad502cd56d02de3c8f6d5ba2f9cf9a910a790fb02638e6d2951828f1c051eaf"
+        }
+      ]
+    },
+    {
+      "id": "elliptic-two-parameter",
+      "archive": "patternformer-elliptic-two-parameter.tar.gz",
+      "archive_sha256": "9480fc367265719bef9e2a21d652ac464c096803ad541c0cb1318f7a226d642b",
+      "parts": [
+        {
+          "name": "patternformer-elliptic-two-parameter.tar.gz",
+          "bytes": 68961076,
+          "sha256": "9480fc367265719bef9e2a21d652ac464c096803ad541c0cb1318f7a226d642b"
+        }
+      ],
+      "members": [
+        {
+          "path": "a2a4/best_ckpt/best_model/adapter_config.json",
+          "bytes": 1006,
+          "sha256": "530e552862639604362d287cb576c6cb247fdc8885189f0985eabc1465d853fb"
+        },
+        {
+          "path": "a2a4/best_ckpt/best_model/adapter_model.safetensors",
+          "bytes": 40400200,
+          "sha256": "cb97cd2f1a08eb25154a61eac7409bc61033ac8736f0be860dd6bcbbd7ec6f26"
+        },
+        {
+          "path": "a2a4/best_ckpt/best_model/dual_head.pt",
+          "bytes": 1873905,
+          "sha256": "5b7ed0d8530557d3ccb924cdbd6bddbf38cea34014ade9146125241a4d84fc9b"
+        },
+        {
+          "path": "a2a4/best_ckpt/best_model/input_projector.pt",
+          "bytes": 14774637,
+          "sha256": "95d882ea4c4d91c6e3f0ac0e29f4b77fc6c6ffee4558db47e77f48cde6e17f8f"
+        },
+        {
+          "path": "a2a4/best_ckpt/best_model/output_projector.pt",
+          "bytes": 14752631,
+          "sha256": "0020db6e33127fddd8c99e2d0b247a9059b4bb665b8643c84da94285ea23c458"
+        },
+        {
+          "path": "a2a4/best_ckpt/best_model/special_tokens.pt",
+          "bytes": 37853,
+          "sha256": "a97806adf3b9aa84877bd61359717cf0c8bbff5deef9199955ec8414e34308af"
+        },
+        {
+          "path": "a2a4/best_ckpt/best_model/unet.pt",
+          "bytes": 9267351,
+          "sha256": "d1d6ceb9448823b714939279a420d5eaf08c4c42c55115e50ea983b630d93309"
+        }
+      ]
+    },
+    {
+      "id": "elliptic-2d",
+      "archive": "patternformer-elliptic-2d.tar.gz",
+      "archive_sha256": "fce3c395012293d9de16a16a4b35c371222cfb6d2839be7ea918955fac8d7292",
+      "parts": [
+        {
+          "name": "patternformer-elliptic-2d.tar.gz",
+          "bytes": 64341826,
+          "sha256": "fce3c395012293d9de16a16a4b35c371222cfb6d2839be7ea918955fac8d7292"
+        }
+      ],
+      "members": [
+        {
+          "path": "2D/best_ckpt/best_model/adapter_config.json",
+          "bytes": 1006,
+          "sha256": "ffbd560dc3feb50a9517a92c2f9c77faac99e2432d5d90d8cdd4b9724a1c6f1a"
+        },
+        {
+          "path": "2D/best_ckpt/best_model/adapter_model.safetensors",
+          "bytes": 40400200,
+          "sha256": "3981f876308b747121c70ac4f0ec9ade9b247c4a94188173c9215a1e3d398e42"
+        },
+        {
+          "path": "2D/best_ckpt/best_model/autoencoder2d.pt",
+          "bytes": 3361319,
+          "sha256": "9ee1917b41851437ef3a4b430b63b47eeae2c1dea8e02cf0250966a7efd9ead9"
+        },
+        {
+          "path": "2D/best_ckpt/best_model/dual_head.pt",
+          "bytes": 1873905,
+          "sha256": "74a795656e5314ce0c07eafe00f824b3f3666395e8d57f9101d73a9b8fd3d346"
+        },
+        {
+          "path": "2D/best_ckpt/best_model/input_projector.pt",
+          "bytes": 14763117,
+          "sha256": "8079adbc103148f69063953222d4c5ad823cd90a11dbbedd336f0ccb7d214c8f"
+        },
+        {
+          "path": "2D/best_ckpt/best_model/output_projector.pt",
+          "bytes": 14752631,
+          "sha256": "0020db6e33127fddd8c99e2d0b247a9059b4bb665b8643c84da94285ea23c458"
+        },
+        {
+          "path": "2D/best_ckpt/best_model/special_tokens.pt",
+          "bytes": 37853,
+          "sha256": "be09ba842dd403bfad64981c94444ded8c6091c5b48426141b7c89359f7201bb"
+        }
+      ]
+    },
+    {
+      "id": "gray-scott-l1",
+      "archive": "patternformer-gray-scott-l1.tar.gz",
+      "archive_sha256": "eed78f21144d3b086b931c57b0162870785189c53e87689425e4e0fd1d738ece",
+      "parts": [
+        {
+          "name": "patternformer-gray-scott-l1.tar.gz",
+          "bytes": 60280874,
+          "sha256": "eed78f21144d3b086b931c57b0162870785189c53e87689425e4e0fd1d738ece"
+        }
+      ],
+      "members": [
+        {
+          "path": "GS/L1/ckpt/epoch_60/adapter_config.json",
+          "bytes": 1006,
+          "sha256": "530e552862639604362d287cb576c6cb247fdc8885189f0985eabc1465d853fb"
+        },
+        {
+          "path": "GS/L1/ckpt/epoch_60/adapter_model.safetensors",
+          "bytes": 40400200,
+          "sha256": "5c8c932ecf7a38d179b12cd755760303e18ca943468bb40d50b5a53f1d8289a8"
+        },
+        {
+          "path": "GS/L1/ckpt/epoch_60/autoencoder2d.pt",
+          "bytes": 12510741,
+          "sha256": "8964290da2afce4f0f80866f7acfafc845f124a24b6a4a9697f422c468c43543"
+        },
+        {
+          "path": "GS/L1/ckpt/epoch_60/dual_head.pt",
+          "bytes": 1873905,
+          "sha256": "e90d73f9c81feeac401ba1d2f4098c319872aaac9e440ba854ebd5810718aa35"
+        },
+        {
+          "path": "GS/L1/ckpt/epoch_60/input_projector.pt",
+          "bytes": 14774637,
+          "sha256": "9a080b789c0d408a05eb3c47d7ad484150e00d8987417b6202dd70022cd8f186"
+        },
+        {
+          "path": "GS/L1/ckpt/epoch_60/special_tokens.pt",
+          "bytes": 37853,
+          "sha256": "2a52b690e43c9aadac3ea36b762b14879212507337bc09ea90e930657048878f"
+        }
+      ]
+    },
+    {
+      "id": "gray-scott-l2",
+      "archive": "patternformer-gray-scott-l2.tar.gz",
+      "archive_sha256": "a560c9ba69c208c9ed37226fe08be35fc8b940f39ce13a11d045e2fbcfaa40fe",
+      "parts": [
+        {
+          "name": "patternformer-gray-scott-l2.tar.gz",
+          "bytes": 60235826,
+          "sha256": "a560c9ba69c208c9ed37226fe08be35fc8b940f39ce13a11d045e2fbcfaa40fe"
+        }
+      ],
+      "members": [
+        {
+          "path": "GS/L2/ckpt/epoch_60/adapter_config.json",
+          "bytes": 1006,
+          "sha256": "28fab82435c82f8aebbde1b001eddd93eb665e3770083b423521a8f7fd5e2997"
+        },
+        {
+          "path": "GS/L2/ckpt/epoch_60/adapter_model.safetensors",
+          "bytes": 40400200,
+          "sha256": "2963fe51b91e23613a4c8b63ddfac0927ca2fe3dbf1146e9f20a7827682831b1"
+        },
+        {
+          "path": "GS/L2/ckpt/epoch_60/autoencoder2d.pt",
+          "bytes": 12510741,
+          "sha256": "e7103a16523ec323e4e91953412b18994d41a8ddbe268dc34fbfb7e1cf289975"
+        },
+        {
+          "path": "GS/L2/ckpt/epoch_60/dual_head.pt",
+          "bytes": 1873905,
+          "sha256": "2377d49be5df0a884ed044e3c9b83eda88a3caedd139a65a56a0c37f2b72d493"
+        },
+        {
+          "path": "GS/L2/ckpt/epoch_60/input_projector.pt",
+          "bytes": 14774637,
+          "sha256": "93501aab123f4ee0350d267f6351812c325629e865b956fa4ea46f80c6190258"
+        },
+        {
+          "path": "GS/L2/ckpt/epoch_60/special_tokens.pt",
+          "bytes": 37853,
+          "sha256": "391b96bcfba9183abbf065b7df3df84068d7e85ad67adaa604aac176ad32e8bf"
+        }
+      ]
+    }
+  ],
+  "base_url": "https://github.com/changzhipeng1-prog/PatternFormer/releases/download/research-artifacts-v1"
+}

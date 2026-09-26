@@ -1,5 +1,8 @@
 # Data, checkpoints and figure inputs
 
+Download the five final main-model checkpoint bundles using [the artifact installer](artifacts/README.md).
+Original experiment logs are indexed in [logs/](logs/README.md).
+
 Place artifact files under the repository root using the paths below. Keep checkpoint
 components together: a directory containing only `adapter_config.json` or a model-card
 README is not the weight bundle. Large tensors and rendered images are excluded from

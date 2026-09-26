@@ -1,0 +1,8 @@
+[rank0] PDE2DData built: 145 nodes, 256 elements, 113 free DOFs
+s= 1189: k_gen=4 fwd=0.322s refine=0.027s total=0.350s steps=16 maxres=1.2e-13
+s=  869: k_gen=4 fwd=0.321s refine=0.026s total=0.347s steps=16 maxres=1.2e-13
+s=  650: k_gen=4 fwd=0.319s refine=0.084s total=0.403s steps=29 maxres=6.2e-02
+s=  304: k_gen=2 fwd=0.162s refine=0.013s total=0.175s steps=8 maxres=7.3e-14
+s= -101: k_gen=2 fwd=0.160s refine=0.013s total=0.174s steps=8 maxres=4.0e-14
+wrote ours_2d_timing.csv
+=== [2D ours timing] done Tue 23 Jun 2026 05:36:59 AM UTC ===

@@ -9,7 +9,7 @@ figures, or load trained checkpoints to run inference and numerical refinement.
 ## Getting started
 
 1. Follow [environment setup](docs/SETUP.md).
-2. Place datasets, checkpoints and figure inputs according to [DATA.md](DATA.md).
+2. [Download final main checkpoints](artifacts/README.md); see [DATA.md](DATA.md) for dataset and figure-input paths.
 3. Choose a figure from the [experiment guide](docs/EXPERIMENTS.md).
 4. To train models, follow [training and checkpoint construction](docs/TRAINING.md).
 5. For model evaluation, follow [checkpoint inference](docs/INFERENCE.md).
@@ -41,6 +41,8 @@ Within each problem, `code/` contains the model and configuration, `test/` the e
 and plotting scripts, `extension/` extrapolation, and `data_gen/` the classical solvers.
 The GS problems use `results/` and `try/` for evaluation outputs and comparison scripts.
 See [source layout](docs/SOURCE_LAYOUT.md) for the execution flow.
+
+Original experiment logs: [logs/](logs/README.md).
 
 ## Citation
 

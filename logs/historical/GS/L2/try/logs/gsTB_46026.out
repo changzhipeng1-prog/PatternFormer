@@ -1,0 +1,13 @@
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+chosen 8 training params (by GT count): ti484(K=27), ti324(K=26), ti480(K=26), ti1132(K=26), ti482(K=24), ti638(K=24), ti1142(K=24), ti1406(K=24)
+  [1/8] ti484 p=(0.0540,0.0625) GT=27: total=4  matched=3  NEW(beyond-data)=1
+  [2/8] ti324 p=(0.0500,0.0625) GT=26: total=8  matched=4  NEW(beyond-data)=4
+  [3/8] ti480 p=(0.0540,0.0615) GT=26: total=39  matched=3  NEW(beyond-data)=36
+  [4/8] ti1132 p=(0.0720,0.0605) GT=26: total=21  matched=6  NEW(beyond-data)=15
+  [5/8] ti482 p=(0.0540,0.0620) GT=24: total=23  matched=5  NEW(beyond-data)=18
+  [6/8] ti638 p=(0.0580,0.0620) GT=24: total=24  matched=5  NEW(beyond-data)=19
+  [7/8] ti1142 p=(0.0720,0.0630) GT=24: total=7  matched=3  NEW(beyond-data)=4
+  [8/8] ti1406 p=(0.0820,0.0615) GT=24: total=7  matched=5  NEW(beyond-data)=2
+
+DONE -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L2/try/results/train_beyond.pt  (8 params, 99 total beyond-data solutions)
+=== DONE Mon 29 Jun 2026 01:23:00 PM UTC ===

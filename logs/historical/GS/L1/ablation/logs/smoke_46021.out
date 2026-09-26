@@ -1,0 +1,10 @@
+=== SMOKE: random-init fixed-K Phase2 (with-context), 5 steps Sun 28 Jun 2026 07:56:26 PM UTC ===
+fresh model  (no_context_prob=0.0)
+[rank0] loading AE from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ckpt/epoch_60/autoencoder2d.pt
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank0] ABLATION random-init backbone (frozen) Qwen/Qwen2.5-7B-Instruct -> cuda:0
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+proj params 8,336,008  lora params 10,092,544
+  ep1 step0/1895 total=2.340e+00 mse=1.894e+00 latent=2.786e+00 pde=3.195e-03 tpde=3.005e-03 ss=0.02
+[smoke] 5 steps OK  total=1.997e+00 mse=1.416e+00 latent=2.578e+00 pde=2.417e-03 tail_pde=2.235e-03 nt=0.000e+00 lam_pde=2.0e-03 lam_tail=1.0e-03 lam_nt=0.0e+00
+=== SMOKE done Sun 28 Jun 2026 08:00:10 PM UTC ===

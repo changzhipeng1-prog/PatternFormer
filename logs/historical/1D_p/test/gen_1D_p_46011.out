@@ -1,0 +1,18 @@
+Loading /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/test/../best_ckpt/best_model ...
+test params: 2701
+  0/2701  p=15.263  n_gt=3  n_gen=8
+  200/2701  p=9.833  n_gt=3  n_gen=8
+  400/2701  p=13.704  n_gt=3  n_gen=8
+  600/2701  p=3.456  n_gt=1  n_gen=7
+  800/2701  p=7.137  n_gt=3  n_gen=7
+  1000/2701  p=14.623  n_gt=3  n_gen=8
+  1200/2701  p=17.189  n_gt=7  n_gen=8
+  1400/2701  p=15.069  n_gt=3  n_gen=8
+  1600/2701  p=15.775  n_gt=3  n_gen=8
+  1800/2701  p=5.588  n_gt=3  n_gen=7
+  2000/2701  p=1.761  n_gt=1  n_gen=8
+  2200/2701  p=13.843  n_gt=3  n_gen=8
+  2400/2701  p=10.893  n_gt=3  n_gen=8
+  2600/2701  p=6.910  n_gt=3  n_gen=8
+saved 2701 params -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/test/generated_solutions.pt
+=== [1D_p test generate] done Sun 28 Jun 2026 05:18:41 PM UTC ===

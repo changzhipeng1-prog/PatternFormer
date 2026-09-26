@@ -1,0 +1,11 @@
+[train] 21103 records  ncpu=32
+[train] dropped: zeros=21103  failures=49  duplicates=4  emptied_records=0  -> records 21103->21103
+[train] solutions=87543  refine_fail=49 (0.06%)  branch_merges=4  corrected_GT_resid_median=1.14e-11  -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/data_gen/../data/bvp_region_train.pt
+[val] 2637 records  ncpu=32
+[val] dropped: zeros=2637  failures=8  duplicates=2  emptied_records=0  -> records 2637->2637
+[val] solutions=10940  refine_fail=8 (0.07%)  branch_merges=2  corrected_GT_resid_median=1.24e-11  -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/data_gen/../data/bvp_region_val.pt
+[test] 2641 records  ncpu=32
+[test] dropped: zeros=2641  failures=6  duplicates=1  emptied_records=0  -> records 2641->2641
+[test] solutions=10957  refine_fail=6 (0.05%)  branch_merges=1  corrected_GT_resid_median=1.17e-11  -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/data_gen/../data/bvp_region_test.pt
+DONE
+=== [a2a4 data correction] done Tue 23 Jun 2026 02:36:12 AM UTC ===

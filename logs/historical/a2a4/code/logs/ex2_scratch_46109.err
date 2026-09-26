@@ -1,0 +1,5 @@
+mkdir: cannot create directory ‘logs’: Permission denied
+mkdir: cannot create directory ‘checkpoints_scratch_s1’: Permission denied
+mkdir: cannot create directory ‘checkpoints_scratch’: Permission denied
+mkdir: cannot create directory ‘outputs’: Permission denied
+mkdir: cannot create directory ‘outputs’: Permission denied

@@ -36,3 +36,8 @@ slurm-*.out
 # User-selected training output directories
 runs/
 .artifact-cache/
+
+# Original experiment logs distributed with the paper code
+!logs/historical/**/*.log
+!logs/historical/**/*.out
+!logs/historical/**/*.err

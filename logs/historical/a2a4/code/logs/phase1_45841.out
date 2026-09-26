@@ -1,0 +1,260 @@
+=== [a2a4] Phase 1 UNet AE pretrain (corrected data) start Tue 23 Jun 2026 02:38:38 AM UTC ===
+============================================================
+1D_a2a4 V2 PDE Model Training
+  Phase:      phase1
+  World size: 8
+  Batch/rank: 4  | grad_accum=4
+  Eff batch:  128
+  Epochs:     60
+  no_ctx:     train=0.00  val=0.00
+============================================================
+======================================================================
+Phase 1: UNet autoencoder pretraining
+======================================================================
+  Train solutions: 66,387  |  Val: 8,293
+[UNet] epoch 001 | train=8.2103e-01 | val=2.8884e-02
+  -> best UNet saved (2.8884e-02)
+[UNet] epoch 002 | train=5.1806e-02 | val=2.0175e-02
+  -> best UNet saved (2.0175e-02)
+[UNet] epoch 003 | train=1.2514e-02 | val=7.8503e-03
+  -> best UNet saved (7.8503e-03)
+[UNet] epoch 004 | train=6.3394e-03 | val=4.9815e-03
+  -> best UNet saved (4.9815e-03)
+[UNet] epoch 005 | train=1.9796e-02 | val=3.0161e-02
+[UNet] epoch 006 | train=1.6523e-02 | val=4.5916e-03
+  -> best UNet saved (4.5916e-03)
+[UNet] epoch 007 | train=4.3250e-03 | val=5.4501e-03
+[UNet] epoch 008 | train=3.3825e-03 | val=2.7434e-03
+  -> best UNet saved (2.7434e-03)
+[UNet] epoch 009 | train=2.6925e-03 | val=2.0911e-03
+  -> best UNet saved (2.0911e-03)
+[UNet] epoch 010 | train=2.3081e-03 | val=1.2010e-03
+  -> best UNet saved (1.2010e-03)
+[UNet] epoch 011 | train=2.3348e-03 | val=1.4633e-03
+[UNet] epoch 012 | train=1.9629e-03 | val=1.3178e-03
+[UNet] epoch 013 | train=2.0153e-03 | val=1.0274e-03
+  -> best UNet saved (1.0274e-03)
+[UNet] epoch 014 | train=1.4585e-03 | val=8.9655e-04
+  -> best UNet saved (8.9655e-04)
+[UNet] epoch 015 | train=1.9437e-03 | val=1.2841e-03
+[UNet] epoch 016 | train=1.4166e-03 | val=9.4390e-04
+[UNet] epoch 017 | train=1.5060e-03 | val=1.1439e-03
+[UNet] epoch 018 | train=1.3784e-03 | val=1.0161e-03
+[UNet] epoch 019 | train=1.0515e-03 | val=7.1689e-04
+  -> best UNet saved (7.1689e-04)
+[UNet] epoch 020 | train=1.4011e-03 | val=9.6935e-04
+[UNet] epoch 021 | train=1.2148e-03 | val=1.6061e-03
+[UNet] epoch 022 | train=1.1237e-03 | val=6.3594e-04
+  -> best UNet saved (6.3594e-04)
+[UNet] epoch 023 | train=1.1140e-03 | val=8.6562e-04
+[UNet] epoch 024 | train=9.6300e-04 | val=8.8520e-04
+[UNet] epoch 025 | train=9.5245e-04 | val=5.8871e-04
+  -> best UNet saved (5.8871e-04)
+[UNet] epoch 026 | train=9.9790e-04 | val=7.2300e-04
+[UNet] epoch 027 | train=1.0040e-03 | val=6.7619e-04
+[UNet] epoch 028 | train=8.5227e-04 | val=5.7525e-04
+  -> best UNet saved (5.7525e-04)
+[UNet] epoch 029 | train=7.6706e-04 | val=6.0359e-04
+[UNet] epoch 030 | train=7.5909e-04 | val=5.3085e-04
+  -> best UNet saved (5.3085e-04)
+[UNet] epoch 031 | train=7.1211e-04 | val=5.2535e-04
+  -> best UNet saved (5.2535e-04)
+[UNet] epoch 032 | train=7.1620e-04 | val=6.4849e-04
+[UNet] epoch 033 | train=7.2983e-04 | val=8.7183e-04
+[UNet] epoch 034 | train=6.9318e-04 | val=4.6716e-04
+  -> best UNet saved (4.6716e-04)
+[UNet] epoch 035 | train=7.5229e-04 | val=6.6303e-04
+[UNet] epoch 036 | train=7.2959e-04 | val=5.9730e-04
+[UNet] epoch 037 | train=6.5833e-04 | val=5.2384e-04
+[UNet] epoch 038 | train=6.2836e-04 | val=4.2425e-04
+  -> best UNet saved (4.2425e-04)
+[UNet] epoch 039 | train=6.8063e-04 | val=4.6617e-04
+[UNet] epoch 040 | train=6.6051e-04 | val=4.3122e-04
+[UNet] epoch 041 | train=6.4503e-04 | val=4.9741e-04
+[UNet] epoch 042 | train=6.7623e-04 | val=4.5536e-04
+[UNet] epoch 043 | train=5.8033e-04 | val=4.1685e-04
+  -> best UNet saved (4.1685e-04)
+[UNet] epoch 044 | train=5.6930e-04 | val=4.2832e-04
+[UNet] epoch 045 | train=5.6300e-04 | val=4.5267e-04
+[UNet] epoch 046 | train=6.2551e-04 | val=3.8249e-04
+  -> best UNet saved (3.8249e-04)
+[UNet] epoch 047 | train=5.5360e-04 | val=4.2003e-04
+[UNet] epoch 048 | train=5.5109e-04 | val=3.9452e-04
+[UNet] epoch 049 | train=5.4041e-04 | val=4.1665e-04
+[UNet] epoch 050 | train=5.8982e-04 | val=4.0864e-04
+[UNet] epoch 051 | train=5.6234e-04 | val=4.0095e-04
+[UNet] epoch 052 | train=5.4087e-04 | val=4.3460e-04
+[UNet] epoch 053 | train=5.7178e-04 | val=4.5798e-04
+[UNet] epoch 054 | train=5.6118e-04 | val=5.5062e-04
+[UNet] epoch 055 | train=5.4681e-04 | val=4.6084e-04
+[UNet] epoch 056 | train=4.8410e-04 | val=3.6769e-04
+  -> best UNet saved (3.6769e-04)
+[UNet] epoch 057 | train=5.5977e-04 | val=3.8185e-04
+[UNet] epoch 058 | train=5.2074e-04 | val=3.6336e-04
+  -> best UNet saved (3.6336e-04)
+[UNet] epoch 059 | train=4.8077e-04 | val=3.8325e-04
+[UNet] epoch 060 | train=5.0144e-04 | val=3.5257e-04
+  -> best UNet saved (3.5257e-04)
+[UNet] epoch 061 | train=4.7798e-04 | val=3.3187e-04
+  -> best UNet saved (3.3187e-04)
+[UNet] epoch 062 | train=5.4362e-04 | val=3.5694e-04
+[UNet] epoch 063 | train=5.9181e-04 | val=3.9825e-04
+[UNet] epoch 064 | train=5.4712e-04 | val=6.8418e-04
+[UNet] epoch 065 | train=4.9111e-04 | val=3.8352e-04
+[UNet] epoch 066 | train=4.6733e-04 | val=3.4318e-04
+[UNet] epoch 067 | train=5.1587e-04 | val=3.4952e-04
+[UNet] epoch 068 | train=4.5533e-04 | val=3.3284e-04
+[UNet] epoch 069 | train=4.7858e-04 | val=3.5024e-04
+[UNet] epoch 070 | train=4.9473e-04 | val=3.6088e-04
+[UNet] epoch 071 | train=4.5974e-04 | val=3.2224e-04
+  -> best UNet saved (3.2224e-04)
+[UNet] epoch 072 | train=4.4005e-04 | val=3.3737e-04
+[UNet] epoch 073 | train=4.7780e-04 | val=3.2097e-04
+  -> best UNet saved (3.2097e-04)
+[UNet] epoch 074 | train=4.9253e-04 | val=3.1642e-04
+  -> best UNet saved (3.1642e-04)
+[UNet] epoch 075 | train=4.7281e-04 | val=3.2429e-04
+[UNet] epoch 076 | train=4.6395e-04 | val=3.1920e-04
+[UNet] epoch 077 | train=5.3534e-04 | val=3.5487e-04
+[UNet] epoch 078 | train=4.2572e-04 | val=3.5109e-04
+[UNet] epoch 079 | train=4.9795e-04 | val=3.6190e-04
+[UNet] epoch 080 | train=4.7568e-04 | val=3.1917e-04
+[UNet] epoch 081 | train=4.6483e-04 | val=3.4199e-04
+[UNet] epoch 082 | train=4.0598e-04 | val=3.5208e-04
+[UNet] epoch 083 | train=4.4370e-04 | val=3.1351e-04
+  -> best UNet saved (3.1351e-04)
+[UNet] epoch 084 | train=4.5072e-04 | val=3.2338e-04
+[UNet] epoch 085 | train=4.3650e-04 | val=3.2263e-04
+[UNet] epoch 086 | train=4.3002e-04 | val=3.0607e-04
+  -> best UNet saved (3.0607e-04)
+[UNet] epoch 087 | train=4.2659e-04 | val=3.6187e-04
+[UNet] epoch 088 | train=4.6764e-04 | val=3.4838e-04
+[UNet] epoch 089 | train=3.9906e-04 | val=3.0236e-04
+  -> best UNet saved (3.0236e-04)
+[UNet] epoch 090 | train=4.6667e-04 | val=3.0729e-04
+[UNet] epoch 091 | train=4.1177e-04 | val=3.9281e-04
+[UNet] epoch 092 | train=4.8058e-04 | val=3.1457e-04
+[UNet] epoch 093 | train=4.1646e-04 | val=3.2771e-04
+[UNet] epoch 094 | train=4.4547e-04 | val=3.2765e-04
+[UNet] epoch 095 | train=4.6536e-04 | val=3.6557e-04
+[UNet] epoch 096 | train=4.1245e-04 | val=2.9260e-04
+  -> best UNet saved (2.9260e-04)
+[UNet] epoch 097 | train=4.0365e-04 | val=3.2747e-04
+[UNet] epoch 098 | train=3.9747e-04 | val=3.0552e-04
+[UNet] epoch 099 | train=4.2807e-04 | val=3.4845e-04
+[UNet] epoch 100 | train=4.4389e-04 | val=3.8773e-04
+[UNet] epoch 101 | train=4.1127e-04 | val=2.9988e-04
+[UNet] epoch 102 | train=4.0197e-04 | val=3.0353e-04
+[UNet] epoch 103 | train=3.9035e-04 | val=3.3188e-04
+[UNet] epoch 104 | train=4.1333e-04 | val=3.1008e-04
+[UNet] epoch 105 | train=4.1660e-04 | val=3.3076e-04
+[UNet] epoch 106 | train=3.8546e-04 | val=2.8727e-04
+  -> best UNet saved (2.8727e-04)
+[UNet] epoch 107 | train=4.1421e-04 | val=3.1525e-04
+[UNet] epoch 108 | train=4.0830e-04 | val=3.4388e-04
+[UNet] epoch 109 | train=4.3479e-04 | val=3.1353e-04
+[UNet] epoch 110 | train=4.2136e-04 | val=2.8967e-04
+[UNet] epoch 111 | train=3.9706e-04 | val=3.2391e-04
+[UNet] epoch 112 | train=4.2475e-04 | val=3.2193e-04
+[UNet] epoch 113 | train=4.2901e-04 | val=5.5301e-04
+[UNet] epoch 114 | train=4.0359e-04 | val=2.8421e-04
+  -> best UNet saved (2.8421e-04)
+[UNet] epoch 115 | train=3.8542e-04 | val=2.8374e-04
+  -> best UNet saved (2.8374e-04)
+[UNet] epoch 116 | train=3.8706e-04 | val=3.3110e-04
+[UNet] epoch 117 | train=3.8116e-04 | val=3.1329e-04
+[UNet] epoch 118 | train=4.1998e-04 | val=3.1889e-04
+[UNet] epoch 119 | train=3.8628e-04 | val=2.9069e-04
+[UNet] epoch 120 | train=3.9818e-04 | val=3.3071e-04
+[UNet] epoch 121 | train=3.9656e-04 | val=3.2309e-04
+[UNet] epoch 122 | train=4.1088e-04 | val=2.9443e-04
+[UNet] epoch 123 | train=3.7334e-04 | val=2.7154e-04
+  -> best UNet saved (2.7154e-04)
+[UNet] epoch 124 | train=4.0917e-04 | val=3.0699e-04
+[UNet] epoch 125 | train=3.6761e-04 | val=2.6781e-04
+  -> best UNet saved (2.6781e-04)
+[UNet] epoch 126 | train=3.4045e-04 | val=2.6945e-04
+[UNet] epoch 127 | train=3.7037e-04 | val=2.8194e-04
+[UNet] epoch 128 | train=3.6597e-04 | val=2.5844e-04
+  -> best UNet saved (2.5844e-04)
+[UNet] epoch 129 | train=3.8684e-04 | val=3.1124e-04
+[UNet] epoch 130 | train=3.7968e-04 | val=3.0472e-04
+[UNet] epoch 131 | train=3.6058e-04 | val=3.4337e-04
+[UNet] epoch 132 | train=3.9340e-04 | val=3.0046e-04
+[UNet] epoch 133 | train=3.4940e-04 | val=2.6271e-04
+[UNet] epoch 134 | train=3.6370e-04 | val=3.4891e-04
+[UNet] epoch 135 | train=3.9334e-04 | val=3.1348e-04
+[UNet] epoch 136 | train=3.5300e-04 | val=3.1043e-04
+[UNet] epoch 137 | train=3.8161e-04 | val=2.8428e-04
+[UNet] epoch 138 | train=3.5028e-04 | val=2.7424e-04
+[UNet] epoch 139 | train=3.9432e-04 | val=2.6767e-04
+[UNet] epoch 140 | train=3.7948e-04 | val=2.6755e-04
+[UNet] epoch 141 | train=3.7905e-04 | val=2.7219e-04
+[UNet] epoch 142 | train=4.0735e-04 | val=2.6549e-04
+[UNet] epoch 143 | train=3.9135e-04 | val=3.1047e-04
+[UNet] epoch 144 | train=3.9106e-04 | val=3.6605e-04
+[UNet] epoch 145 | train=3.8977e-04 | val=2.7843e-04
+[UNet] epoch 146 | train=4.6080e-04 | val=1.0244e-03
+[UNet] epoch 147 | train=4.1832e-04 | val=2.7165e-04
+[UNet] epoch 148 | train=3.4741e-04 | val=3.3850e-04
+[UNet] epoch 149 | train=3.5420e-04 | val=2.5358e-04
+  -> best UNet saved (2.5358e-04)
+[UNet] epoch 150 | train=3.7113e-04 | val=2.5526e-04
+[UNet] epoch 151 | train=3.7357e-04 | val=3.3139e-04
+[UNet] epoch 152 | train=4.0264e-04 | val=2.8048e-04
+[UNet] epoch 153 | train=3.6678e-04 | val=3.0339e-04
+[UNet] epoch 154 | train=3.7097e-04 | val=3.4548e-04
+[UNet] epoch 155 | train=3.4704e-04 | val=2.9863e-04
+[UNet] epoch 156 | train=3.7041e-04 | val=2.7555e-04
+[UNet] epoch 157 | train=3.6633e-04 | val=2.8018e-04
+[UNet] epoch 158 | train=3.7705e-04 | val=2.7591e-04
+[UNet] epoch 159 | train=3.6104e-04 | val=2.8627e-04
+[UNet] epoch 160 | train=3.4120e-04 | val=2.6199e-04
+[UNet] epoch 161 | train=3.3972e-04 | val=2.5354e-04
+  -> best UNet saved (2.5354e-04)
+[UNet] epoch 162 | train=3.5073e-04 | val=2.7997e-04
+[UNet] epoch 163 | train=3.7095e-04 | val=2.7542e-04
+[UNet] epoch 164 | train=3.7502e-04 | val=2.6289e-04
+[UNet] epoch 165 | train=3.4530e-04 | val=3.1535e-04
+[UNet] epoch 166 | train=3.5029e-04 | val=2.5570e-04
+[UNet] epoch 167 | train=3.3401e-04 | val=2.5882e-04
+[UNet] epoch 168 | train=3.4380e-04 | val=2.6839e-04
+[UNet] epoch 169 | train=3.4218e-04 | val=2.9430e-04
+[UNet] epoch 170 | train=3.4628e-04 | val=2.5856e-04
+[UNet] epoch 171 | train=3.4424e-04 | val=2.5624e-04
+[UNet] epoch 172 | train=3.5795e-04 | val=2.7936e-04
+[UNet] epoch 173 | train=3.5536e-04 | val=2.9208e-04
+[UNet] epoch 174 | train=3.7673e-04 | val=2.6296e-04
+[UNet] epoch 175 | train=3.3777e-04 | val=2.6085e-04
+[UNet] epoch 176 | train=3.6162e-04 | val=2.6207e-04
+[UNet] epoch 177 | train=3.7409e-04 | val=2.9103e-04
+[UNet] epoch 178 | train=3.4917e-04 | val=2.7598e-04
+[UNet] epoch 179 | train=3.3208e-04 | val=2.5145e-04
+  -> best UNet saved (2.5145e-04)
+[UNet] epoch 180 | train=3.5163e-04 | val=3.0312e-04
+[UNet] epoch 181 | train=3.4507e-04 | val=2.5103e-04
+  -> best UNet saved (2.5103e-04)
+[UNet] epoch 182 | train=3.1564e-04 | val=2.5429e-04
+[UNet] epoch 183 | train=3.4057e-04 | val=2.6350e-04
+[UNet] epoch 184 | train=3.3243e-04 | val=2.5696e-04
+[UNet] epoch 185 | train=3.4391e-04 | val=2.8320e-04
+[UNet] epoch 186 | train=3.1965e-04 | val=2.7099e-04
+[UNet] epoch 187 | train=3.3297e-04 | val=2.6162e-04
+[UNet] epoch 188 | train=3.2926e-04 | val=2.4509e-04
+  -> best UNet saved (2.4509e-04)
+[UNet] epoch 189 | train=3.5252e-04 | val=2.7740e-04
+[UNet] epoch 190 | train=3.5314e-04 | val=2.9059e-04
+[UNet] epoch 191 | train=3.3425e-04 | val=3.0024e-04
+[UNet] epoch 192 | train=3.5589e-04 | val=3.8517e-04
+[UNet] epoch 193 | train=3.3373e-04 | val=2.5879e-04
+[UNet] epoch 194 | train=3.4323e-04 | val=2.7795e-04
+[UNet] epoch 195 | train=3.2048e-04 | val=2.4180e-04
+  -> best UNet saved (2.4180e-04)
+[UNet] epoch 196 | train=3.3287e-04 | val=2.5092e-04
+[UNet] epoch 197 | train=3.5312e-04 | val=2.7982e-04
+[UNet] epoch 198 | train=3.3109e-04 | val=2.5544e-04
+[UNet] epoch 199 | train=3.3240e-04 | val=2.7156e-04
+[UNet] epoch 200 | train=3.3374e-04 | val=2.5938e-04
+Phase 1 done. best_val=2.4180e-04
+=== [a2a4] Phase 1 done Tue 23 Jun 2026 03:55:21 AM UTC ===
+ERROR: unet_best.pt missing

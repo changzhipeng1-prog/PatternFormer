@@ -1,0 +1,376 @@
+=== [1D_p] STAGE 1 withcontext (from-HF, lr 1e-4/2e-5) start Sat 20 Jun 2026 04:11:35 AM UTC ===
+============================================================
+V2 PDE Model Training
+============================================================
+  World size:  8
+  Phase:       phase2
+  Batch size:  8  (per rank)
+  Grad accum:  2
+  Effective B: 128
+  Epochs:      100
+  target_repeat_per_epoch: 1
+  no_context_prob: 0.00
+  val_no_context_prob: 0.00
+  lr_proj:     0.0001
+  lr_lora:     2e-05
+  lambda_pde:  0.05
+  latent_dim:  256
+  max_seq_len: 256
+======================================================================
+Phase 2: V2PDEModel training (DDP)
+======================================================================
+[rank4] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank4] UNet frozen (encoder + decoder)
+[rank4] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:4
+[rank3] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank6] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank3] UNet frozen (encoder + decoder)
+[rank6] UNet frozen (encoder + decoder)
+[rank7] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank7] UNet frozen (encoder + decoder)
+[rank3] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:3
+[rank6] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:6
+[rank1] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank5] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank1] UNet frozen (encoder + decoder)
+[rank5] UNet frozen (encoder + decoder)
+[rank2] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank7] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:7
+[rank2] UNet frozen (encoder + decoder)
+[rank0] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen/checkpoints/best_model_copy/unet.pt
+[rank1] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:1
+[rank0] UNet frozen (encoder + decoder)
+[rank5] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:5
+[rank2] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:2
+[rank0] Loading Qwen: Qwen/Qwen2.5-7B-Instruct → cuda:0
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+  Weighted sampler: k_gt distribution = {1: 2527, 3: 8690, 5: 91, 7: 1292}
+  multisol_weight_power = 1.5
+  target_repeat_per_epoch: 1 (global target samples/epoch=12600)
+  train steps/rank/epoch: 197 | world_size=8
+  no_context_prob (train): 0.00
+  no_context_prob (val):   0.00
+  Projector params : 15,705,221
+  LoRA params      : 10,092,544
+  UNet params      : 4,608,127  (frozen)
+Epoch   1/100 | total=2.2229e+00  mse=2.0486e+00  pde=0.0000e+00  ce=1.7431e-01 | val_mse=3.4319e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=264.5s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=3.4319e-01)
+Epoch   2/100 | total=2.9831e-01  mse=2.9351e-01  pde=0.0000e+00  ce=4.7921e-03 | val_mse=1.6470e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=262.7s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.6470e-01)
+Epoch   3/100 | total=1.9681e-01  mse=1.9231e-01  pde=0.0000e+00  ce=4.4957e-03 | val_mse=1.5018e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=262.1s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.5018e-01)
+Epoch   4/100 | total=2.1647e-01  mse=2.1148e-01  pde=0.0000e+00  ce=4.9829e-03 | val_mse=1.2390e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=260.3s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.2390e-01)
+Epoch   5/100 | total=1.4487e-01  mse=1.3655e-01  pde=0.0000e+00  ce=8.3173e-03 | val_mse=1.1074e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=248.6s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.1074e-01)
+Epoch   6/100 | total=1.6420e-01  mse=1.5971e-01  pde=7.1759e-03  ce=4.4752e-03 | val_mse=9.7627e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0020 | time=248.2s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=9.7627e-02)
+Epoch   7/100 | total=1.4504e-01  mse=1.4402e-01  pde=6.7217e-03  ce=1.0014e-03 | val_mse=8.5897e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0040 | time=253.1s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=8.5897e-02)
+Epoch   8/100 | total=1.0976e-01  mse=1.0580e-01  pde=6.0081e-03  ce=3.9252e-03 | val_mse=7.1188e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0060 | time=253.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=7.1188e-02)
+Epoch   9/100 | total=1.1691e-01  mse=1.1513e-01  pde=6.3886e-03  ce=1.7368e-03 | val_mse=7.4210e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0080 | time=249.7s
+Epoch  10/100 | total=1.1542e-01  mse=1.1281e-01  pde=6.0548e-03  ce=2.5491e-03 | val_mse=6.3045e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0100 | time=246.3s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=6.3045e-02)
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_10
+Epoch  11/100 | total=1.3866e-01  mse=1.3260e-01  pde=6.2659e-03  ce=5.9847e-03 | val_mse=7.3824e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0120 | time=250.2s
+Epoch  12/100 | total=1.0507e-01  mse=1.0350e-01  pde=5.3029e-03  ce=1.4941e-03 | val_mse=7.1400e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0140 | time=248.4s
+Epoch  13/100 | total=8.6756e-02  mse=8.4217e-02  pde=4.5541e-03  ce=2.4657e-03 | val_mse=6.2821e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0160 | time=247.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=6.2821e-02)
+Epoch  14/100 | total=1.0726e-01  mse=1.0320e-01  pde=4.7419e-03  ce=3.9695e-03 | val_mse=6.0412e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0180 | time=248.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=6.0412e-02)
+Epoch  15/100 | total=9.3006e-02  mse=9.1786e-02  pde=4.0759e-03  ce=1.1387e-03 | val_mse=5.0650e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0200 | time=255.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=5.0650e-02)
+Epoch  16/100 | total=8.6481e-02  mse=8.4824e-02  pde=3.7769e-03  ce=1.5743e-03 | val_mse=6.2593e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0220 | time=251.1s
+Epoch  17/100 | total=8.3509e-02  mse=8.2665e-02  pde=3.9115e-03  ce=7.5015e-04 | val_mse=5.2642e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0240 | time=252.6s
+Epoch  18/100 | total=9.2865e-02  mse=9.1558e-02  pde=3.9673e-03  ce=1.2041e-03 | val_mse=5.3279e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0260 | time=251.8s
+Epoch  19/100 | total=1.0800e-01  mse=1.0549e-01  pde=3.5378e-03  ce=2.4125e-03 | val_mse=4.9715e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0280 | time=251.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.9715e-02)
+Epoch  20/100 | total=9.0339e-02  mse=8.6592e-02  pde=3.3108e-03  ce=3.6475e-03 | val_mse=5.9536e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0300 | time=251.6s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_20
+Epoch  21/100 | total=1.0131e-01  mse=1.0022e-01  pde=3.0621e-03  ce=9.9804e-04 | val_mse=6.2255e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0320 | time=250.5s
+Epoch  22/100 | total=7.9993e-02  mse=7.8996e-02  pde=3.1735e-03  ce=8.8958e-04 | val_mse=4.7194e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0340 | time=247.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.7194e-02)
+Epoch  23/100 | total=7.2613e-02  mse=7.2062e-02  pde=2.8066e-03  ce=4.4917e-04 | val_mse=5.5778e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0360 | time=249.9s
+Epoch  24/100 | total=8.8202e-02  mse=8.7379e-02  pde=2.7639e-03  ce=7.1729e-04 | val_mse=4.7762e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0380 | time=247.4s
+Epoch  25/100 | total=9.4542e-02  mse=9.3090e-02  pde=2.8688e-03  ce=1.3370e-03 | val_mse=4.4612e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0400 | time=248.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.4612e-02)
+Epoch  26/100 | total=8.9017e-02  mse=7.9689e-02  pde=2.6699e-03  ce=9.2165e-03 | val_mse=4.5623e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0420 | time=250.2s
+Epoch  27/100 | total=8.2240e-02  mse=7.9140e-02  pde=2.8150e-03  ce=2.9764e-03 | val_mse=3.5965e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0440 | time=253.3s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=3.5965e-02)
+Epoch  28/100 | total=6.5587e-02  mse=6.4476e-02  pde=2.4455e-03  ce=9.9848e-04 | val_mse=6.2202e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0460 | time=247.9s
+Epoch  29/100 | total=9.0822e-02  mse=8.9107e-02  pde=3.1461e-03  ce=1.5645e-03 | val_mse=5.3100e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0480 | time=246.1s
+Epoch  30/100 | total=5.3778e-02  mse=5.0249e-02  pde=2.1900e-03  ce=3.4195e-03 | val_mse=5.5355e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=244.9s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_30
+Epoch  31/100 | total=8.1558e-02  mse=8.0558e-02  pde=2.2593e-03  ce=8.8720e-04 | val_mse=4.2451e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=248.4s
+Epoch  32/100 | total=6.9791e-02  mse=6.9016e-02  pde=2.2523e-03  ce=6.6159e-04 | val_mse=3.3603e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=249.5s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=3.3603e-02)
+Epoch  33/100 | total=7.2625e-02  mse=7.0700e-02  pde=1.8939e-03  ce=1.8306e-03 | val_mse=4.3492e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=251.4s
+Epoch  34/100 | total=1.0621e-01  mse=1.0462e-01  pde=2.2444e-03  ce=1.4809e-03 | val_mse=3.9972e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=248.3s
+Epoch  35/100 | total=6.5384e-02  mse=6.3308e-02  pde=2.1459e-03  ce=1.9691e-03 | val_mse=3.8815e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=249.6s
+Epoch  36/100 | total=6.6350e-02  mse=6.4759e-02  pde=2.2320e-03  ce=1.4789e-03 | val_mse=4.5946e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=250.7s
+Epoch  37/100 | total=1.0127e-01  mse=9.8851e-02  pde=2.3647e-03  ce=2.3023e-03 | val_mse=2.8404e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=248.4s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=2.8404e-02)
+Epoch  38/100 | total=8.7738e-02  mse=8.6591e-02  pde=1.7730e-03  ce=1.0576e-03 | val_mse=3.4109e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=250.4s
+Epoch  39/100 | total=6.7488e-02  mse=6.6727e-02  pde=1.8802e-03  ce=6.6724e-04 | val_mse=3.3007e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=251.7s
+Epoch  40/100 | total=9.0953e-02  mse=8.9969e-02  pde=2.0427e-03  ce=8.8216e-04 | val_mse=3.6931e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=250.3s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_40
+Epoch  41/100 | total=6.1383e-02  mse=5.9390e-02  pde=1.7423e-03  ce=1.9054e-03 | val_mse=4.6371e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=253.9s
+Epoch  42/100 | total=6.7873e-02  mse=6.5309e-02  pde=1.7224e-03  ce=2.4774e-03 | val_mse=2.5651e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=251.6s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=2.5651e-02)
+Epoch  43/100 | total=5.1467e-02  mse=5.1047e-02  pde=1.5293e-03  ce=3.4354e-04 | val_mse=2.9992e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=248.8s
+Epoch  44/100 | total=7.8260e-02  mse=7.5108e-02  pde=1.8125e-03  ce=3.0620e-03 | val_mse=2.6023e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=250.5s
+Epoch  45/100 | total=6.6839e-02  mse=6.4897e-02  pde=1.7191e-03  ce=1.8556e-03 | val_mse=3.2366e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=249.1s
+Epoch  46/100 | total=6.5898e-02  mse=6.4674e-02  pde=1.5559e-03  ce=1.1459e-03 | val_mse=3.7308e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=247.1s
+Epoch  47/100 | total=8.3812e-02  mse=8.2140e-02  pde=1.7673e-03  ce=1.5841e-03 | val_mse=3.7105e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=246.9s
+Epoch  48/100 | total=7.4448e-02  mse=7.3354e-02  pde=1.7897e-03  ce=1.0044e-03 | val_mse=3.0485e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=251.1s
+Epoch  49/100 | total=7.0577e-02  mse=6.9724e-02  pde=1.7943e-03  ce=7.6333e-04 | val_mse=3.1110e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=253.0s
+Epoch  50/100 | total=6.2499e-02  mse=6.1391e-02  pde=1.5158e-03  ce=1.0321e-03 | val_mse=3.3525e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=250.8s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_50
+Epoch  51/100 | total=4.7966e-02  mse=4.6809e-02  pde=1.4909e-03  ce=1.0824e-03 | val_mse=3.8873e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 [LR↓] | lambda_pde=0.0500 | time=250.8s
+Epoch  52/100 | total=5.1314e-02  mse=5.0866e-02  pde=1.3878e-03  ce=3.7866e-04 | val_mse=1.9002e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=247.8s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.9002e-02)
+Epoch  53/100 | total=3.7597e-02  mse=3.7234e-02  pde=1.5412e-03  ce=2.8589e-04 | val_mse=1.9139e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=252.3s
+Epoch  54/100 | total=4.2743e-02  mse=4.2400e-02  pde=1.5954e-03  ce=2.6323e-04 | val_mse=1.7997e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=250.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.7997e-02)
+Epoch  55/100 | total=3.5488e-02  mse=3.5274e-02  pde=1.5668e-03  ce=1.3603e-04 | val_mse=1.6909e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=253.4s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.6909e-02)
+Epoch  56/100 | total=3.3035e-02  mse=3.1626e-02  pde=1.5189e-03  ce=1.3333e-03 | val_mse=1.4989e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=249.2s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.4989e-02)
+Epoch  57/100 | total=3.6353e-02  mse=3.5586e-02  pde=1.4837e-03  ce=6.9277e-04 | val_mse=1.7031e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=249.9s
+Epoch  58/100 | total=2.9115e-02  mse=2.8456e-02  pde=1.4551e-03  ce=5.8677e-04 | val_mse=1.7567e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=250.1s
+Epoch  59/100 | total=3.5003e-02  mse=3.4360e-02  pde=1.5958e-03  ce=5.6260e-04 | val_mse=1.8752e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=248.7s
+Epoch  60/100 | total=3.0451e-02  mse=3.0017e-02  pde=1.4215e-03  ce=3.6346e-04 | val_mse=1.4001e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=251.6s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.4001e-02)
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_60
+Epoch  61/100 | total=3.0907e-02  mse=3.0383e-02  pde=1.3917e-03  ce=4.5463e-04 | val_mse=1.5670e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=251.1s
+Epoch  62/100 | total=2.5812e-02  mse=2.5227e-02  pde=1.4738e-03  ce=5.1143e-04 | val_mse=1.4017e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=247.8s
+Epoch  63/100 | total=2.4395e-02  mse=2.4042e-02  pde=1.3759e-03  ce=2.8377e-04 | val_mse=2.3920e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=246.2s
+Epoch  64/100 | total=4.1353e-02  mse=4.0831e-02  pde=1.2952e-03  ce=4.5685e-04 | val_mse=1.4788e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=248.8s
+Epoch  65/100 | total=2.2893e-02  mse=2.2314e-02  pde=1.4102e-03  ce=5.0827e-04 | val_mse=1.2341e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=246.2s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.2341e-02)
+Epoch  66/100 | total=3.4302e-02  mse=3.3488e-02  pde=1.4488e-03  ce=7.4206e-04 | val_mse=1.4506e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=247.3s
+Epoch  67/100 | total=2.8282e-02  mse=2.7936e-02  pde=1.4872e-03  ce=2.7198e-04 | val_mse=1.5236e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=247.3s
+Epoch  68/100 | total=2.6451e-02  mse=2.5698e-02  pde=1.4063e-03  ce=6.8238e-04 | val_mse=1.3943e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=248.9s
+Epoch  69/100 | total=3.0404e-02  mse=2.9606e-02  pde=1.4184e-03  ce=7.2743e-04 | val_mse=1.4339e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=248.3s
+Epoch  70/100 | total=2.8690e-02  mse=2.8131e-02  pde=1.3964e-03  ce=4.8954e-04 | val_mse=1.6298e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=247.0s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_70
+Epoch  71/100 | total=2.7167e-02  mse=2.6798e-02  pde=1.4357e-03  ce=2.9718e-04 | val_mse=1.2320e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=249.5s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.2320e-02)
+Epoch  72/100 | total=2.4743e-02  mse=2.4212e-02  pde=1.3581e-03  ce=4.6281e-04 | val_mse=1.3139e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=249.3s
+Epoch  73/100 | total=3.6757e-02  mse=3.6269e-02  pde=1.2590e-03  ce=4.2453e-04 | val_mse=2.0193e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=248.5s
+Epoch  74/100 | total=2.9134e-02  mse=2.8408e-02  pde=1.3050e-03  ce=6.6163e-04 | val_mse=1.3035e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=255.1s
+Epoch  75/100 | total=3.4418e-02  mse=3.3759e-02  pde=1.3189e-03  ce=5.9326e-04 | val_mse=1.6168e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=251.3s
+Epoch  76/100 | total=4.7491e-02  mse=4.6975e-02  pde=1.4412e-03  ce=4.4415e-04 | val_mse=1.3756e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=251.6s
+Epoch  77/100 | total=4.9856e-02  mse=4.9500e-02  pde=1.3197e-03  ce=2.8989e-04 | val_mse=1.5569e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=248.7s
+Epoch  78/100 | total=2.7056e-02  mse=2.6585e-02  pde=1.2803e-03  ce=4.0662e-04 | val_mse=1.3465e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=250.3s
+Epoch  79/100 | total=2.3978e-02  mse=2.3375e-02  pde=1.2659e-03  ce=5.3911e-04 | val_mse=1.3750e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=247.4s
+Epoch  80/100 | total=2.8659e-02  mse=2.8098e-02  pde=1.4022e-03  ce=4.9046e-04 | val_mse=1.3378e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 [LR↓] | lambda_pde=0.0500 | time=248.0s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_80
+Epoch  81/100 | total=2.5218e-02  mse=2.4814e-02  pde=1.2451e-03  ce=3.4209e-04 | val_mse=1.1599e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=251.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.1599e-02)
+Epoch  82/100 | total=2.8522e-02  mse=2.8260e-02  pde=1.2415e-03  ce=2.0072e-04 | val_mse=1.0454e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=246.3s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.0454e-02)
+Epoch  83/100 | total=2.2852e-02  mse=2.2536e-02  pde=1.3095e-03  ce=2.4991e-04 | val_mse=1.0517e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=247.0s
+Epoch  84/100 | total=2.6456e-02  mse=2.5991e-02  pde=1.3041e-03  ce=3.9989e-04 | val_mse=1.0376e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=252.5s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.0376e-02)
+Epoch  85/100 | total=2.2689e-02  mse=2.1867e-02  pde=1.4051e-03  ce=7.5156e-04 | val_mse=1.1136e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=250.0s
+Epoch  86/100 | total=1.8943e-02  mse=1.8562e-02  pde=1.1985e-03  ce=3.2070e-04 | val_mse=9.7764e-03 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=252.6s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=9.7764e-03)
+Epoch  87/100 | total=1.9169e-02  mse=1.8763e-02  pde=1.2076e-03  ce=3.4567e-04 | val_mse=1.0390e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=251.0s
+Epoch  88/100 | total=1.9808e-02  mse=1.9421e-02  pde=1.2383e-03  ce=3.2484e-04 | val_mse=1.1708e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=250.7s
+Epoch  89/100 | total=2.3461e-02  mse=2.2945e-02  pde=1.3077e-03  ce=4.5030e-04 | val_mse=1.0140e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=248.4s
+Epoch  90/100 | total=2.0754e-02  mse=2.0295e-02  pde=1.3535e-03  ce=3.9094e-04 | val_mse=1.0149e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=247.7s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_90
+Epoch  91/100 | total=2.1945e-02  mse=2.1641e-02  pde=1.3964e-03  ce=2.3376e-04 | val_mse=1.0383e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=252.3s
+Epoch  92/100 | total=2.0099e-02  mse=1.9618e-02  pde=1.2282e-03  ce=4.2022e-04 | val_mse=9.8835e-03 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=247.6s
+Epoch  93/100 | total=1.6626e-02  mse=1.6188e-02  pde=1.2753e-03  ce=3.7510e-04 | val_mse=1.0629e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=252.5s
+Epoch  94/100 | total=1.8252e-02  mse=1.7825e-02  pde=1.2643e-03  ce=3.6395e-04 | val_mse=1.0683e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=249.2s
+Epoch  95/100 | total=2.0338e-02  mse=2.0055e-02  pde=1.3792e-03  ce=2.1363e-04 | val_mse=9.9331e-03 | lr_proj=2.70e-06  lr_lora=5.40e-07 [LR↓] | lambda_pde=0.0500 | time=248.1s
+Epoch  96/100 | total=2.1635e-02  mse=2.1130e-02  pde=1.3134e-03  ce=4.3918e-04 | val_mse=9.9545e-03 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=246.2s
+Epoch  97/100 | total=2.1537e-02  mse=2.1171e-02  pde=1.2601e-03  ce=3.0285e-04 | val_mse=9.5363e-03 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=253.3s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=9.5363e-03)
+Epoch  98/100 | total=2.4605e-02  mse=2.4307e-02  pde=1.2277e-03  ce=2.3707e-04 | val_mse=9.8777e-03 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=250.2s
+Epoch  99/100 | total=2.6813e-02  mse=2.6353e-02  pde=1.2742e-03  ce=3.9685e-04 | val_mse=1.0198e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=249.8s
+Epoch 100/100 | total=2.0558e-02  mse=2.0005e-02  pde=1.2279e-03  ce=4.9168e-04 | val_mse=1.0079e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=251.4s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_100
+Training complete.  best_val_mse=9.5363e-03
+=== [1D_p] STAGE 2 nocontext (from stage1, lr 2e-5/5e-6) start Sat 20 Jun 2026 11:09:11 AM UTC ===
+============================================================
+V2 PDE Model Training
+============================================================
+  World size:  8
+  Phase:       phase2
+  Batch size:  8  (per rank)
+  Grad accum:  2
+  Effective B: 128
+  Epochs:      100
+  target_repeat_per_epoch: 1
+  no_context_prob: 1.00
+  val_no_context_prob: 1.00
+  lr_proj:     2e-05
+  lr_lora:     5e-06
+  lambda_pde:  0.05
+  latent_dim:  256
+  max_seq_len: 256
+======================================================================
+Phase 2: V2PDEModel training (DDP)
+======================================================================
+  Resuming phase2 weights from: ./checkpoints_pde_s1/best_model
+  Weighted sampler: k_gt distribution = {1: 2527, 3: 8690, 5: 91, 7: 1292}
+  multisol_weight_power = 1.5
+  target_repeat_per_epoch: 1 (global target samples/epoch=12600)
+  train steps/rank/epoch: 197 | world_size=8
+  no_context_prob (train): 1.00
+  no_context_prob (val):   1.00
+  Projector params : 15,705,221
+  LoRA params      : 10,092,544
+  UNet params      : 4,608,127  (frozen)
+Epoch   1/100 | total=1.1681e-01  mse=9.4028e-02  pde=0.0000e+00  ce=2.2785e-02 | val_mse=1.8888e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=118.0s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.8888e-02)
+Epoch   2/100 | total=4.0348e-02  mse=4.0115e-02  pde=0.0000e+00  ce=2.3263e-04 | val_mse=1.4465e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=115.8s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.4465e-02)
+Epoch   3/100 | total=2.0335e-02  mse=1.9945e-02  pde=0.0000e+00  ce=3.8976e-04 | val_mse=1.3568e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=116.3s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.3568e-02)
+Epoch   4/100 | total=3.8682e-02  mse=3.8330e-02  pde=0.0000e+00  ce=3.5204e-04 | val_mse=1.6710e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=116.4s
+Epoch   5/100 | total=2.1158e-02  mse=2.0672e-02  pde=0.0000e+00  ce=4.8644e-04 | val_mse=7.3742e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=116.1s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=7.3742e-03)
+Epoch   6/100 | total=3.6718e-02  mse=3.6151e-02  pde=1.4067e-03  ce=5.6342e-04 | val_mse=1.3169e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0020 | time=116.0s
+Epoch   7/100 | total=2.2301e-02  mse=2.1988e-02  pde=1.3825e-03  ce=3.0731e-04 | val_mse=1.4431e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0040 | time=116.6s
+Epoch   8/100 | total=2.4601e-02  mse=2.4245e-02  pde=1.3794e-03  ce=3.4832e-04 | val_mse=9.5705e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0060 | time=116.9s
+Epoch   9/100 | total=2.2916e-02  mse=2.2534e-02  pde=1.3218e-03  ce=3.7109e-04 | val_mse=7.6444e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0080 | time=114.9s
+Epoch  10/100 | total=2.1644e-02  mse=2.1275e-02  pde=1.2410e-03  ce=3.5577e-04 | val_mse=1.3997e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0100 | time=115.6s
+V2PDEModel saved to ./checkpoints_pde/epoch_10
+Epoch  11/100 | total=2.7198e-02  mse=2.6850e-02  pde=1.2877e-03  ce=3.3260e-04 | val_mse=8.0953e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0120 | time=115.7s
+Epoch  12/100 | total=1.8319e-02  mse=1.7981e-02  pde=1.2149e-03  ce=3.2098e-04 | val_mse=6.8905e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0140 | time=115.3s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=6.8905e-03)
+Epoch  13/100 | total=1.8318e-02  mse=1.7921e-02  pde=1.2208e-03  ce=3.7756e-04 | val_mse=9.5497e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0160 | time=116.4s
+Epoch  14/100 | total=1.7128e-02  mse=1.6706e-02  pde=1.1380e-03  ce=4.0169e-04 | val_mse=6.2839e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0180 | time=115.2s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=6.2839e-03)
+Epoch  15/100 | total=2.3994e-02  mse=2.3553e-02  pde=1.1275e-03  ce=4.1849e-04 | val_mse=1.7758e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0200 | time=116.0s
+Epoch  16/100 | total=2.2105e-02  mse=2.1710e-02  pde=1.1488e-03  ce=3.7032e-04 | val_mse=1.1714e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0220 | time=116.3s
+Epoch  17/100 | total=2.3089e-02  mse=2.2765e-02  pde=1.1918e-03  ce=2.9472e-04 | val_mse=9.4649e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0240 | time=114.4s
+Epoch  18/100 | total=3.2538e-02  mse=3.2276e-02  pde=1.1920e-03  ce=2.3051e-04 | val_mse=1.5813e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0260 | time=115.7s
+Epoch  19/100 | total=3.5955e-02  mse=3.5737e-02  pde=1.2392e-03  ce=1.8354e-04 | val_mse=1.0545e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0280 | time=116.3s
+Epoch  20/100 | total=2.7853e-02  mse=2.7461e-02  pde=1.2483e-03  ce=3.5427e-04 | val_mse=6.0630e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0300 | time=115.4s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=6.0630e-03)
+V2PDEModel saved to ./checkpoints_pde/epoch_20
+Epoch  21/100 | total=3.7313e-02  mse=3.7050e-02  pde=1.1622e-03  ce=2.2548e-04 | val_mse=8.0370e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0320 | time=116.0s
+Epoch  22/100 | total=2.1513e-02  mse=2.1180e-02  pde=1.1522e-03  ce=2.9359e-04 | val_mse=8.9587e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0340 | time=115.5s
+Epoch  23/100 | total=1.6436e-02  mse=1.6274e-02  pde=1.0723e-03  ce=1.2281e-04 | val_mse=6.5975e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0360 | time=114.8s
+Epoch  24/100 | total=2.5923e-02  mse=2.5651e-02  pde=1.1256e-03  ce=2.2953e-04 | val_mse=9.7682e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0380 | time=115.5s
+Epoch  25/100 | total=2.5830e-02  mse=2.5508e-02  pde=1.1373e-03  ce=2.7617e-04 | val_mse=1.0291e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0400 | time=117.0s
+Epoch  26/100 | total=2.2231e-02  mse=2.1839e-02  pde=1.0818e-03  ce=3.4702e-04 | val_mse=1.3904e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0420 | time=115.9s
+Epoch  27/100 | total=1.9102e-02  mse=1.8857e-02  pde=1.0285e-03  ce=1.9963e-04 | val_mse=7.1790e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0440 | time=115.0s
+Epoch  28/100 | total=1.7091e-02  mse=1.6674e-02  pde=9.9425e-04  ce=3.7131e-04 | val_mse=7.9548e-03 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0460 | time=115.9s
+Epoch  29/100 | total=2.0161e-02  mse=1.9792e-02  pde=1.1393e-03  ce=3.1406e-04 | val_mse=1.3456e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 [LR↓] | lambda_pde=0.0480 | time=116.1s
+Epoch  30/100 | total=1.0875e-02  mse=1.0592e-02  pde=9.9662e-04  ce=2.3284e-04 | val_mse=6.0968e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=116.0s
+V2PDEModel saved to ./checkpoints_pde/epoch_30
+Epoch  31/100 | total=1.8957e-02  mse=1.8643e-02  pde=1.0617e-03  ce=2.6122e-04 | val_mse=6.0000e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=116.0s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=6.0000e-03)
+Epoch  32/100 | total=1.5987e-02  mse=1.5760e-02  pde=1.0347e-03  ce=1.7536e-04 | val_mse=6.1806e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.6s
+Epoch  33/100 | total=1.8027e-02  mse=1.7573e-02  pde=9.7016e-04  ce=4.0594e-04 | val_mse=5.2739e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.4s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=5.2739e-03)
+Epoch  34/100 | total=1.2696e-02  mse=1.2410e-02  pde=9.9172e-04  ce=2.3645e-04 | val_mse=6.2003e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.6s
+Epoch  35/100 | total=9.5935e-03  mse=9.0727e-03  pde=9.4069e-04  ce=4.7368e-04 | val_mse=5.4012e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.8s
+Epoch  36/100 | total=1.6496e-02  mse=1.6115e-02  pde=1.0376e-03  ce=3.2958e-04 | val_mse=9.7216e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=117.4s
+Epoch  37/100 | total=2.2476e-02  mse=2.2257e-02  pde=9.8648e-04  ce=1.6894e-04 | val_mse=6.1698e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.8s
+Epoch  38/100 | total=1.4795e-02  mse=1.4456e-02  pde=1.0238e-03  ce=2.8789e-04 | val_mse=6.2094e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.4s
+Epoch  39/100 | total=9.0466e-03  mse=8.7073e-03  pde=9.5905e-04  ce=2.9135e-04 | val_mse=5.5132e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=114.7s
+Epoch  40/100 | total=1.2377e-02  mse=1.2029e-02  pde=9.8795e-04  ce=2.9849e-04 | val_mse=5.7232e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.8s
+V2PDEModel saved to ./checkpoints_pde/epoch_40
+Epoch  41/100 | total=6.5938e-03  mse=6.2916e-03  pde=1.0060e-03  ce=2.5193e-04 | val_mse=5.6931e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=118.2s
+Epoch  42/100 | total=1.6120e-02  mse=1.5818e-02  pde=9.5882e-04  ce=2.5450e-04 | val_mse=5.1833e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.5s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=5.1833e-03)
+Epoch  43/100 | total=1.2251e-02  mse=1.1994e-02  pde=9.3248e-04  ce=2.1064e-04 | val_mse=6.0812e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.0s
+Epoch  44/100 | total=1.7697e-02  mse=1.7198e-02  pde=1.0189e-03  ce=4.4831e-04 | val_mse=5.4816e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=117.2s
+Epoch  45/100 | total=1.7553e-02  mse=1.7280e-02  pde=9.4116e-04  ce=2.2658e-04 | val_mse=5.9887e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.8s
+Epoch  46/100 | total=1.1899e-02  mse=1.1627e-02  pde=9.6332e-04  ce=2.2378e-04 | val_mse=5.8190e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=114.3s
+Epoch  47/100 | total=1.9092e-02  mse=1.8789e-02  pde=9.7162e-04  ce=2.5504e-04 | val_mse=7.0070e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=115.1s
+Epoch  48/100 | total=1.3397e-02  mse=1.3002e-02  pde=1.0587e-03  ce=3.4220e-04 | val_mse=5.3870e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=116.6s
+Epoch  49/100 | total=2.1292e-02  mse=2.0925e-02  pde=1.0235e-03  ce=3.1584e-04 | val_mse=5.3846e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=117.2s
+Epoch  50/100 | total=1.7969e-02  mse=1.7473e-02  pde=9.6125e-04  ce=4.4796e-04 | val_mse=5.1834e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=116.7s
+V2PDEModel saved to ./checkpoints_pde/epoch_50
+Epoch  51/100 | total=1.0805e-02  mse=1.0558e-02  pde=9.8388e-04  ce=1.9737e-04 | val_mse=5.7069e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 [LR↓] | lambda_pde=0.0500 | time=116.8s
+Epoch  52/100 | total=1.6592e-02  mse=1.6287e-02  pde=9.8113e-04  ce=2.5581e-04 | val_mse=6.1211e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.7s
+Epoch  53/100 | total=1.1696e-02  mse=1.1464e-02  pde=1.0043e-03  ce=1.8156e-04 | val_mse=6.0335e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.5s
+Epoch  54/100 | total=1.3019e-02  mse=1.2832e-02  pde=9.5673e-04  ce=1.3865e-04 | val_mse=4.9149e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.4s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=4.9149e-03)
+Epoch  55/100 | total=1.4516e-02  mse=1.4357e-02  pde=9.7921e-04  ce=1.1013e-04 | val_mse=5.7457e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=117.7s
+Epoch  56/100 | total=1.3584e-02  mse=1.2913e-02  pde=9.3015e-04  ce=6.2377e-04 | val_mse=5.5808e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=115.3s
+Epoch  57/100 | total=9.5225e-03  mse=9.0888e-03  pde=9.4111e-04  ce=3.8668e-04 | val_mse=5.4570e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=115.9s
+Epoch  58/100 | total=1.1960e-02  mse=1.1529e-02  pde=8.8915e-04  ce=3.8641e-04 | val_mse=5.1259e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=115.9s
+Epoch  59/100 | total=2.0570e-02  mse=2.0244e-02  pde=9.1402e-04  ce=2.7985e-04 | val_mse=6.1564e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.6s
+Epoch  60/100 | total=1.4134e-02  mse=1.3886e-02  pde=9.6003e-04  ce=1.9949e-04 | val_mse=5.9169e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.3s
+V2PDEModel saved to ./checkpoints_pde/epoch_60
+Epoch  61/100 | total=1.0634e-02  mse=1.0299e-02  pde=9.5665e-04  ce=2.8744e-04 | val_mse=4.9082e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.3s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=4.9082e-03)
+Epoch  62/100 | total=1.0742e-02  mse=1.0301e-02  pde=9.5615e-04  ce=3.9248e-04 | val_mse=5.5687e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=115.8s
+Epoch  63/100 | total=1.5886e-02  mse=1.5685e-02  pde=9.4395e-04  ce=1.5300e-04 | val_mse=5.8456e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=115.8s
+Epoch  64/100 | total=1.2618e-02  mse=1.2312e-02  pde=1.0082e-03  ce=2.5534e-04 | val_mse=5.7049e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.1s
+Epoch  65/100 | total=1.1037e-02  mse=1.0611e-02  pde=9.3889e-04  ce=3.7905e-04 | val_mse=5.8826e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=114.9s
+Epoch  66/100 | total=1.7062e-02  mse=1.6544e-02  pde=9.4141e-04  ce=4.7095e-04 | val_mse=5.6704e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=114.4s
+Epoch  67/100 | total=1.2929e-02  mse=1.2695e-02  pde=9.4211e-04  ce=1.8623e-04 | val_mse=5.5906e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.0s
+Epoch  68/100 | total=1.5020e-02  mse=1.4605e-02  pde=9.5520e-04  ce=3.6706e-04 | val_mse=5.7598e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=116.5s
+Epoch  69/100 | total=1.2671e-02  mse=1.2039e-02  pde=9.5162e-04  ce=5.8420e-04 | val_mse=5.1776e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=115.8s
+Epoch  70/100 | total=9.2810e-03  mse=8.9345e-03  pde=9.1042e-04  ce=3.0102e-04 | val_mse=5.6238e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 [LR↓] | lambda_pde=0.0500 | time=116.0s
+V2PDEModel saved to ./checkpoints_pde/epoch_70
+Epoch  71/100 | total=1.2511e-02  mse=1.2309e-02  pde=9.8150e-04  ce=1.5287e-04 | val_mse=5.5162e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=117.7s
+Epoch  72/100 | total=1.4500e-02  mse=1.4135e-02  pde=9.3764e-04  ce=3.1781e-04 | val_mse=5.5546e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=115.9s
+Epoch  73/100 | total=1.3143e-02  mse=1.2844e-02  pde=8.9648e-04  ce=2.5476e-04 | val_mse=5.2567e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=116.7s
+Epoch  74/100 | total=1.6437e-02  mse=1.5938e-02  pde=9.5323e-04  ce=4.5187e-04 | val_mse=5.2941e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=117.4s
+Epoch  75/100 | total=1.5916e-02  mse=1.5525e-02  pde=9.3366e-04  ce=3.4475e-04 | val_mse=5.6203e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=117.3s
+Epoch  76/100 | total=1.8962e-02  mse=1.8640e-02  pde=9.9211e-04  ce=2.7292e-04 | val_mse=5.5093e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=116.7s
+[early-stop] no val_mse improvement for 15 epochs (best=4.9082e-03); stopping at epoch 76/100
+Training complete.  best_val_mse=4.9082e-03
+=== [1D_p] two-stage complete Sat 20 Jun 2026 01:36:33 PM UTC ===

@@ -1,0 +1,7 @@
+loaded 2401 nonempty cells -> 20797 raw sols
+trivial: drop 0 -> 20797 kept
+grouped into P=1930 params; raw per-param mean 10.8
+D4: 20797 -> 17858 sols (14.1% removed); per-param mean 9.3 max 29
+saved gs_dataset_L2dense_d4.pt  N=17858 P=1930
+split: train 1350 val 288 test 292 (old preserved: 471 matched, fresh 1459)
+wrote /home/zfc5231/work/BBBB_qwen_pde_branch/2d_GrayScott/qwen_ord_L2/data_expanded/: lookup P=1930 N=17858

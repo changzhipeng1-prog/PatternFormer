@@ -1,0 +1,7 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+
+------------
+Latexmk: Could not find file 'report4.tex'.
+-- Use the -f option to force complete processing.

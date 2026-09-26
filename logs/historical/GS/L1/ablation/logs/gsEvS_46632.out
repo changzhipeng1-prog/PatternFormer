@@ -1,0 +1,93 @@
+===== arm1_pretrained  s2024 DET (noise=0) Tue 28 Jul 2026 06:35:10 AM UTC =====
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+=== qwen_ord eval ckpt=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm1_pretrained_s2024_p3/best_model K=24 n=163 L2=False (FDM maxiter=8000 early=3000/0.05) ===
+  0/163 p4 Kt=1 conv=0 distinct=0 cov=0.00
+  10/163 p76 Kt=5 conv=0 distinct=0 cov=0.00
+  20/163 p124 Kt=2 conv=0 distinct=0 cov=0.00
+  30/163 p185 Kt=10 conv=9 distinct=2 cov=0.20
+  40/163 p288 Kt=1 conv=0 distinct=0 cov=0.00
+  50/163 p333 Kt=8 conv=6 distinct=5 cov=0.50
+  60/163 p371 Kt=1 conv=3 distinct=2 cov=1.00
+  70/163 p429 Kt=2 conv=8 distinct=1 cov=0.50
+  80/163 p529 Kt=8 conv=7 distinct=6 cov=0.50
+  90/163 p598 Kt=9 conv=7 distinct=7 cov=0.44
+  100/163 p666 Kt=11 conv=16 distinct=8 cov=0.45
+  110/163 p779 Kt=17 conv=14 distinct=7 cov=0.35
+  120/163 p832 Kt=16 conv=11 distinct=8 cov=0.19
+  130/163 p896 Kt=20 conv=17 distinct=12 cov=0.55
+  140/163 p965 Kt=14 conv=13 distinct=7 cov=0.36
+  150/163 p1013 Kt=10 conv=7 distinct=4 cov=0.20
+  160/163 p1069 Kt=7 conv=12 distinct=3 cov=0.14
+
+=== SUMMARY === det_distinct=4.48 cov=0.307 Ktrue=9.40 init_res(med)=6.07e-01  baseline_det=2.53
+wrote /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/eval/arm1_pretrained_s2024_det.json
+===== arm1_pretrained  s2024 NOISE=0.1 Tue 28 Jul 2026 07:03:22 AM UTC =====
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+=== qwen_ord eval ckpt=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm1_pretrained_s2024_p3/best_model K=24 n=163 L2=False (FDM maxiter=8000 early=3000/0.05) ===
+  0/163 p4 Kt=1 conv=0 distinct=0 cov=0.00
+  10/163 p76 Kt=5 conv=0 distinct=0 cov=0.00
+  20/163 p124 Kt=2 conv=1 distinct=1 cov=0.00
+  30/163 p185 Kt=10 conv=11 distinct=3 cov=0.30
+  40/163 p288 Kt=1 conv=0 distinct=0 cov=0.00
+  50/163 p333 Kt=8 conv=5 distinct=4 cov=0.50
+  60/163 p371 Kt=1 conv=6 distinct=3 cov=1.00
+  70/163 p429 Kt=2 conv=5 distinct=1 cov=0.50
+  80/163 p529 Kt=8 conv=10 distinct=8 cov=0.50
+  90/163 p598 Kt=9 conv=8 distinct=6 cov=0.44
+  100/163 p666 Kt=11 conv=12 distinct=8 cov=0.45
+  110/163 p779 Kt=17 conv=14 distinct=9 cov=0.35
+  120/163 p832 Kt=16 conv=12 distinct=6 cov=0.19
+  130/163 p896 Kt=20 conv=19 distinct=13 cov=0.55
+  140/163 p965 Kt=14 conv=17 distinct=8 cov=0.36
+  150/163 p1013 Kt=10 conv=4 distinct=3 cov=0.10
+  160/163 p1069 Kt=7 conv=6 distinct=3 cov=0.14
+
+=== SUMMARY === det_distinct=4.51 cov=0.295 Ktrue=9.40 init_res(med)=6.23e-01  baseline_det=2.53
+wrote /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/eval/arm1_pretrained_s2024_noise01.json
+===== arm2_random  s2024 DET (noise=0) Tue 28 Jul 2026 07:32:09 AM UTC =====
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+=== qwen_ord eval ckpt=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_s2024_p3/best_model K=24 n=163 L2=False (FDM maxiter=8000 early=3000/0.05) ===
+  0/163 p4 Kt=1 conv=0 distinct=0 cov=0.00
+  10/163 p76 Kt=5 conv=0 distinct=0 cov=0.00
+  20/163 p124 Kt=2 conv=0 distinct=0 cov=0.00
+  30/163 p185 Kt=10 conv=1 distinct=1 cov=0.10
+  40/163 p288 Kt=1 conv=0 distinct=0 cov=0.00
+  50/163 p333 Kt=8 conv=1 distinct=1 cov=0.00
+  60/163 p371 Kt=1 conv=1 distinct=1 cov=0.00
+  70/163 p429 Kt=2 conv=1 distinct=1 cov=0.50
+  80/163 p529 Kt=8 conv=0 distinct=0 cov=0.00
+  90/163 p598 Kt=9 conv=3 distinct=2 cov=0.00
+  100/163 p666 Kt=11 conv=3 distinct=2 cov=0.00
+  110/163 p779 Kt=17 conv=3 distinct=2 cov=0.06
+  120/163 p832 Kt=16 conv=19 distinct=3 cov=0.00
+  130/163 p896 Kt=20 conv=21 distinct=3 cov=0.10
+  140/163 p965 Kt=14 conv=4 distinct=2 cov=0.00
+  150/163 p1013 Kt=10 conv=6 distinct=2 cov=0.00
+  160/163 p1069 Kt=7 conv=17 distinct=2 cov=0.29
+
+=== SUMMARY === det_distinct=1.30 cov=0.071 Ktrue=9.40 init_res(med)=5.43e-01  baseline_det=2.53
+wrote /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/eval/arm2_random_s2024_det.json
+===== arm2_random  s2024 NOISE=0.1 Tue 28 Jul 2026 07:54:10 AM UTC =====
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+=== qwen_ord eval ckpt=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_s2024_p3/best_model K=24 n=163 L2=False (FDM maxiter=8000 early=3000/0.05) ===
+  0/163 p4 Kt=1 conv=0 distinct=0 cov=0.00
+  10/163 p76 Kt=5 conv=0 distinct=0 cov=0.00
+  20/163 p124 Kt=2 conv=0 distinct=0 cov=0.00
+  30/163 p185 Kt=10 conv=0 distinct=0 cov=0.00
+  40/163 p288 Kt=1 conv=0 distinct=0 cov=0.00
+  50/163 p333 Kt=8 conv=1 distinct=1 cov=0.00
+  60/163 p371 Kt=1 conv=2 distinct=1 cov=0.00
+  70/163 p429 Kt=2 conv=1 distinct=1 cov=0.00
+  80/163 p529 Kt=8 conv=0 distinct=0 cov=0.00
+  90/163 p598 Kt=9 conv=1 distinct=1 cov=0.00
+  100/163 p666 Kt=11 conv=3 distinct=2 cov=0.00
+  110/163 p779 Kt=17 conv=3 distinct=2 cov=0.06
+  120/163 p832 Kt=16 conv=18 distinct=3 cov=0.00
+  130/163 p896 Kt=20 conv=21 distinct=4 cov=0.15
+  140/163 p965 Kt=14 conv=4 distinct=2 cov=0.00
+  150/163 p1013 Kt=10 conv=6 distinct=2 cov=0.00
+  160/163 p1069 Kt=7 conv=17 distinct=2 cov=0.29
+
+=== SUMMARY === det_distinct=1.33 cov=0.075 Ktrue=9.40 init_res(med)=5.44e-01  baseline_det=2.53
+wrote /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/eval/arm2_random_s2024_noise01.json
+=== DONE Tue 28 Jul 2026 08:16:04 AM UTC ===

@@ -1,0 +1,19 @@
+=== [ex3 scratch] generate Thu 09 Jul 2026 03:24:09 PM UTC ===  CKPT=/home/zfc5231/work/BBBB_qwen_pde_branch/paper/2D/code/checkpoints_scratch/best_model
+Loading /home/zfc5231/work/BBBB_qwen_pde_branch/paper/2D/code/checkpoints_scratch/best_model ...
+[rank0] PDE2DData built: 145 nodes, 256 elements, 113 free DOFs
+test params: 262
+  0/262  s=-101.00  n_gt=2  n_gen=2
+  50/262  s=904.00  n_gt=4  n_gen=4
+  100/262  s=1256.00  n_gt=4  n_gen=4
+  150/262  s=1009.00  n_gt=4  n_gen=4
+  200/262  s=352.00  n_gt=2  n_gen=2
+  250/262  s=999.00  n_gt=4  n_gen=4
+saved 262 params -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/2D/test/scratch/generated_solutions.pt
+=== [ex3 scratch] stats Thu 09 Jul 2026 03:25:17 PM UTC ===
+params=262  ncpu=32
+wrote 820 rows -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/2D/test/scratch/stats.csv
+DIRECT rel-L2 : median=1.116e-02 mean=1.845e-02 p90=2.852e-02
+POST   rel-L2 : median=2.311e-03 mean=7.092e-03 p90=1.059e-02
+POST   steps  : median=4.000e+00 mean=4.081e+00 p90=4.000e+00   converged 99.6%
+solutions=820  saved -> /home/zfc5231/work/BBBB_qwen_pde_branch/paper/2D/test/scratch/stats.pt
+=== [ex3 scratch eval] done Thu 09 Jul 2026 03:25:19 PM UTC ===

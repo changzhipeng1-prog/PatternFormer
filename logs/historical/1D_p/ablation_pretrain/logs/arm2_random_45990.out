@@ -1,0 +1,349 @@
+=== [ARM2 random-init] STAGE 1 withcontext (lr 1e-4/2e-5) Sat 27 Jun 2026 06:37:41 PM UTC ===
+============================================================
+V2 PDE Model Training
+============================================================
+  World size:  4
+  Phase:       phase2
+  Batch size:  8  (per rank)
+  Grad accum:  4
+  Effective B: 128
+  Epochs:      100
+  target_repeat_per_epoch: 1
+  no_context_prob: 0.00
+  val_no_context_prob: 0.00
+  lr_proj:     0.0001
+  lr_lora:     2e-05
+  lambda_pde:  0.05
+  latent_dim:  256
+  max_seq_len: 256
+======================================================================
+Phase 2: V2PDEModel training (DDP)
+======================================================================
+[rank1] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/../best_ckpt/best_model/unet.pt
+[rank3] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/../best_ckpt/best_model/unet.pt
+[rank1] UNet frozen (encoder + decoder)
+[rank0] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/../best_ckpt/best_model/unet.pt
+[rank3] UNet frozen (encoder + decoder)
+[rank0] UNet frozen (encoder + decoder)
+[rank2] Loading UNet weights from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/../best_ckpt/best_model/unet.pt
+[rank2] UNet frozen (encoder + decoder)
+[rank1] ABLATION random-init (frozen): build backbone from config (hidden=3584, layers=28) → cuda:1
+[rank3] ABLATION random-init (frozen): build backbone from config (hidden=3584, layers=28) → cuda:3
+[rank0] ABLATION random-init (frozen): build backbone from config (hidden=3584, layers=28) → cuda:0
+[rank2] ABLATION random-init (frozen): build backbone from config (hidden=3584, layers=28) → cuda:2
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+  Weighted sampler: k_gt distribution = {1: 2527, 3: 8690, 5: 91, 7: 1292}
+  multisol_weight_power = 1.5
+  target_repeat_per_epoch: 1 (global target samples/epoch=12600)
+  train steps/rank/epoch: 394 | world_size=4
+  no_context_prob (train): 0.00
+  no_context_prob (val):   0.00
+  Projector params : 15,705,221
+  LoRA params      : 10,092,544
+  UNet params      : 4,608,127  (frozen)
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+Epoch   1/100 | total=3.3944e+00  mse=3.3616e+00  pde=0.0000e+00  ce=3.2823e-02 | val_mse=1.2189e+00 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=383.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.2189e+00)
+Epoch   2/100 | total=1.2160e+00  mse=1.2119e+00  pde=0.0000e+00  ce=4.1671e-03 | val_mse=4.5184e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=391.9s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=4.5184e-01)
+Epoch   3/100 | total=5.8906e-01  mse=5.8601e-01  pde=0.0000e+00  ce=3.0488e-03 | val_mse=2.8164e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=391.6s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.8164e-01)
+Epoch   4/100 | total=4.2075e-01  mse=4.1758e-01  pde=0.0000e+00  ce=3.1676e-03 | val_mse=2.1217e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=388.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.1217e-01)
+Epoch   5/100 | total=3.1999e-01  mse=3.1711e-01  pde=0.0000e+00  ce=2.8793e-03 | val_mse=1.6930e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0000 | time=388.0s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.6930e-01)
+Epoch   6/100 | total=3.0221e-01  mse=2.9838e-01  pde=1.1570e-02  ce=3.8095e-03 | val_mse=2.3228e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0020 | time=389.6s
+Epoch   7/100 | total=2.5469e-01  mse=2.5290e-01  pde=1.0121e-02  ce=1.7496e-03 | val_mse=1.9686e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0040 | time=389.7s
+Epoch   8/100 | total=2.5247e-01  mse=2.5055e-01  pde=1.0353e-02  ce=1.8627e-03 | val_mse=1.1978e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0060 | time=390.6s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.1978e-01)
+Epoch   9/100 | total=2.3955e-01  mse=2.3793e-01  pde=8.9638e-03  ce=1.5536e-03 | val_mse=1.6654e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0080 | time=390.5s
+Epoch  10/100 | total=1.9914e-01  mse=1.9734e-01  pde=8.9546e-03  ce=1.7126e-03 | val_mse=1.2717e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0100 | time=388.4s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_10
+Epoch  11/100 | total=2.0977e-01  mse=2.0777e-01  pde=9.0681e-03  ce=1.8948e-03 | val_mse=9.3799e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0120 | time=386.6s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=9.3799e-02)
+Epoch  12/100 | total=1.9475e-01  mse=1.9134e-01  pde=1.0017e-02  ce=3.2642e-03 | val_mse=1.2530e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0140 | time=389.8s
+Epoch  13/100 | total=1.8220e-01  mse=1.8030e-01  pde=8.3289e-03  ce=1.7668e-03 | val_mse=9.5254e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0160 | time=389.3s
+Epoch  14/100 | total=1.7315e-01  mse=1.7032e-01  pde=7.9945e-03  ce=2.6862e-03 | val_mse=8.6568e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0180 | time=389.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=8.6568e-02)
+Epoch  15/100 | total=1.6130e-01  mse=1.5965e-01  pde=7.1405e-03  ce=1.5080e-03 | val_mse=8.7000e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0200 | time=389.5s
+Epoch  16/100 | total=1.4443e-01  mse=1.4282e-01  pde=6.5789e-03  ce=1.4714e-03 | val_mse=7.5185e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0220 | time=388.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=7.5185e-02)
+Epoch  17/100 | total=1.5117e-01  mse=1.4977e-01  pde=7.4752e-03  ce=1.2194e-03 | val_mse=1.1421e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0240 | time=389.2s
+Epoch  18/100 | total=1.5158e-01  mse=1.4944e-01  pde=6.9318e-03  ce=1.9621e-03 | val_mse=7.7313e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0260 | time=390.5s
+Epoch  19/100 | total=1.4518e-01  mse=1.4123e-01  pde=7.1550e-03  ce=3.7520e-03 | val_mse=8.6032e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0280 | time=389.5s
+Epoch  20/100 | total=1.5128e-01  mse=1.4943e-01  pde=7.4816e-03  ce=1.6297e-03 | val_mse=9.7131e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0300 | time=388.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_20
+Epoch  21/100 | total=1.4473e-01  mse=1.4296e-01  pde=6.8004e-03  ce=1.5583e-03 | val_mse=7.7790e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0320 | time=387.7s
+Epoch  22/100 | total=1.3769e-01  mse=1.3606e-01  pde=6.3672e-03  ce=1.4211e-03 | val_mse=6.6212e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0340 | time=387.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=6.6212e-02)
+Epoch  23/100 | total=1.3273e-01  mse=1.3131e-01  pde=5.9867e-03  ce=1.2057e-03 | val_mse=8.4416e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0360 | time=387.8s
+Epoch  24/100 | total=1.3615e-01  mse=1.3453e-01  pde=6.3960e-03  ce=1.3798e-03 | val_mse=8.5412e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0380 | time=387.1s
+Epoch  25/100 | total=1.4280e-01  mse=1.4138e-01  pde=6.9973e-03  ce=1.1492e-03 | val_mse=1.0133e-01 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0400 | time=391.3s
+Epoch  26/100 | total=1.4309e-01  mse=1.4136e-01  pde=6.2963e-03  ce=1.4635e-03 | val_mse=6.8503e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0420 | time=389.9s
+Epoch  27/100 | total=1.2656e-01  mse=1.2513e-01  pde=6.3114e-03  ce=1.1566e-03 | val_mse=6.8169e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0440 | time=389.1s
+Epoch  28/100 | total=1.5100e-01  mse=1.4895e-01  pde=6.1405e-03  ce=1.7646e-03 | val_mse=5.9853e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0460 | time=389.9s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=5.9853e-02)
+Epoch  29/100 | total=1.3185e-01  mse=1.3041e-01  pde=5.6214e-03  ce=1.1644e-03 | val_mse=8.5016e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0480 | time=390.2s
+Epoch  30/100 | total=1.0429e-01  mse=1.0286e-01  pde=5.2465e-03  ce=1.1694e-03 | val_mse=7.3926e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=388.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_30
+Epoch  31/100 | total=1.2911e-01  mse=1.2766e-01  pde=5.8074e-03  ce=1.1621e-03 | val_mse=8.9790e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=389.3s
+Epoch  32/100 | total=1.4685e-01  mse=1.4479e-01  pde=5.9048e-03  ce=1.7660e-03 | val_mse=6.5461e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=392.6s
+Epoch  33/100 | total=1.1858e-01  mse=1.1625e-01  pde=5.5413e-03  ce=2.0529e-03 | val_mse=5.9306e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=387.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=5.9306e-02)
+Epoch  34/100 | total=1.1653e-01  mse=1.1406e-01  pde=5.9292e-03  ce=2.1682e-03 | val_mse=7.4166e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=390.9s
+Epoch  35/100 | total=1.1522e-01  mse=1.1337e-01  pde=5.5805e-03  ce=1.5747e-03 | val_mse=7.3797e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=389.8s
+Epoch  36/100 | total=1.3585e-01  mse=1.3366e-01  pde=5.3756e-03  ce=1.9275e-03 | val_mse=6.8096e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=389.9s
+Epoch  37/100 | total=1.1636e-01  mse=1.1424e-01  pde=5.6422e-03  ce=1.8375e-03 | val_mse=5.6407e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=387.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=5.6407e-02)
+Epoch  38/100 | total=1.0632e-01  mse=1.0484e-01  pde=4.9392e-03  ce=1.2266e-03 | val_mse=5.3015e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=387.2s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=5.3015e-02)
+Epoch  39/100 | total=9.7093e-02  mse=9.5710e-02  pde=4.8953e-03  ce=1.1388e-03 | val_mse=6.3268e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=391.4s
+Epoch  40/100 | total=1.0983e-01  mse=1.0852e-01  pde=5.0417e-03  ce=1.0605e-03 | val_mse=6.7828e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=389.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_40
+Epoch  41/100 | total=1.1723e-01  mse=1.1604e-01  pde=5.1093e-03  ce=9.3490e-04 | val_mse=7.4853e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=390.9s
+Epoch  42/100 | total=1.0689e-01  mse=1.0525e-01  pde=4.8253e-03  ce=1.3999e-03 | val_mse=4.1063e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=388.0s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=4.1063e-02)
+Epoch  43/100 | total=9.2252e-02  mse=9.0973e-02  pde=4.4268e-03  ce=1.0576e-03 | val_mse=9.3396e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=388.5s
+Epoch  44/100 | total=9.0503e-02  mse=8.8789e-02  pde=4.3540e-03  ce=1.4961e-03 | val_mse=4.1165e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=388.8s
+Epoch  45/100 | total=1.0002e-01  mse=9.8548e-02  pde=4.5985e-03  ce=1.2382e-03 | val_mse=6.1433e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=387.7s
+Epoch  46/100 | total=9.3584e-02  mse=9.1492e-02  pde=4.2243e-03  ce=1.8799e-03 | val_mse=7.1144e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=387.3s
+Epoch  47/100 | total=9.9730e-02  mse=9.7500e-02  pde=4.5681e-03  ce=2.0016e-03 | val_mse=7.5984e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=390.2s
+Epoch  48/100 | total=8.1922e-02  mse=8.0498e-02  pde=4.2362e-03  ce=1.2120e-03 | val_mse=6.7297e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=389.9s
+Epoch  49/100 | total=1.0452e-01  mse=1.0203e-01  pde=4.2924e-03  ce=2.2701e-03 | val_mse=8.3557e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=388.2s
+Epoch  50/100 | total=1.0552e-01  mse=1.0378e-01  pde=4.3373e-03  ce=1.5253e-03 | val_mse=7.2520e-02 | lr_proj=1.00e-04  lr_lora=2.00e-05 | lambda_pde=0.0500 | time=389.6s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_50
+Epoch  51/100 | total=1.0500e-01  mse=1.0358e-01  pde=4.4793e-03  ce=1.1947e-03 | val_mse=4.3729e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 [LR↓] | lambda_pde=0.0500 | time=388.4s
+Epoch  52/100 | total=6.7414e-02  mse=6.6371e-02  pde=3.8659e-03  ce=8.4995e-04 | val_mse=3.8419e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=390.2s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=3.8419e-02)
+Epoch  53/100 | total=6.8190e-02  mse=6.7122e-02  pde=3.8421e-03  ce=8.7668e-04 | val_mse=2.9828e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=390.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.9828e-02)
+Epoch  54/100 | total=6.0371e-02  mse=5.9184e-02  pde=3.6961e-03  ce=1.0030e-03 | val_mse=3.4380e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=390.3s
+Epoch  55/100 | total=7.0815e-02  mse=6.9781e-02  pde=3.7175e-03  ce=8.4871e-04 | val_mse=3.0532e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.3s
+Epoch  56/100 | total=6.5450e-02  mse=6.3959e-02  pde=3.7116e-03  ce=1.3051e-03 | val_mse=2.7047e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.4s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.7047e-02)
+Epoch  57/100 | total=6.1379e-02  mse=6.0084e-02  pde=3.7835e-03  ce=1.1055e-03 | val_mse=2.7981e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=387.3s
+Epoch  58/100 | total=5.7014e-02  mse=5.5596e-02  pde=3.5451e-03  ce=1.2406e-03 | val_mse=3.2452e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=390.1s
+Epoch  59/100 | total=6.5813e-02  mse=6.4800e-02  pde=3.7313e-03  ce=8.2646e-04 | val_mse=2.9261e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=390.4s
+Epoch  60/100 | total=6.1536e-02  mse=6.0234e-02  pde=3.7967e-03  ce=1.1117e-03 | val_mse=2.3764e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=387.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.3764e-02)
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_60
+Epoch  61/100 | total=5.5223e-02  mse=5.4106e-02  pde=3.6022e-03  ce=9.3669e-04 | val_mse=2.9671e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=387.8s
+Epoch  62/100 | total=5.2300e-02  mse=5.1310e-02  pde=3.6088e-03  ce=8.0975e-04 | val_mse=2.6751e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=388.1s
+Epoch  63/100 | total=6.3463e-02  mse=6.2659e-02  pde=3.5666e-03  ce=6.2648e-04 | val_mse=2.7982e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.7s
+Epoch  64/100 | total=6.1255e-02  mse=6.0366e-02  pde=3.4938e-03  ce=7.1457e-04 | val_mse=2.7722e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.4s
+Epoch  65/100 | total=5.8895e-02  mse=5.7669e-02  pde=3.4734e-03  ce=1.0527e-03 | val_mse=3.6925e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=388.6s
+Epoch  66/100 | total=6.9031e-02  mse=6.7949e-02  pde=3.5218e-03  ce=9.0587e-04 | val_mse=2.3465e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=388.6s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.3465e-02)
+Epoch  67/100 | total=6.1968e-02  mse=6.0948e-02  pde=3.5699e-03  ce=8.4128e-04 | val_mse=2.3054e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.3054e-02)
+Epoch  68/100 | total=6.5252e-02  mse=6.4065e-02  pde=3.5546e-03  ce=1.0088e-03 | val_mse=2.6827e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=388.6s
+Epoch  69/100 | total=5.8283e-02  mse=5.6972e-02  pde=3.5770e-03  ce=1.1316e-03 | val_mse=2.9613e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.8s
+Epoch  70/100 | total=6.0894e-02  mse=5.9498e-02  pde=3.4765e-03  ce=1.2221e-03 | val_mse=2.4250e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=388.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_70
+Epoch  71/100 | total=6.4842e-02  mse=6.3855e-02  pde=3.6118e-03  ce=8.0679e-04 | val_mse=2.4705e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=388.0s
+Epoch  72/100 | total=6.0598e-02  mse=5.9573e-02  pde=3.4381e-03  ce=8.5296e-04 | val_mse=2.5388e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.0s
+Epoch  73/100 | total=6.0421e-02  mse=5.9257e-02  pde=3.4642e-03  ce=9.9099e-04 | val_mse=2.3243e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.6s
+Epoch  74/100 | total=6.3283e-02  mse=6.1985e-02  pde=3.4593e-03  ce=1.1251e-03 | val_mse=2.7906e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=390.8s
+Epoch  75/100 | total=7.2139e-02  mse=7.0930e-02  pde=3.5078e-03  ce=1.0328e-03 | val_mse=3.1415e-02 | lr_proj=3.00e-05  lr_lora=6.00e-06 | lambda_pde=0.0500 | time=389.3s
+Epoch  76/100 | total=6.0329e-02  mse=5.9319e-02  pde=3.5280e-03  ce=8.3432e-04 | val_mse=2.6486e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 [LR↓] | lambda_pde=0.0500 | time=390.2s
+Epoch  77/100 | total=6.0313e-02  mse=5.9261e-02  pde=3.4294e-03  ce=8.8118e-04 | val_mse=2.0826e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.5s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.0826e-02)
+Epoch  78/100 | total=5.3546e-02  mse=5.2526e-02  pde=3.3974e-03  ce=8.5036e-04 | val_mse=2.0440e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.1s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=2.0440e-02)
+Epoch  79/100 | total=4.5670e-02  mse=4.4895e-02  pde=3.3755e-03  ce=6.0586e-04 | val_mse=2.1983e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.7s
+Epoch  80/100 | total=5.2981e-02  mse=5.1881e-02  pde=3.4010e-03  ce=9.2922e-04 | val_mse=1.9213e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=390.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.9213e-02)
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_80
+Epoch  81/100 | total=4.2547e-02  mse=4.1602e-02  pde=3.4420e-03  ce=7.7340e-04 | val_mse=2.1908e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=389.4s
+Epoch  82/100 | total=5.9724e-02  mse=5.8876e-02  pde=3.3504e-03  ce=6.8072e-04 | val_mse=2.0502e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.9s
+Epoch  83/100 | total=5.2510e-02  mse=5.1663e-02  pde=3.4578e-03  ce=6.7473e-04 | val_mse=2.1044e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.3s
+Epoch  84/100 | total=5.3661e-02  mse=5.2779e-02  pde=3.4699e-03  ce=7.0887e-04 | val_mse=2.0179e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.8s
+Epoch  85/100 | total=5.2234e-02  mse=5.1077e-02  pde=3.4458e-03  ce=9.8451e-04 | val_mse=1.9485e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=389.3s
+Epoch  86/100 | total=6.3018e-02  mse=6.2053e-02  pde=3.4621e-03  ce=7.9148e-04 | val_mse=1.9657e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=387.9s
+Epoch  87/100 | total=4.9649e-02  mse=4.8707e-02  pde=3.4189e-03  ce=7.7091e-04 | val_mse=2.0368e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=390.5s
+Epoch  88/100 | total=4.5519e-02  mse=4.4618e-02  pde=3.4642e-03  ce=7.2736e-04 | val_mse=1.9341e-02 | lr_proj=9.00e-06  lr_lora=1.80e-06 | lambda_pde=0.0500 | time=388.4s
+Epoch  89/100 | total=5.3294e-02  mse=5.2347e-02  pde=3.4051e-03  ce=7.7715e-04 | val_mse=1.9462e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 [LR↓] | lambda_pde=0.0500 | time=387.7s
+Epoch  90/100 | total=5.3647e-02  mse=5.2547e-02  pde=3.4704e-03  ce=9.2661e-04 | val_mse=1.9092e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=389.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.9092e-02)
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_90
+Epoch  91/100 | total=4.9338e-02  mse=4.8493e-02  pde=3.5177e-03  ce=6.6931e-04 | val_mse=1.9372e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=387.4s
+Epoch  92/100 | total=5.5717e-02  mse=5.4669e-02  pde=3.4064e-03  ce=8.7864e-04 | val_mse=1.8896e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=389.1s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.8896e-02)
+Epoch  93/100 | total=5.2759e-02  mse=5.1888e-02  pde=3.4396e-03  ce=6.9918e-04 | val_mse=1.9445e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=386.6s
+Epoch  94/100 | total=5.2178e-02  mse=5.1097e-02  pde=3.4172e-03  ce=9.1036e-04 | val_mse=1.8971e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=385.6s
+Epoch  95/100 | total=5.0864e-02  mse=4.9721e-02  pde=3.4402e-03  ce=9.7113e-04 | val_mse=1.8855e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=386.0s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.8855e-02)
+Epoch  96/100 | total=5.2372e-02  mse=5.1378e-02  pde=3.5140e-03  ce=8.1784e-04 | val_mse=1.8799e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=391.4s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.8799e-02)
+Epoch  97/100 | total=4.9412e-02  mse=4.8479e-02  pde=3.4465e-03  ce=7.6116e-04 | val_mse=1.8631e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=389.2s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.8631e-02)
+Epoch  98/100 | total=4.9310e-02  mse=4.8440e-02  pde=3.4327e-03  ce=6.9795e-04 | val_mse=1.9565e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=390.1s
+Epoch  99/100 | total=4.7740e-02  mse=4.6800e-02  pde=3.4508e-03  ce=7.6714e-04 | val_mse=1.9815e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=392.4s
+Epoch 100/100 | total=5.7846e-02  mse=5.6937e-02  pde=3.4597e-03  ce=7.3651e-04 | val_mse=1.8587e-02 | lr_proj=2.70e-06  lr_lora=5.40e-07 | lambda_pde=0.0500 | time=391.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  -> Best model saved (val_mse=1.8587e-02)
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/epoch_100
+Training complete.  best_val_mse=1.8587e-02
+=== [ARM2 random-init] STAGE 2 nocontext (lr 2e-5/5e-6) Sun 28 Jun 2026 05:30:07 AM UTC ===
+============================================================
+V2 PDE Model Training
+============================================================
+  World size:  4
+  Phase:       phase2
+  Batch size:  8  (per rank)
+  Grad accum:  4
+  Effective B: 128
+  Epochs:      100
+  target_repeat_per_epoch: 1
+  no_context_prob: 1.00
+  val_no_context_prob: 1.00
+  lr_proj:     2e-05
+  lr_lora:     5e-06
+  lambda_pde:  0.05
+  latent_dim:  256
+  max_seq_len: 256
+======================================================================
+Phase 2: V2PDEModel training (DDP)
+======================================================================
+  Resuming phase2 weights from: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random_s1/best_model
+  Weighted sampler: k_gt distribution = {1: 2527, 3: 8690, 5: 91, 7: 1292}
+  multisol_weight_power = 1.5
+  target_repeat_per_epoch: 1 (global target samples/epoch=12600)
+  train steps/rank/epoch: 394 | world_size=4
+  no_context_prob (train): 1.00
+  no_context_prob (val):   1.00
+  Projector params : 15,705,221
+  LoRA params      : 10,092,544
+  UNet params      : 4,608,127  (frozen)
+Epoch   1/100 | total=1.8753e-01  mse=1.8240e-01  pde=0.0000e+00  ce=5.1315e-03 | val_mse=3.0913e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=188.0s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=3.0913e-02)
+Epoch   2/100 | total=5.9469e-02  mse=5.8054e-02  pde=0.0000e+00  ce=1.4146e-03 | val_mse=2.9775e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=184.7s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=2.9775e-02)
+Epoch   3/100 | total=5.4398e-02  mse=5.3137e-02  pde=0.0000e+00  ce=1.2615e-03 | val_mse=2.1994e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=184.1s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=2.1994e-02)
+Epoch   4/100 | total=5.8203e-02  mse=5.6838e-02  pde=0.0000e+00  ce=1.3647e-03 | val_mse=1.9598e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=185.3s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.9598e-02)
+Epoch   5/100 | total=5.2647e-02  mse=5.1375e-02  pde=0.0000e+00  ce=1.2714e-03 | val_mse=3.0205e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0000 | time=184.6s
+Epoch   6/100 | total=5.6864e-02  mse=5.5491e-02  pde=3.8094e-03  ce=1.3651e-03 | val_mse=2.0931e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0020 | time=185.4s
+Epoch   7/100 | total=4.8203e-02  mse=4.7407e-02  pde=3.6299e-03  ce=7.8137e-04 | val_mse=2.6672e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0040 | time=184.8s
+Epoch   8/100 | total=5.4923e-02  mse=5.4013e-02  pde=3.7416e-03  ce=8.8738e-04 | val_mse=2.0037e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0060 | time=185.6s
+Epoch   9/100 | total=4.9265e-02  mse=4.8467e-02  pde=3.7041e-03  ce=7.6834e-04 | val_mse=1.7614e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0080 | time=184.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.7614e-02)
+Epoch  10/100 | total=4.1343e-02  mse=4.0543e-02  pde=3.5924e-03  ce=7.6369e-04 | val_mse=1.9993e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0100 | time=185.2s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/epoch_10
+Epoch  11/100 | total=5.1111e-02  mse=5.0172e-02  pde=3.4230e-03  ce=8.9859e-04 | val_mse=1.7446e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0120 | time=184.5s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.7446e-02)
+Epoch  12/100 | total=5.7120e-02  mse=5.6040e-02  pde=3.7740e-03  ce=1.0278e-03 | val_mse=2.0770e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0140 | time=185.3s
+Epoch  13/100 | total=4.6422e-02  mse=4.5523e-02  pde=3.5597e-03  ce=8.4116e-04 | val_mse=1.7128e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0160 | time=184.5s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.7128e-02)
+Epoch  14/100 | total=4.8246e-02  mse=4.7304e-02  pde=3.5265e-03  ce=8.7801e-04 | val_mse=1.7287e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0180 | time=185.0s
+Epoch  15/100 | total=4.3494e-02  mse=4.2519e-02  pde=3.5326e-03  ce=9.0482e-04 | val_mse=1.9043e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0200 | time=185.5s
+Epoch  16/100 | total=4.5546e-02  mse=4.4732e-02  pde=3.4480e-03  ce=7.3874e-04 | val_mse=1.2887e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0220 | time=185.6s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.2887e-02)
+Epoch  17/100 | total=4.5618e-02  mse=4.4769e-02  pde=3.5023e-03  ce=7.6483e-04 | val_mse=1.5295e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0240 | time=184.7s
+Epoch  18/100 | total=5.0847e-02  mse=4.9854e-02  pde=3.7337e-03  ce=8.9580e-04 | val_mse=2.8021e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0260 | time=185.3s
+Epoch  19/100 | total=5.3267e-02  mse=5.2376e-02  pde=3.4486e-03  ce=7.9496e-04 | val_mse=1.7345e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0280 | time=185.0s
+Epoch  20/100 | total=4.7401e-02  mse=4.6401e-02  pde=3.5546e-03  ce=8.9389e-04 | val_mse=1.7593e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0300 | time=185.1s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/epoch_20
+Epoch  21/100 | total=4.2977e-02  mse=4.2023e-02  pde=3.5426e-03  ce=8.4047e-04 | val_mse=2.5301e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0320 | time=184.4s
+Epoch  22/100 | total=4.4879e-02  mse=4.3909e-02  pde=3.4908e-03  ce=8.5134e-04 | val_mse=3.0028e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0340 | time=184.8s
+Epoch  23/100 | total=4.4223e-02  mse=4.3558e-02  pde=3.4103e-03  ce=5.4287e-04 | val_mse=1.7862e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0360 | time=184.6s
+Epoch  24/100 | total=4.0858e-02  mse=4.0012e-02  pde=3.3382e-03  ce=7.1917e-04 | val_mse=2.8028e-02 | lr_proj=2.00e-05  lr_lora=5.00e-06 | lambda_pde=0.0380 | time=184.6s
+Epoch  25/100 | total=5.6314e-02  mse=5.5557e-02  pde=3.5562e-03  ce=6.1448e-04 | val_mse=2.0475e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 [LR↓] | lambda_pde=0.0400 | time=184.9s
+Epoch  26/100 | total=3.4128e-02  mse=3.3178e-02  pde=3.4127e-03  ce=8.0666e-04 | val_mse=1.5771e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0420 | time=184.6s
+Epoch  27/100 | total=2.7015e-02  mse=2.6204e-02  pde=3.4323e-03  ce=6.6007e-04 | val_mse=1.0320e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0440 | time=185.2s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.0320e-02)
+Epoch  28/100 | total=2.8943e-02  mse=2.7934e-02  pde=3.3313e-03  ce=8.5514e-04 | val_mse=1.0460e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0460 | time=184.2s
+Epoch  29/100 | total=3.0526e-02  mse=2.9463e-02  pde=3.4597e-03  ce=8.9668e-04 | val_mse=1.0311e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0480 | time=185.5s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=1.0311e-02)
+Epoch  30/100 | total=2.5798e-02  mse=2.4919e-02  pde=3.3942e-03  ce=7.0927e-04 | val_mse=8.7733e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.9s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=8.7733e-03)
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/epoch_30
+Epoch  31/100 | total=2.8481e-02  mse=2.7605e-02  pde=3.4139e-03  ce=7.0514e-04 | val_mse=1.0482e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=186.1s
+Epoch  32/100 | total=3.0116e-02  mse=2.9077e-02  pde=3.3278e-03  ce=8.7317e-04 | val_mse=9.4794e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.2s
+Epoch  33/100 | total=3.0566e-02  mse=2.9432e-02  pde=3.2613e-03  ce=9.7017e-04 | val_mse=7.9545e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.2s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=7.9545e-03)
+Epoch  34/100 | total=2.8230e-02  mse=2.7296e-02  pde=3.4107e-03  ce=7.6385e-04 | val_mse=1.0847e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.9s
+Epoch  35/100 | total=2.5237e-02  mse=2.4219e-02  pde=3.1435e-03  ce=8.6081e-04 | val_mse=8.4105e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.1s
+Epoch  36/100 | total=3.0362e-02  mse=2.9362e-02  pde=3.2478e-03  ce=8.3743e-04 | val_mse=1.4179e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=185.3s
+Epoch  37/100 | total=2.9931e-02  mse=2.9097e-02  pde=3.1316e-03  ce=6.7741e-04 | val_mse=9.1458e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.0s
+Epoch  38/100 | total=2.5392e-02  mse=2.4612e-02  pde=3.1242e-03  ce=6.2350e-04 | val_mse=1.0120e-02 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.6s
+Epoch  39/100 | total=2.3816e-02  mse=2.2882e-02  pde=3.1190e-03  ce=7.7752e-04 | val_mse=8.2574e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.6s
+Epoch  40/100 | total=2.5731e-02  mse=2.4950e-02  pde=3.1585e-03  ce=6.2319e-04 | val_mse=9.6051e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=184.8s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/epoch_40
+Epoch  41/100 | total=3.0670e-02  mse=2.9968e-02  pde=3.0881e-03  ce=5.4813e-04 | val_mse=9.3343e-03 | lr_proj=6.00e-06  lr_lora=1.50e-06 | lambda_pde=0.0500 | time=185.9s
+Epoch  42/100 | total=3.5913e-02  mse=3.5051e-02  pde=3.0722e-03  ce=7.0765e-04 | val_mse=8.0613e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 [LR↓] | lambda_pde=0.0500 | time=185.4s
+Epoch  43/100 | total=1.8355e-02  mse=1.7553e-02  pde=2.9836e-03  ce=6.5287e-04 | val_mse=7.3361e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.3s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=7.3361e-03)
+Epoch  44/100 | total=2.1475e-02  mse=2.0405e-02  pde=3.1180e-03  ce=9.1428e-04 | val_mse=7.9721e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.4s
+Epoch  45/100 | total=2.3076e-02  mse=2.2301e-02  pde=3.1108e-03  ce=6.1993e-04 | val_mse=7.1347e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=184.9s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=7.1347e-03)
+Epoch  46/100 | total=2.3888e-02  mse=2.2964e-02  pde=3.0294e-03  ce=7.7270e-04 | val_mse=8.2325e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=184.6s
+Epoch  47/100 | total=2.4195e-02  mse=2.3155e-02  pde=3.1254e-03  ce=8.8332e-04 | val_mse=6.8104e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.4s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/best_model
+  -> Best model saved (val_mse=6.8104e-03)
+Epoch  48/100 | total=2.3115e-02  mse=2.2241e-02  pde=3.1216e-03  ce=7.1842e-04 | val_mse=7.0810e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.4s
+Epoch  49/100 | total=2.4424e-02  mse=2.3397e-02  pde=3.1375e-03  ce=8.7023e-04 | val_mse=6.8362e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=184.2s
+Epoch  50/100 | total=2.7130e-02  mse=2.6358e-02  pde=3.1302e-03  ce=6.1568e-04 | val_mse=1.0115e-02 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.4s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/epoch_50
+Epoch  51/100 | total=2.2298e-02  mse=2.1430e-02  pde=3.1040e-03  ce=7.1345e-04 | val_mse=7.0459e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=186.1s
+Epoch  52/100 | total=2.4151e-02  mse=2.3303e-02  pde=3.0680e-03  ce=6.9388e-04 | val_mse=8.1258e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=187.0s
+Epoch  53/100 | total=1.9782e-02  mse=1.9028e-02  pde=3.0870e-03  ce=5.9941e-04 | val_mse=7.5224e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=184.5s
+Epoch  54/100 | total=1.9320e-02  mse=1.8474e-02  pde=3.0247e-03  ce=6.9503e-04 | val_mse=7.3674e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.2s
+Epoch  55/100 | total=2.3588e-02  mse=2.2844e-02  pde=3.1478e-03  ce=5.8645e-04 | val_mse=7.1509e-03 | lr_proj=1.80e-06  lr_lora=4.50e-07 | lambda_pde=0.0500 | time=185.8s
+Epoch  56/100 | total=2.0598e-02  mse=1.9496e-02  pde=3.0155e-03  ce=9.5074e-04 | val_mse=7.8950e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 [LR↓] | lambda_pde=0.0500 | time=185.7s
+Epoch  57/100 | total=1.9124e-02  mse=1.8158e-02  pde=2.9750e-03  ce=8.1720e-04 | val_mse=7.2179e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=185.9s
+Epoch  58/100 | total=2.0554e-02  mse=1.9623e-02  pde=3.0083e-03  ce=7.8069e-04 | val_mse=6.9093e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=186.3s
+Epoch  59/100 | total=2.4890e-02  mse=2.4086e-02  pde=3.0382e-03  ce=6.5200e-04 | val_mse=7.2913e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=186.6s
+Epoch  60/100 | total=2.0942e-02  mse=2.0133e-02  pde=3.0390e-03  ce=6.5642e-04 | val_mse=7.7902e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=184.9s
+V2PDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/1D_p/ablation_pretrain/ckpt_arm2_random/epoch_60
+Epoch  61/100 | total=1.9696e-02  mse=1.8786e-02  pde=3.0783e-03  ce=7.5556e-04 | val_mse=7.2419e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=184.9s
+Epoch  62/100 | total=1.9038e-02  mse=1.8219e-02  pde=3.0351e-03  ce=6.6778e-04 | val_mse=7.7399e-03 | lr_proj=5.40e-07  lr_lora=1.35e-07 | lambda_pde=0.0500 | time=185.1s
+[early-stop] no val_mse improvement for 15 epochs (best=6.8104e-03); stopping at epoch 62/100
+Training complete.  best_val_mse=6.8104e-03
+=== [ARM2 random-init] two-stage complete Sun 28 Jun 2026 08:45:23 AM UTC ===

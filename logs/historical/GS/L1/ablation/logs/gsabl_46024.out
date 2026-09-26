@@ -1,0 +1,1029 @@
+=== [arm2_random] PHASE2 with-context fixed-K (RAND=1) Sun 28 Jun 2026 08:40:11 PM UTC ===
+fresh model  (no_context_prob=0.0)
+[rank3] loading AE from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ckpt/epoch_60/autoencoder2d.pt
+[rank2] loading AE from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ckpt/epoch_60/autoencoder2d.pt
+[rank1] loading AE from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ckpt/epoch_60/autoencoder2d.pt
+[rank0] loading AE from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ckpt/epoch_60/autoencoder2d.pt
+[rank3] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank2] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank1] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank3] ABLATION random-init backbone (frozen) Qwen/Qwen2.5-7B-Instruct -> cuda:3
+[rank2] ABLATION random-init backbone (frozen) Qwen/Qwen2.5-7B-Instruct -> cuda:2
+[rank0] ABLATION random-init backbone (frozen) Qwen/Qwen2.5-7B-Instruct -> cuda:0
+[rank1] ABLATION random-init backbone (frozen) Qwen/Qwen2.5-7B-Instruct -> cuda:1
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+proj params 8,336,008  lora params 10,092,544
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+trainable params: 10,092,544 || all params: 7,625,709,056 || trainable%: 0.1323
+  ep1 step0/237 total=2.669e+00 mse=2.422e+00 latent=2.915e+00 pde=1.023e-02 tpde=8.669e-03 ss=0.02
+  ep1 step50/237 total=1.292e+00 mse=9.787e-01 latent=1.605e+00 pde=2.206e-03 tpde=2.926e-03 ss=0.02
+  ep1 step100/237 total=1.106e+00 mse=9.796e-01 latent=1.232e+00 pde=2.430e-03 tpde=2.899e-03 ss=0.02
+  ep1 step150/237 total=1.352e+00 mse=1.245e+00 latent=1.459e+00 pde=2.337e-03 tpde=2.827e-03 ss=0.02
+  ep1 step200/237 total=1.017e+00 mse=9.831e-01 latent=1.051e+00 pde=2.205e-03 tpde=2.608e-03 ss=0.02
+Epoch 1/80 | train total=1.1609e+00 mse=9.6314e-01 tpde=2.8932e-03 nt=0.0000e+00 | val_mse=8.6210e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 634s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=8.6210e-01)
+  ep2 step0/237 total=7.465e-01 mse=7.086e-01 latent=7.844e-01 pde=4.371e-03 tpde=4.369e-03 ss=0.03
+  ep2 step50/237 total=9.720e-01 mse=9.485e-01 latent=9.954e-01 pde=2.426e-03 tpde=2.737e-03 ss=0.03
+  ep2 step100/237 total=6.339e-01 mse=5.925e-01 latent=6.752e-01 pde=3.620e-03 tpde=3.941e-03 ss=0.03
+  ep2 step150/237 total=8.538e-01 mse=8.982e-01 latent=8.092e-01 pde=2.165e-03 tpde=2.555e-03 ss=0.03
+  ep2 step200/237 total=9.239e-01 mse=9.916e-01 latent=8.561e-01 pde=3.797e-03 tpde=4.039e-03 ss=0.03
+Epoch 2/80 | train total=8.3518e-01 mse=8.3504e-01 tpde=3.3459e-03 nt=0.0000e+00 | val_mse=7.6743e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 603s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=7.6743e-01)
+  ep3 step0/237 total=8.121e-01 mse=8.148e-01 latent=8.094e-01 pde=3.715e-03 tpde=4.559e-03 ss=0.05
+  ep3 step50/237 total=7.110e-01 mse=6.691e-01 latent=7.529e-01 pde=3.112e-03 tpde=4.174e-03 ss=0.05
+  ep3 step100/237 total=7.568e-01 mse=7.191e-01 latent=7.944e-01 pde=2.497e-03 tpde=3.633e-03 ss=0.05
+  ep3 step150/237 total=9.385e-01 mse=9.738e-01 latent=9.031e-01 pde=2.274e-03 tpde=3.674e-03 ss=0.05
+  ep3 step200/237 total=6.919e-01 mse=6.701e-01 latent=7.137e-01 pde=2.326e-03 tpde=3.321e-03 ss=0.05
+Epoch 3/80 | train total=7.5023e-01 mse=7.5062e-01 tpde=3.6802e-03 nt=0.0000e+00 | val_mse=6.7714e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=6.7714e-01)
+  ep4 step0/237 total=8.632e-01 mse=9.008e-01 latent=8.256e-01 pde=2.549e-03 tpde=3.403e-03 ss=0.07
+  ep4 step50/237 total=6.587e-01 mse=6.829e-01 latent=6.345e-01 pde=2.660e-03 tpde=3.117e-03 ss=0.07
+  ep4 step100/237 total=5.954e-01 mse=5.937e-01 latent=5.970e-01 pde=2.694e-03 tpde=3.640e-03 ss=0.07
+  ep4 step150/237 total=6.754e-01 mse=6.558e-01 latent=6.950e-01 pde=2.556e-03 tpde=4.236e-03 ss=0.07
+  ep4 step200/237 total=6.841e-01 mse=6.147e-01 latent=7.534e-01 pde=2.244e-03 tpde=3.329e-03 ss=0.07
+Epoch 4/80 | train total=6.6911e-01 mse=6.5571e-01 tpde=3.5939e-03 nt=0.0000e+00 | val_mse=6.2599e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 667s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=6.2599e-01)
+  ep5 step0/237 total=6.876e-01 mse=6.578e-01 latent=7.172e-01 pde=2.477e-03 tpde=4.170e-03 ss=0.08
+  ep5 step50/237 total=5.648e-01 mse=5.573e-01 latent=5.722e-01 pde=2.168e-03 tpde=3.192e-03 ss=0.08
+  ep5 step100/237 total=5.388e-01 mse=4.724e-01 latent=6.052e-01 pde=2.661e-03 tpde=4.540e-03 ss=0.08
+  ep5 step150/237 total=6.520e-01 mse=6.456e-01 latent=6.582e-01 pde=2.209e-03 tpde=3.411e-03 ss=0.08
+  ep5 step200/237 total=5.802e-01 mse=5.751e-01 latent=5.853e-01 pde=2.442e-03 tpde=2.651e-03 ss=0.08
+Epoch 5/80 | train total=6.1556e-01 mse=6.0203e-01 tpde=3.5162e-03 nt=0.0000e+00 | val_mse=5.9120e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 612s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=5.9120e-01)
+  ep6 step0/237 total=7.531e-01 mse=7.970e-01 latent=7.091e-01 pde=2.260e-03 tpde=3.232e-03 ss=0.10
+  ep6 step50/237 total=5.965e-01 mse=5.757e-01 latent=6.172e-01 pde=2.072e-03 tpde=2.778e-03 ss=0.10
+  ep6 step100/237 total=5.813e-01 mse=5.410e-01 latent=6.216e-01 pde=2.068e-03 tpde=3.321e-03 ss=0.10
+  ep6 step150/237 total=6.488e-01 mse=6.315e-01 latent=6.660e-01 pde=2.052e-03 tpde=3.421e-03 ss=0.10
+  ep6 step200/237 total=6.736e-01 mse=6.868e-01 latent=6.604e-01 pde=2.281e-03 tpde=2.616e-03 ss=0.10
+Epoch 6/80 | train total=5.7058e-01 mse=5.5324e-01 tpde=3.5044e-03 nt=0.0000e+00 | val_mse=5.5455e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 565s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=5.5455e-01)
+  ep7 step0/237 total=4.800e-01 mse=4.575e-01 latent=5.024e-01 pde=2.550e-03 tpde=3.463e-03 ss=0.12
+  ep7 step50/237 total=5.740e-01 mse=5.411e-01 latent=6.067e-01 pde=1.869e-03 tpde=2.872e-03 ss=0.12
+  ep7 step100/237 total=5.596e-01 mse=5.355e-01 latent=5.835e-01 pde=2.238e-03 tpde=3.454e-03 ss=0.12
+  ep7 step150/237 total=5.931e-01 mse=6.111e-01 latent=5.749e-01 pde=1.957e-03 tpde=3.349e-03 ss=0.12
+  ep7 step200/237 total=5.699e-01 mse=5.370e-01 latent=6.027e-01 pde=2.208e-03 tpde=2.930e-03 ss=0.12
+Epoch 7/80 | train total=5.5119e-01 mse=5.3850e-01 tpde=3.3933e-03 nt=0.0000e+00 | val_mse=5.3619e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 565s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=5.3619e-01)
+  ep8 step0/237 total=4.605e-01 mse=4.332e-01 latent=4.877e-01 pde=1.985e-03 tpde=3.018e-03 ss=0.13
+  ep8 step50/237 total=4.905e-01 mse=4.754e-01 latent=5.055e-01 pde=2.512e-03 tpde=3.863e-03 ss=0.13
+  ep8 step100/237 total=4.804e-01 mse=4.740e-01 latent=4.866e-01 pde=2.407e-03 tpde=3.193e-03 ss=0.13
+  ep8 step150/237 total=5.578e-01 mse=5.572e-01 latent=5.583e-01 pde=2.999e-03 tpde=3.784e-03 ss=0.13
+  ep8 step200/237 total=5.700e-01 mse=5.844e-01 latent=5.555e-01 pde=1.947e-03 tpde=2.791e-03 ss=0.13
+Epoch 8/80 | train total=5.2817e-01 mse=5.1605e-01 tpde=3.2711e-03 nt=0.0000e+00 | val_mse=5.2027e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 570s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=5.2027e-01)
+  ep9 step0/237 total=5.444e-01 mse=5.447e-01 latent=5.439e-01 pde=2.094e-03 tpde=2.984e-03 ss=0.15
+  ep9 step50/237 total=5.831e-01 mse=5.877e-01 latent=5.782e-01 pde=3.303e-03 tpde=2.803e-03 ss=0.15
+  ep9 step100/237 total=4.634e-01 mse=4.442e-01 latent=4.825e-01 pde=3.015e-03 tpde=3.432e-03 ss=0.15
+  ep9 step150/237 total=4.740e-01 mse=4.541e-01 latent=4.936e-01 pde=2.273e-03 tpde=3.113e-03 ss=0.15
+  ep9 step200/237 total=5.980e-01 mse=5.964e-01 latent=5.994e-01 pde=2.524e-03 tpde=2.824e-03 ss=0.15
+Epoch 9/80 | train total=5.1616e-01 mse=5.0378e-01 tpde=3.1547e-03 nt=0.0000e+00 | val_mse=5.0230e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 567s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=5.0230e-01)
+  ep10 step0/237 total=6.869e-01 mse=7.111e-01 latent=6.626e-01 pde=2.066e-03 tpde=2.338e-03 ss=0.17
+  ep10 step50/237 total=3.972e-01 mse=3.554e-01 latent=4.387e-01 pde=2.320e-03 tpde=3.126e-03 ss=0.17
+  ep10 step100/237 total=4.249e-01 mse=4.366e-01 latent=4.132e-01 pde=2.608e-03 tpde=2.674e-03 ss=0.17
+  ep10 step150/237 total=4.700e-01 mse=4.197e-01 latent=5.201e-01 pde=3.100e-03 tpde=3.191e-03 ss=0.17
+  ep10 step200/237 total=6.750e-01 mse=7.041e-01 latent=6.458e-01 pde=1.822e-03 tpde=2.619e-03 ss=0.17
+Epoch 10/80 | train total=4.9768e-01 mse=4.8644e-01 tpde=3.0593e-03 nt=0.0000e+00 | val_mse=4.8898e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.8898e-01)
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_10
+  ep11 step0/237 total=5.067e-01 mse=4.969e-01 latent=5.163e-01 pde=2.637e-03 tpde=3.316e-03 ss=0.18
+  ep11 step50/237 total=5.031e-01 mse=5.059e-01 latent=5.001e-01 pde=3.322e-03 tpde=3.214e-03 ss=0.18
+  ep11 step100/237 total=5.120e-01 mse=4.951e-01 latent=5.288e-01 pde=1.871e-03 tpde=2.539e-03 ss=0.18
+  ep11 step150/237 total=6.044e-01 mse=6.120e-01 latent=5.967e-01 pde=2.372e-03 tpde=3.108e-03 ss=0.18
+  ep11 step200/237 total=4.180e-01 mse=3.874e-01 latent=4.483e-01 pde=2.028e-03 tpde=2.563e-03 ss=0.18
+Epoch 11/80 | train total=4.9004e-01 mse=4.7829e-01 tpde=2.9194e-03 nt=0.0000e+00 | val_mse=4.8126e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 566s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.8126e-01)
+  ep12 step0/237 total=3.443e-01 mse=3.289e-01 latent=3.596e-01 pde=3.047e-03 tpde=3.560e-03 ss=0.20
+  ep12 step50/237 total=6.075e-01 mse=6.097e-01 latent=6.050e-01 pde=3.093e-03 tpde=2.720e-03 ss=0.20
+  ep12 step100/237 total=6.655e-01 mse=7.072e-01 latent=6.236e-01 pde=2.341e-03 tpde=2.418e-03 ss=0.20
+  ep12 step150/237 total=5.395e-01 mse=5.390e-01 latent=5.400e-01 pde=1.895e-03 tpde=2.568e-03 ss=0.20
+  ep12 step200/237 total=4.660e-01 mse=4.726e-01 latent=4.593e-01 pde=2.467e-03 tpde=3.017e-03 ss=0.20
+Epoch 12/80 | train total=4.8114e-01 mse=4.6992e-01 tpde=2.8136e-03 nt=0.0000e+00 | val_mse=4.7139e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 656s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.7139e-01)
+  ep13 step0/237 total=4.576e-01 mse=4.438e-01 latent=4.712e-01 pde=2.074e-03 tpde=2.266e-03 ss=0.22
+  ep13 step50/237 total=6.624e-01 mse=6.682e-01 latent=6.566e-01 pde=1.857e-03 tpde=2.276e-03 ss=0.22
+  ep13 step100/237 total=3.757e-01 mse=3.594e-01 latent=3.919e-01 pde=2.458e-03 tpde=2.689e-03 ss=0.22
+  ep13 step150/237 total=2.860e-01 mse=2.659e-01 latent=3.058e-01 pde=4.621e-03 tpde=2.729e-03 ss=0.22
+  ep13 step200/237 total=6.254e-01 mse=6.471e-01 latent=6.035e-01 pde=3.090e-03 tpde=3.266e-03 ss=0.22
+Epoch 13/80 | train total=4.7434e-01 mse=4.6259e-01 tpde=2.8448e-03 nt=0.0000e+00 | val_mse=4.6886e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 700s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.6886e-01)
+  ep14 step0/237 total=4.774e-01 mse=4.821e-01 latent=4.726e-01 pde=2.011e-03 tpde=2.572e-03 ss=0.23
+  ep14 step50/237 total=4.615e-01 mse=4.361e-01 latent=4.868e-01 pde=2.009e-03 tpde=2.635e-03 ss=0.23
+  ep14 step100/237 total=3.957e-01 mse=3.535e-01 latent=4.377e-01 pde=1.952e-03 tpde=2.548e-03 ss=0.23
+  ep14 step150/237 total=5.643e-01 mse=5.581e-01 latent=5.704e-01 pde=2.567e-03 tpde=2.928e-03 ss=0.23
+  ep14 step200/237 total=5.624e-01 mse=5.641e-01 latent=5.598e-01 pde=2.090e-03 tpde=3.633e-02 ss=0.23
+Epoch 14/80 | train total=4.6229e-01 mse=4.4898e-01 tpde=2.8784e-03 nt=0.0000e+00 | val_mse=4.5118e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 689s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.5118e-01)
+  ep15 step0/237 total=6.696e-01 mse=7.950e-01 latent=5.441e-01 pde=1.959e-03 tpde=2.673e-03 ss=0.25
+  ep15 step50/237 total=4.964e-01 mse=4.989e-01 latent=4.936e-01 pde=3.962e-03 tpde=2.816e-03 ss=0.25
+  ep15 step100/237 total=3.816e-01 mse=3.668e-01 latent=3.963e-01 pde=1.994e-03 tpde=2.659e-03 ss=0.25
+  ep15 step150/237 total=3.728e-01 mse=3.485e-01 latent=3.969e-01 pde=2.405e-03 tpde=3.021e-03 ss=0.25
+  ep15 step200/237 total=4.423e-01 mse=4.169e-01 latent=4.676e-01 pde=2.795e-03 tpde=2.239e-03 ss=0.25
+Epoch 15/80 | train total=4.5983e-01 mse=4.4739e-01 tpde=2.8759e-03 nt=0.0000e+00 | val_mse=4.4982e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 733s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.4982e-01)
+  ep16 step0/237 total=3.702e-01 mse=3.293e-01 latent=4.109e-01 pde=2.403e-03 tpde=2.279e-03 ss=0.25
+  ep16 step50/237 total=3.918e-01 mse=3.681e-01 latent=4.154e-01 pde=2.162e-03 tpde=2.692e-03 ss=0.25
+  ep16 step100/237 total=4.723e-01 mse=4.673e-01 latent=4.771e-01 pde=2.158e-03 tpde=2.433e-03 ss=0.25
+  ep16 step150/237 total=4.602e-01 mse=4.553e-01 latent=4.650e-01 pde=2.225e-03 tpde=2.211e-03 ss=0.25
+  ep16 step200/237 total=4.513e-01 mse=4.407e-01 latent=4.617e-01 pde=2.270e-03 tpde=2.181e-03 ss=0.25
+Epoch 16/80 | train total=4.4991e-01 mse=4.3760e-01 tpde=2.8360e-03 nt=0.0000e+00 | val_mse=4.4013e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 668s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.4013e-01)
+  ep17 step0/237 total=4.473e-01 mse=4.462e-01 latent=4.482e-01 pde=3.046e-03 tpde=2.641e-03 ss=0.25
+  ep17 step50/237 total=5.066e-01 mse=4.996e-01 latent=5.135e-01 pde=1.950e-03 tpde=2.696e-03 ss=0.25
+  ep17 step100/237 total=4.565e-01 mse=4.244e-01 latent=4.884e-01 pde=2.393e-03 tpde=3.223e-03 ss=0.25
+  ep17 step150/237 total=2.725e-01 mse=2.311e-01 latent=3.138e-01 pde=2.233e-03 tpde=2.617e-03 ss=0.25
+  ep17 step200/237 total=4.013e-01 mse=3.748e-01 latent=4.276e-01 pde=2.018e-03 tpde=2.952e-03 ss=0.25
+Epoch 17/80 | train total=4.4637e-01 mse=4.3463e-01 tpde=2.7060e-03 nt=0.0000e+00 | val_mse=4.3347e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 564s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.3347e-01)
+  ep18 step0/237 total=4.655e-01 mse=4.619e-01 latent=4.689e-01 pde=2.569e-03 tpde=2.259e-03 ss=0.25
+  ep18 step50/237 total=4.625e-01 mse=4.677e-01 latent=4.571e-01 pde=2.018e-03 tpde=2.532e-03 ss=0.25
+  ep18 step100/237 total=3.882e-01 mse=3.578e-01 latent=4.185e-01 pde=2.316e-03 tpde=2.548e-03 ss=0.25
+  ep18 step150/237 total=4.478e-01 mse=4.154e-01 latent=4.801e-01 pde=2.066e-03 tpde=2.909e-03 ss=0.25
+  ep18 step200/237 total=3.343e-01 mse=2.872e-01 latent=3.812e-01 pde=3.041e-03 tpde=3.163e-03 ss=0.25
+Epoch 18/80 | train total=4.3657e-01 mse=4.2419e-01 tpde=2.8403e-03 nt=0.0000e+00 | val_mse=4.3335e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 581s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.3335e-01)
+  ep19 step0/237 total=5.247e-01 mse=5.189e-01 latent=5.303e-01 pde=3.217e-03 tpde=2.777e-03 ss=0.25
+  ep19 step50/237 total=4.969e-01 mse=5.382e-01 latent=4.555e-01 pde=2.285e-03 tpde=2.210e-03 ss=0.25
+  ep19 step100/237 total=4.527e-01 mse=4.597e-01 latent=4.455e-01 pde=2.658e-03 tpde=2.699e-03 ss=0.25
+  ep19 step150/237 total=4.252e-01 mse=3.784e-01 latent=4.719e-01 pde=2.786e-03 tpde=3.037e-03 ss=0.25
+  ep19 step200/237 total=5.011e-01 mse=5.025e-01 latent=4.996e-01 pde=2.350e-03 tpde=2.631e-03 ss=0.25
+Epoch 19/80 | train total=4.3706e-01 mse=4.2561e-01 tpde=2.6676e-03 nt=0.0000e+00 | val_mse=4.2217e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 578s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.2217e-01)
+  ep20 step0/237 total=4.754e-01 mse=4.972e-01 latent=4.534e-01 pde=2.987e-03 tpde=2.549e-03 ss=0.25
+  ep20 step50/237 total=6.053e-01 mse=6.458e-01 latent=5.646e-01 pde=2.516e-03 tpde=2.589e-03 ss=0.25
+  ep20 step100/237 total=3.274e-01 mse=3.053e-01 latent=3.494e-01 pde=2.796e-03 tpde=2.720e-03 ss=0.25
+  ep20 step150/237 total=2.985e-01 mse=2.423e-01 latent=3.545e-01 pde=1.736e-03 tpde=2.312e-03 ss=0.25
+  ep20 step200/237 total=5.745e-01 mse=5.711e-01 latent=5.778e-01 pde=2.193e-03 tpde=2.291e-03 ss=0.25
+Epoch 20/80 | train total=4.2619e-01 mse=4.1499e-01 tpde=2.6669e-03 nt=0.0000e+00 | val_mse=4.2206e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 577s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.2206e-01)
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_20
+  ep21 step0/237 total=2.475e-01 mse=2.224e-01 latent=2.725e-01 pde=2.626e-03 tpde=2.397e-03 ss=0.25
+  ep21 step50/237 total=5.716e-01 mse=5.629e-01 latent=5.802e-01 pde=1.951e-03 tpde=2.366e-03 ss=0.25
+  ep21 step100/237 total=5.192e-01 mse=5.408e-01 latent=4.975e-01 pde=2.393e-03 tpde=2.314e-03 ss=0.25
+  ep21 step150/237 total=5.880e-01 mse=5.668e-01 latent=6.091e-01 pde=2.722e-03 tpde=2.149e-03 ss=0.25
+  ep21 step200/237 total=4.458e-01 mse=4.364e-01 latent=4.551e-01 pde=1.840e-03 tpde=2.348e-03 ss=0.25
+Epoch 21/80 | train total=4.1998e-01 mse=4.0774e-01 tpde=2.7218e-03 nt=0.0000e+00 | val_mse=4.1860e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 574s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.1860e-01)
+  ep22 step0/237 total=3.654e-01 mse=3.521e-01 latent=3.785e-01 pde=2.218e-03 tpde=2.788e-03 ss=0.25
+  ep22 step50/237 total=4.218e-01 mse=3.799e-01 latent=4.636e-01 pde=2.323e-03 tpde=1.986e-03 ss=0.25
+  ep22 step100/237 total=4.767e-01 mse=4.513e-01 latent=5.019e-01 pde=3.109e-03 tpde=2.959e-03 ss=0.25
+  ep22 step150/237 total=4.120e-01 mse=4.036e-01 latent=4.202e-01 pde=3.182e-03 tpde=2.538e-03 ss=0.25
+  ep22 step200/237 total=4.183e-01 mse=3.718e-01 latent=4.646e-01 pde=2.746e-03 tpde=2.611e-03 ss=0.25
+Epoch 22/80 | train total=4.1630e-01 mse=4.0431e-01 tpde=2.7391e-03 nt=0.0000e+00 | val_mse=4.1914e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 578s
+  ep23 step0/237 total=4.918e-01 mse=5.035e-01 latent=4.801e-01 pde=2.030e-03 tpde=2.247e-03 ss=0.25
+  ep23 step50/237 total=4.439e-01 mse=4.388e-01 latent=4.489e-01 pde=1.878e-03 tpde=2.545e-03 ss=0.25
+  ep23 step100/237 total=2.258e-01 mse=1.975e-01 latent=2.540e-01 pde=2.076e-03 tpde=2.274e-03 ss=0.25
+  ep23 step150/237 total=3.383e-01 mse=3.302e-01 latent=3.461e-01 pde=2.296e-03 tpde=2.712e-03 ss=0.25
+  ep23 step200/237 total=3.232e-01 mse=3.046e-01 latent=3.417e-01 pde=2.784e-03 tpde=2.473e-03 ss=0.25
+Epoch 23/80 | train total=4.1411e-01 mse=4.0153e-01 tpde=2.7644e-03 nt=0.0000e+00 | val_mse=4.1651e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.1651e-01)
+  ep24 step0/237 total=4.101e-01 mse=3.943e-01 latent=4.258e-01 pde=1.863e-03 tpde=2.505e-03 ss=0.25
+  ep24 step50/237 total=4.074e-01 mse=4.011e-01 latent=4.135e-01 pde=4.683e-03 tpde=2.946e-03 ss=0.25
+  ep24 step100/237 total=6.278e-01 mse=6.574e-01 latent=5.981e-01 pde=2.289e-03 tpde=2.291e-03 ss=0.25
+  ep24 step150/237 total=4.900e-01 mse=4.862e-01 latent=4.938e-01 pde=1.765e-03 tpde=2.002e-03 ss=0.25
+  ep24 step200/237 total=3.830e-01 mse=3.490e-01 latent=4.167e-01 pde=3.820e-03 tpde=2.314e-03 ss=0.25
+Epoch 24/80 | train total=4.1320e-01 mse=4.0293e-01 tpde=2.6847e-03 nt=0.0000e+00 | val_mse=4.0713e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.0713e-01)
+  ep25 step0/237 total=4.290e-01 mse=4.014e-01 latent=4.565e-01 pde=1.741e-03 tpde=2.467e-03 ss=0.25
+  ep25 step50/237 total=3.088e-01 mse=2.629e-01 latent=3.546e-01 pde=1.892e-03 tpde=2.641e-03 ss=0.25
+  ep25 step100/237 total=4.550e-01 mse=4.402e-01 latent=4.697e-01 pde=2.153e-03 tpde=3.014e-03 ss=0.25
+  ep25 step150/237 total=3.840e-01 mse=3.571e-01 latent=4.108e-01 pde=2.381e-03 tpde=2.638e-03 ss=0.25
+  ep25 step200/237 total=3.426e-01 mse=3.181e-01 latent=3.670e-01 pde=1.938e-03 tpde=2.478e-03 ss=0.25
+Epoch 25/80 | train total=4.0691e-01 mse=3.9611e-01 tpde=2.7662e-03 nt=0.0000e+00 | val_mse=4.0399e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 573s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.0399e-01)
+  ep26 step0/237 total=2.486e-01 mse=1.751e-01 latent=3.219e-01 pde=1.846e-03 tpde=2.250e-03 ss=0.25
+  ep26 step50/237 total=4.808e-01 mse=4.713e-01 latent=4.902e-01 pde=1.987e-03 tpde=2.348e-03 ss=0.25
+  ep26 step100/237 total=4.438e-01 mse=4.292e-01 latent=4.582e-01 pde=1.948e-03 tpde=2.722e-03 ss=0.25
+  ep26 step150/237 total=3.878e-01 mse=3.627e-01 latent=4.128e-01 pde=1.953e-03 tpde=2.361e-03 ss=0.25
+  ep26 step200/237 total=2.981e-01 mse=2.695e-01 latent=3.267e-01 pde=1.856e-03 tpde=3.123e-03 ss=0.25
+Epoch 26/80 | train total=3.9804e-01 mse=3.8514e-01 tpde=2.8118e-03 nt=0.0000e+00 | val_mse=4.0132e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=4.0132e-01)
+  ep27 step0/237 total=5.222e-01 mse=5.299e-01 latent=5.143e-01 pde=2.197e-03 tpde=2.219e-03 ss=0.25
+  ep27 step50/237 total=5.193e-01 mse=5.826e-01 latent=4.558e-01 pde=3.266e-03 tpde=3.491e-03 ss=0.25
+  ep27 step100/237 total=2.311e-01 mse=2.009e-01 latent=2.611e-01 pde=2.327e-03 tpde=2.823e-03 ss=0.25
+  ep27 step150/237 total=4.573e-01 mse=4.583e-01 latent=4.561e-01 pde=2.452e-03 tpde=2.889e-03 ss=0.25
+  ep27 step200/237 total=4.746e-01 mse=4.932e-01 latent=4.559e-01 pde=2.559e-03 tpde=2.755e-03 ss=0.25
+Epoch 27/80 | train total=3.9919e-01 mse=3.8693e-01 tpde=2.7167e-03 nt=0.0000e+00 | val_mse=4.0343e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 576s
+  ep28 step0/237 total=2.194e-01 mse=1.955e-01 latent=2.431e-01 pde=2.344e-03 tpde=2.186e-03 ss=0.25
+  ep28 step50/237 total=3.760e-01 mse=3.717e-01 latent=3.801e-01 pde=2.194e-03 tpde=2.046e-03 ss=0.25
+  ep28 step100/237 total=2.984e-01 mse=2.673e-01 latent=3.293e-01 pde=1.890e-03 tpde=2.606e-03 ss=0.25
+  ep28 step150/237 total=4.215e-01 mse=4.122e-01 latent=4.306e-01 pde=2.516e-03 tpde=2.582e-03 ss=0.25
+  ep28 step200/237 total=4.652e-01 mse=4.749e-01 latent=4.555e-01 pde=1.855e-03 tpde=2.375e-03 ss=0.25
+Epoch 28/80 | train total=3.9681e-01 mse=3.8503e-01 tpde=2.7398e-03 nt=0.0000e+00 | val_mse=3.9833e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.9833e-01)
+  ep29 step0/237 total=4.418e-01 mse=4.239e-01 latent=4.597e-01 pde=1.957e-03 tpde=2.489e-03 ss=0.25
+  ep29 step50/237 total=3.254e-01 mse=3.135e-01 latent=3.372e-01 pde=2.722e-03 tpde=2.589e-03 ss=0.25
+  ep29 step100/237 total=4.380e-01 mse=4.014e-01 latent=4.745e-01 pde=1.780e-03 tpde=2.520e-03 ss=0.25
+  ep29 step150/237 total=4.190e-01 mse=3.927e-01 latent=4.451e-01 pde=2.592e-03 tpde=2.857e-03 ss=0.25
+  ep29 step200/237 total=3.582e-01 mse=3.708e-01 latent=3.454e-01 pde=2.290e-03 tpde=2.404e-03 ss=0.25
+Epoch 29/80 | train total=4.0005e-01 mse=3.8940e-01 tpde=2.6318e-03 nt=0.0000e+00 | val_mse=3.9540e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 575s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.9540e-01)
+  ep30 step0/237 total=3.332e-01 mse=2.903e-01 latent=3.759e-01 pde=2.478e-03 tpde=2.287e-03 ss=0.25
+  ep30 step50/237 total=4.463e-01 mse=4.402e-01 latent=4.523e-01 pde=1.942e-03 tpde=8.812e-03 ss=0.25
+  ep30 step100/237 total=4.915e-01 mse=4.750e-01 latent=5.079e-01 pde=2.200e-03 tpde=2.622e-03 ss=0.25
+  ep30 step150/237 total=2.570e-01 mse=2.304e-01 latent=2.834e-01 pde=3.194e-03 tpde=2.719e-03 ss=0.25
+  ep30 step200/237 total=2.971e-01 mse=3.039e-01 latent=2.901e-01 pde=2.751e-03 tpde=2.554e-03 ss=0.25
+Epoch 30/80 | train total=3.8886e-01 mse=3.7647e-01 tpde=2.8546e-03 nt=0.0000e+00 | val_mse=3.9038e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.9038e-01)
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_30
+  ep31 step0/237 total=5.218e-01 mse=5.412e-01 latent=5.023e-01 pde=1.853e-03 tpde=2.128e-03 ss=0.25
+  ep31 step50/237 total=2.974e-01 mse=2.625e-01 latent=3.321e-01 pde=1.908e-03 tpde=2.567e-03 ss=0.25
+  ep31 step100/237 total=4.461e-01 mse=4.409e-01 latent=4.511e-01 pde=1.758e-03 tpde=3.196e-03 ss=0.25
+  ep31 step150/237 total=2.851e-01 mse=2.826e-01 latent=2.874e-01 pde=2.016e-03 tpde=2.497e-03 ss=0.25
+  ep31 step200/237 total=4.143e-01 mse=3.975e-01 latent=4.309e-01 pde=1.834e-03 tpde=2.520e-03 ss=0.25
+Epoch 31/80 | train total=3.8659e-01 mse=3.7447e-01 tpde=2.7104e-03 nt=0.0000e+00 | val_mse=3.8646e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 567s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.8646e-01)
+  ep32 step0/237 total=3.587e-01 mse=3.513e-01 latent=3.659e-01 pde=2.297e-03 tpde=3.015e-03 ss=0.25
+  ep32 step50/237 total=5.561e-01 mse=5.699e-01 latent=5.421e-01 pde=1.892e-03 tpde=2.196e-03 ss=0.25
+  ep32 step100/237 total=4.203e-01 mse=3.950e-01 latent=4.454e-01 pde=2.913e-03 tpde=2.530e-03 ss=0.25
+  ep32 step150/237 total=3.312e-01 mse=3.112e-01 latent=3.511e-01 pde=2.572e-03 tpde=3.658e-03 ss=0.25
+  ep32 step200/237 total=2.466e-01 mse=2.247e-01 latent=2.683e-01 pde=1.967e-03 tpde=2.462e-03 ss=0.25
+Epoch 32/80 | train total=3.9019e-01 mse=3.7842e-01 tpde=2.7511e-03 nt=0.0000e+00 | val_mse=3.8356e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 567s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.8356e-01)
+  ep33 step0/237 total=3.029e-01 mse=2.691e-01 latent=3.365e-01 pde=1.790e-03 tpde=2.515e-03 ss=0.25
+  ep33 step50/237 total=4.761e-01 mse=4.793e-01 latent=4.728e-01 pde=1.753e-03 tpde=2.809e-03 ss=0.25
+  ep33 step100/237 total=3.616e-01 mse=3.471e-01 latent=3.759e-01 pde=1.764e-03 tpde=2.464e-03 ss=0.25
+  ep33 step150/237 total=4.535e-01 mse=4.625e-01 latent=4.445e-01 pde=1.974e-03 tpde=2.374e-03 ss=0.25
+  ep33 step200/237 total=4.370e-01 mse=4.362e-01 latent=4.376e-01 pde=1.945e-03 tpde=2.845e-03 ss=0.25
+Epoch 33/80 | train total=3.8117e-01 mse=3.6874e-01 tpde=2.7563e-03 nt=0.0000e+00 | val_mse=3.8193e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 571s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.8193e-01)
+  ep34 step0/237 total=4.551e-01 mse=4.446e-01 latent=4.655e-01 pde=2.369e-03 tpde=2.876e-03 ss=0.25
+  ep34 step50/237 total=4.568e-01 mse=4.758e-01 latent=4.377e-01 pde=1.762e-03 tpde=2.437e-03 ss=0.25
+  ep34 step100/237 total=2.853e-01 mse=2.166e-01 latent=3.539e-01 pde=2.186e-03 tpde=2.928e-03 ss=0.25
+  ep34 step150/237 total=2.788e-01 mse=2.728e-01 latent=2.846e-01 pde=2.320e-03 tpde=2.659e-03 ss=0.25
+  ep34 step200/237 total=3.690e-01 mse=3.508e-01 latent=3.869e-01 pde=1.823e-03 tpde=2.550e-03 ss=0.25
+Epoch 34/80 | train total=3.7800e-01 mse=3.6434e-01 tpde=2.7353e-03 nt=0.0000e+00 | val_mse=3.8726e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 571s
+  ep35 step0/237 total=3.449e-01 mse=3.246e-01 latent=3.652e-01 pde=2.136e-03 tpde=2.649e-03 ss=0.25
+  ep35 step50/237 total=4.329e-01 mse=4.480e-01 latent=4.176e-01 pde=1.858e-03 tpde=2.280e-03 ss=0.25
+  ep35 step100/237 total=4.613e-01 mse=4.609e-01 latent=4.615e-01 pde=1.893e-03 tpde=2.014e-03 ss=0.25
+  ep35 step150/237 total=2.645e-01 mse=2.339e-01 latent=2.950e-01 pde=1.803e-03 tpde=2.652e-03 ss=0.25
+  ep35 step200/237 total=3.169e-01 mse=2.964e-01 latent=3.373e-01 pde=1.761e-03 tpde=3.282e-03 ss=0.25
+Epoch 35/80 | train total=3.7820e-01 mse=3.6604e-01 tpde=2.9592e-03 nt=0.0000e+00 | val_mse=3.7980e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 586s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.7980e-01)
+  ep36 step0/237 total=5.060e-01 mse=5.055e-01 latent=5.063e-01 pde=2.871e-03 tpde=2.679e-03 ss=0.25
+  ep36 step50/237 total=5.119e-01 mse=4.914e-01 latent=5.322e-01 pde=1.934e-03 tpde=2.626e-03 ss=0.25
+  ep36 step100/237 total=5.077e-01 mse=5.179e-01 latent=4.973e-01 pde=2.073e-03 tpde=2.960e-03 ss=0.25
+  ep36 step150/237 total=3.101e-01 mse=2.932e-01 latent=3.268e-01 pde=1.648e-03 tpde=2.517e-03 ss=0.25
+  ep36 step200/237 total=3.641e-01 mse=3.489e-01 latent=3.791e-01 pde=2.086e-03 tpde=2.574e-03 ss=0.25
+Epoch 36/80 | train total=3.7878e-01 mse=3.6594e-01 tpde=2.7745e-03 nt=0.0000e+00 | val_mse=3.7981e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 607s
+  ep37 step0/237 total=4.363e-01 mse=4.291e-01 latent=4.434e-01 pde=2.168e-03 tpde=3.248e-03 ss=0.25
+  ep37 step50/237 total=4.808e-01 mse=4.989e-01 latent=4.624e-01 pde=3.533e-03 tpde=3.788e-03 ss=0.25
+  ep37 step100/237 total=3.956e-01 mse=3.886e-01 latent=4.025e-01 pde=2.008e-03 tpde=2.290e-03 ss=0.25
+  ep37 step150/237 total=5.052e-01 mse=5.033e-01 latent=5.070e-01 pde=1.894e-03 tpde=2.581e-03 ss=0.25
+  ep37 step200/237 total=2.695e-01 mse=2.518e-01 latent=2.870e-01 pde=2.323e-03 tpde=3.008e-03 ss=0.25
+Epoch 37/80 | train total=3.6703e-01 mse=3.5302e-01 tpde=2.7780e-03 nt=0.0000e+00 | val_mse=3.7121e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 600s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.7121e-01)
+  ep38 step0/237 total=1.428e-01 mse=9.387e-02 latent=1.917e-01 pde=1.739e-03 tpde=2.254e-03 ss=0.25
+  ep38 step50/237 total=3.727e-01 mse=3.666e-01 latent=3.786e-01 pde=2.220e-03 tpde=2.303e-03 ss=0.25
+  ep38 step100/237 total=3.655e-01 mse=3.490e-01 latent=3.818e-01 pde=2.340e-03 tpde=3.089e-03 ss=0.25
+  ep38 step150/237 total=2.894e-01 mse=2.920e-01 latent=2.866e-01 pde=3.069e-03 tpde=2.600e-03 ss=0.25
+  ep38 step200/237 total=1.720e-01 mse=1.369e-01 latent=2.069e-01 pde=1.905e-03 tpde=2.168e-03 ss=0.25
+Epoch 38/80 | train total=3.6882e-01 mse=3.5514e-01 tpde=2.6934e-03 nt=0.0000e+00 | val_mse=3.7256e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 576s
+  ep39 step0/237 total=3.905e-01 mse=3.929e-01 latent=3.880e-01 pde=1.751e-03 tpde=2.487e-03 ss=0.25
+  ep39 step50/237 total=4.118e-01 mse=3.734e-01 latent=4.500e-01 pde=1.836e-03 tpde=2.741e-03 ss=0.25
+  ep39 step100/237 total=3.834e-01 mse=3.631e-01 latent=4.035e-01 pde=2.324e-03 tpde=3.136e-03 ss=0.25
+  ep39 step150/237 total=4.097e-01 mse=4.106e-01 latent=4.087e-01 pde=1.811e-03 tpde=3.202e-03 ss=0.25
+  ep39 step200/237 total=4.108e-01 mse=3.975e-01 latent=4.239e-01 pde=2.245e-03 tpde=3.541e-03 ss=0.25
+Epoch 39/80 | train total=3.7040e-01 mse=3.5652e-01 tpde=2.8079e-03 nt=0.0000e+00 | val_mse=3.7239e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 571s
+  ep40 step0/237 total=3.754e-01 mse=3.323e-01 latent=4.183e-01 pde=2.268e-03 tpde=3.568e-03 ss=0.25
+  ep40 step50/237 total=3.135e-01 mse=3.210e-01 latent=3.059e-01 pde=2.818e-03 tpde=2.515e-03 ss=0.25
+  ep40 step100/237 total=4.019e-01 mse=3.999e-01 latent=4.038e-01 pde=1.846e-03 tpde=3.188e-03 ss=0.25
+  ep40 step150/237 total=3.914e-01 mse=3.901e-01 latent=3.926e-01 pde=2.251e-03 tpde=2.249e-03 ss=0.25
+  ep40 step200/237 total=2.599e-01 mse=2.092e-01 latent=3.105e-01 pde=2.327e-03 tpde=2.853e-03 ss=0.25
+Epoch 40/80 | train total=3.6761e-01 mse=3.5411e-01 tpde=2.7997e-03 nt=0.0000e+00 | val_mse=3.7189e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_40
+  ep41 step0/237 total=4.313e-01 mse=4.412e-01 latent=4.213e-01 pde=2.569e-03 tpde=2.496e-03 ss=0.25
+  ep41 step50/237 total=3.619e-01 mse=3.207e-01 latent=4.030e-01 pde=1.728e-03 tpde=2.006e-03 ss=0.25
+  ep41 step100/237 total=2.277e-01 mse=2.123e-01 latent=2.429e-01 pde=3.692e-03 tpde=3.103e-03 ss=0.25
+  ep41 step150/237 total=3.890e-01 mse=3.873e-01 latent=3.905e-01 pde=2.620e-03 tpde=2.332e-03 ss=0.25
+  ep41 step200/237 total=3.593e-01 mse=3.391e-01 latent=3.795e-01 pde=1.868e-03 tpde=2.425e-03 ss=0.25
+Epoch 41/80 | train total=3.6327e-01 mse=3.4936e-01 tpde=2.7270e-03 nt=0.0000e+00 | val_mse=3.7066e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 575s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.7066e-01)
+  ep42 step0/237 total=3.110e-01 mse=3.135e-01 latent=3.083e-01 pde=2.280e-03 tpde=2.795e-03 ss=0.25
+  ep42 step50/237 total=3.374e-01 mse=3.007e-01 latent=3.740e-01 pde=2.538e-03 tpde=2.495e-03 ss=0.25
+  ep42 step100/237 total=3.178e-01 mse=2.730e-01 latent=3.623e-01 pde=2.400e-03 tpde=3.720e-03 ss=0.25
+  ep42 step150/237 total=2.721e-01 mse=2.411e-01 latent=3.029e-01 pde=1.802e-03 tpde=2.557e-03 ss=0.25
+  ep42 step200/237 total=3.559e-01 mse=3.317e-01 latent=3.801e-01 pde=2.036e-03 tpde=2.569e-03 ss=0.25
+Epoch 42/80 | train total=3.6129e-01 mse=3.4676e-01 tpde=2.8443e-03 nt=0.0000e+00 | val_mse=3.6704e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 578s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.6704e-01)
+  ep43 step0/237 total=3.940e-01 mse=4.053e-01 latent=3.825e-01 pde=1.862e-03 tpde=4.030e-03 ss=0.25
+  ep43 step50/237 total=2.466e-01 mse=2.295e-01 latent=2.636e-01 pde=2.881e-03 tpde=2.512e-03 ss=0.25
+  ep43 step100/237 total=5.250e-01 mse=5.065e-01 latent=5.433e-01 pde=2.256e-03 tpde=2.420e-03 ss=0.25
+  ep43 step150/237 total=1.796e-01 mse=1.587e-01 latent=2.003e-01 pde=2.919e-03 tpde=2.198e-03 ss=0.25
+  ep43 step200/237 total=4.438e-01 mse=4.168e-01 latent=4.708e-01 pde=1.885e-03 tpde=2.252e-03 ss=0.25
+Epoch 43/80 | train total=3.5799e-01 mse=3.4323e-01 tpde=2.8951e-03 nt=0.0000e+00 | val_mse=3.7043e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+  ep44 step0/237 total=3.330e-01 mse=3.091e-01 latent=3.568e-01 pde=2.436e-03 tpde=2.205e-03 ss=0.25
+  ep44 step50/237 total=4.684e-01 mse=4.620e-01 latent=4.746e-01 pde=2.058e-03 tpde=2.751e-03 ss=0.25
+  ep44 step100/237 total=3.143e-01 mse=3.058e-01 latent=3.227e-01 pde=2.194e-03 tpde=3.195e-03 ss=0.25
+  ep44 step150/237 total=2.990e-01 mse=2.453e-01 latent=3.525e-01 pde=2.154e-03 tpde=3.119e-03 ss=0.25
+  ep44 step200/237 total=2.971e-01 mse=2.722e-01 latent=3.218e-01 pde=2.281e-03 tpde=2.171e-03 ss=0.25
+Epoch 44/80 | train total=3.5420e-01 mse=3.3864e-01 tpde=2.7626e-03 nt=0.0000e+00 | val_mse=3.6503e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.6503e-01)
+  ep45 step0/237 total=2.082e-01 mse=1.849e-01 latent=2.313e-01 pde=2.398e-03 tpde=2.827e-03 ss=0.25
+  ep45 step50/237 total=4.075e-01 mse=3.854e-01 latent=4.296e-01 pde=1.698e-03 tpde=2.222e-03 ss=0.25
+  ep45 step100/237 total=4.556e-01 mse=4.321e-01 latent=4.789e-01 pde=2.082e-03 tpde=2.934e-03 ss=0.25
+  ep45 step150/237 total=4.608e-01 mse=4.539e-01 latent=4.675e-01 pde=2.357e-03 tpde=2.930e-03 ss=0.25
+  ep45 step200/237 total=4.333e-01 mse=4.161e-01 latent=4.504e-01 pde=2.320e-03 tpde=3.308e-03 ss=0.25
+Epoch 45/80 | train total=3.5644e-01 mse=3.4071e-01 tpde=2.7088e-03 nt=0.0000e+00 | val_mse=3.6614e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 574s
+  ep46 step0/237 total=3.856e-01 mse=3.349e-01 latent=4.361e-01 pde=1.836e-03 tpde=2.397e-03 ss=0.25
+  ep46 step50/237 total=3.992e-01 mse=3.773e-01 latent=4.210e-01 pde=2.160e-03 tpde=2.489e-03 ss=0.25
+  ep46 step100/237 total=2.631e-01 mse=2.468e-01 latent=2.793e-01 pde=2.511e-03 tpde=2.472e-03 ss=0.25
+  ep46 step150/237 total=3.407e-01 mse=3.217e-01 latent=3.597e-01 pde=1.898e-03 tpde=3.634e-03 ss=0.25
+  ep46 step200/237 total=1.876e-01 mse=1.552e-01 latent=2.198e-01 pde=1.703e-03 tpde=2.286e-03 ss=0.25
+Epoch 46/80 | train total=3.5608e-01 mse=3.4028e-01 tpde=2.7509e-03 nt=0.0000e+00 | val_mse=3.6105e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 564s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.6105e-01)
+  ep47 step0/237 total=4.226e-01 mse=4.142e-01 latent=4.309e-01 pde=2.218e-03 tpde=2.450e-03 ss=0.25
+  ep47 step50/237 total=4.160e-01 mse=3.986e-01 latent=4.333e-01 pde=2.983e-03 tpde=2.788e-03 ss=0.25
+  ep47 step100/237 total=4.537e-01 mse=4.706e-01 latent=4.366e-01 pde=2.455e-03 tpde=2.309e-03 ss=0.25
+  ep47 step150/237 total=3.896e-01 mse=3.971e-01 latent=3.819e-01 pde=2.157e-03 tpde=3.177e-03 ss=0.25
+  ep47 step200/237 total=4.151e-01 mse=4.148e-01 latent=4.152e-01 pde=3.137e-03 tpde=2.220e-03 ss=0.25
+Epoch 47/80 | train total=3.5221e-01 mse=3.3663e-01 tpde=2.7588e-03 nt=0.0000e+00 | val_mse=3.6481e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+  ep48 step0/237 total=5.982e-01 mse=6.178e-01 latent=5.784e-01 pde=2.750e-03 tpde=3.579e-03 ss=0.25
+  ep48 step50/237 total=2.939e-01 mse=2.687e-01 latent=3.191e-01 pde=2.327e-03 tpde=2.547e-03 ss=0.25
+  ep48 step100/237 total=4.377e-01 mse=4.258e-01 latent=4.494e-01 pde=1.880e-03 tpde=2.356e-03 ss=0.25
+  ep48 step150/237 total=4.161e-01 mse=4.073e-01 latent=4.248e-01 pde=1.740e-03 tpde=2.857e-03 ss=0.25
+  ep48 step200/237 total=5.110e-01 mse=5.080e-01 latent=5.139e-01 pde=1.969e-03 tpde=3.043e-03 ss=0.25
+Epoch 48/80 | train total=3.5449e-01 mse=3.3842e-01 tpde=2.7427e-03 nt=0.0000e+00 | val_mse=3.6315e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 565s
+  ep49 step0/237 total=3.700e-01 mse=3.756e-01 latent=3.642e-01 pde=2.357e-03 tpde=2.986e-03 ss=0.25
+  ep49 step50/237 total=3.778e-01 mse=3.851e-01 latent=3.703e-01 pde=2.162e-03 tpde=2.946e-03 ss=0.25
+  ep49 step100/237 total=3.252e-01 mse=2.827e-01 latent=3.675e-01 pde=1.789e-03 tpde=2.566e-03 ss=0.25
+  ep49 step150/237 total=4.540e-01 mse=4.514e-01 latent=4.565e-01 pde=2.244e-03 tpde=2.522e-03 ss=0.25
+  ep49 step200/237 total=4.215e-01 mse=4.061e-01 latent=4.368e-01 pde=2.589e-03 tpde=2.583e-03 ss=0.25
+Epoch 49/80 | train total=3.5136e-01 mse=3.3448e-01 tpde=2.7529e-03 nt=0.0000e+00 | val_mse=3.5962e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 567s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.5962e-01)
+  ep50 step0/237 total=2.810e-01 mse=2.379e-01 latent=3.239e-01 pde=3.711e-03 tpde=2.933e-03 ss=0.25
+  ep50 step50/237 total=4.169e-01 mse=4.127e-01 latent=4.209e-01 pde=2.070e-03 tpde=2.308e-03 ss=0.25
+  ep50 step100/237 total=3.443e-01 mse=3.345e-01 latent=3.539e-01 pde=1.649e-03 tpde=2.577e-03 ss=0.25
+  ep50 step150/237 total=4.015e-01 mse=3.916e-01 latent=4.113e-01 pde=2.068e-03 tpde=2.664e-03 ss=0.25
+  ep50 step200/237 total=2.882e-01 mse=2.666e-01 latent=3.097e-01 pde=1.886e-03 tpde=2.980e-03 ss=0.25
+Epoch 50/80 | train total=3.5106e-01 mse=3.3363e-01 tpde=2.8101e-03 nt=0.0000e+00 | val_mse=3.5589e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 564s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.5589e-01)
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_50
+  ep51 step0/237 total=3.811e-01 mse=3.665e-01 latent=3.955e-01 pde=1.844e-03 tpde=3.110e-03 ss=0.25
+  ep51 step50/237 total=4.299e-01 mse=4.108e-01 latent=4.488e-01 pde=1.926e-03 tpde=2.864e-03 ss=0.25
+  ep51 step100/237 total=3.543e-01 mse=3.358e-01 latent=3.726e-01 pde=3.443e-03 tpde=2.497e-03 ss=0.25
+  ep51 step150/237 total=2.903e-01 mse=2.504e-01 latent=3.301e-01 pde=1.731e-03 tpde=2.235e-03 ss=0.25
+  ep51 step200/237 total=3.253e-01 mse=3.278e-01 latent=3.227e-01 pde=2.065e-03 tpde=3.008e-03 ss=0.25
+Epoch 51/80 | train total=3.4308e-01 mse=3.2439e-01 tpde=2.8067e-03 nt=0.0000e+00 | val_mse=3.5769e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+  ep52 step0/237 total=3.416e-01 mse=3.115e-01 latent=3.716e-01 pde=1.622e-03 tpde=2.272e-03 ss=0.25
+  ep52 step50/237 total=3.820e-01 mse=3.583e-01 latent=4.057e-01 pde=1.983e-03 tpde=2.058e-03 ss=0.25
+  ep52 step100/237 total=4.914e-01 mse=4.981e-01 latent=4.845e-01 pde=3.451e-03 tpde=2.778e-03 ss=0.25
+  ep52 step150/237 total=4.112e-01 mse=3.874e-01 latent=4.349e-01 pde=2.144e-03 tpde=2.615e-03 ss=0.25
+  ep52 step200/237 total=5.255e-01 mse=5.088e-01 latent=5.422e-01 pde=2.393e-03 tpde=3.055e-03 ss=0.25
+Epoch 52/80 | train total=3.4287e-01 mse=3.2344e-01 tpde=2.7542e-03 nt=0.0000e+00 | val_mse=3.6030e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+  ep53 step0/237 total=4.458e-01 mse=4.264e-01 latent=4.651e-01 pde=1.820e-03 tpde=1.991e-03 ss=0.25
+  ep53 step50/237 total=3.887e-01 mse=3.682e-01 latent=4.091e-01 pde=2.097e-03 tpde=3.194e-03 ss=0.25
+  ep53 step100/237 total=4.216e-01 mse=3.988e-01 latent=4.443e-01 pde=1.926e-03 tpde=3.179e-03 ss=0.25
+  ep53 step150/237 total=3.183e-01 mse=3.163e-01 latent=3.202e-01 pde=2.065e-03 tpde=2.360e-03 ss=0.25
+  ep53 step200/237 total=3.450e-01 mse=3.345e-01 latent=3.553e-01 pde=2.786e-03 tpde=4.103e-03 ss=0.25
+Epoch 53/80 | train total=3.4106e-01 mse=3.2211e-01 tpde=2.6598e-03 nt=0.0000e+00 | val_mse=3.5490e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 561s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.5490e-01)
+  ep54 step0/237 total=2.685e-01 mse=2.610e-01 latent=2.758e-01 pde=2.105e-03 tpde=2.347e-03 ss=0.25
+  ep54 step50/237 total=3.020e-01 mse=2.709e-01 latent=3.330e-01 pde=1.912e-03 tpde=2.002e-03 ss=0.25
+  ep54 step100/237 total=4.661e-01 mse=4.659e-01 latent=4.662e-01 pde=3.282e-03 tpde=2.157e-03 ss=0.25
+  ep54 step150/237 total=4.772e-01 mse=4.545e-01 latent=4.998e-01 pde=2.235e-03 tpde=2.508e-03 ss=0.25
+  ep54 step200/237 total=2.731e-01 mse=2.125e-01 latent=3.335e-01 pde=1.707e-03 tpde=2.052e-03 ss=0.25
+Epoch 54/80 | train total=3.3963e-01 mse=3.2063e-01 tpde=2.7269e-03 nt=0.0000e+00 | val_mse=3.5183e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 561s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.5183e-01)
+  ep55 step0/237 total=1.741e-01 mse=1.372e-01 latent=2.108e-01 pde=2.857e-03 tpde=3.077e-03 ss=0.25
+  ep55 step50/237 total=2.971e-01 mse=2.817e-01 latent=3.123e-01 pde=2.226e-03 tpde=2.191e-03 ss=0.25
+  ep55 step100/237 total=3.530e-01 mse=3.355e-01 latent=3.704e-01 pde=1.879e-03 tpde=2.870e-03 ss=0.25
+  ep55 step150/237 total=4.111e-01 mse=3.891e-01 latent=4.329e-01 pde=2.122e-03 tpde=2.203e-03 ss=0.25
+  ep55 step200/237 total=4.307e-01 mse=4.142e-01 latent=4.471e-01 pde=2.155e-03 tpde=2.571e-03 ss=0.25
+Epoch 55/80 | train total=3.4067e-01 mse=3.2115e-01 tpde=2.7670e-03 nt=0.0000e+00 | val_mse=3.5556e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 565s
+  ep56 step0/237 total=3.064e-01 mse=2.887e-01 latent=3.239e-01 pde=1.782e-03 tpde=2.069e-03 ss=0.25
+  ep56 step50/237 total=2.915e-01 mse=2.630e-01 latent=3.199e-01 pde=1.816e-03 tpde=2.693e-03 ss=0.25
+  ep56 step100/237 total=3.417e-01 mse=3.189e-01 latent=3.644e-01 pde=3.078e-03 tpde=2.538e-03 ss=0.25
+  ep56 step150/237 total=4.132e-01 mse=3.859e-01 latent=4.405e-01 pde=2.113e-03 tpde=2.956e-03 ss=0.25
+  ep56 step200/237 total=3.166e-01 mse=3.041e-01 latent=3.289e-01 pde=2.129e-03 tpde=3.023e-03 ss=0.25
+Epoch 56/80 | train total=3.3819e-01 mse=3.1842e-01 tpde=2.8060e-03 nt=0.0000e+00 | val_mse=3.5322e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+  ep57 step0/237 total=2.926e-01 mse=2.560e-01 latent=3.290e-01 pde=2.055e-03 tpde=3.051e-03 ss=0.25
+  ep57 step50/237 total=3.782e-01 mse=3.648e-01 latent=3.914e-01 pde=1.900e-03 tpde=3.147e-03 ss=0.25
+  ep57 step100/237 total=4.491e-01 mse=4.378e-01 latent=4.602e-01 pde=2.011e-03 tpde=2.316e-03 ss=0.25
+  ep57 step150/237 total=2.835e-01 mse=2.841e-01 latent=2.828e-01 pde=1.963e-03 tpde=2.156e-03 ss=0.25
+  ep57 step200/237 total=3.335e-01 mse=3.268e-01 latent=3.402e-01 pde=1.719e-03 tpde=2.335e-03 ss=0.25
+Epoch 57/80 | train total=3.3485e-01 mse=3.1322e-01 tpde=2.7655e-03 nt=0.0000e+00 | val_mse=3.5106e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.5106e-01)
+  ep58 step0/237 total=2.867e-01 mse=2.635e-01 latent=3.097e-01 pde=1.851e-03 tpde=3.134e-03 ss=0.25
+  ep58 step50/237 total=2.512e-01 mse=2.314e-01 latent=2.709e-01 pde=1.853e-03 tpde=2.188e-03 ss=0.25
+  ep58 step100/237 total=3.483e-01 mse=3.288e-01 latent=3.677e-01 pde=1.754e-03 tpde=2.979e-03 ss=0.25
+  ep58 step150/237 total=2.018e-01 mse=1.769e-01 latent=2.267e-01 pde=1.690e-03 tpde=2.248e-03 ss=0.25
+  ep58 step200/237 total=3.415e-01 mse=3.541e-01 latent=3.288e-01 pde=2.241e-03 tpde=2.304e-03 ss=0.25
+Epoch 58/80 | train total=3.3576e-01 mse=3.1614e-01 tpde=2.7279e-03 nt=0.0000e+00 | val_mse=3.5083e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.5083e-01)
+  ep59 step0/237 total=3.108e-01 mse=2.661e-01 latent=3.554e-01 pde=2.482e-03 tpde=2.583e-03 ss=0.25
+  ep59 step50/237 total=3.541e-01 mse=3.256e-01 latent=3.826e-01 pde=1.715e-03 tpde=2.572e-03 ss=0.25
+  ep59 step100/237 total=3.044e-01 mse=2.581e-01 latent=3.505e-01 pde=1.665e-03 tpde=3.510e-03 ss=0.25
+  ep59 step150/237 total=3.019e-01 mse=2.874e-01 latent=3.162e-01 pde=2.255e-03 tpde=2.831e-03 ss=0.25
+  ep59 step200/237 total=2.994e-01 mse=2.643e-01 latent=3.344e-01 pde=1.649e-03 tpde=2.167e-03 ss=0.25
+Epoch 59/80 | train total=3.2961e-01 mse=3.0798e-01 tpde=2.7912e-03 nt=0.0000e+00 | val_mse=3.4984e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 573s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.4984e-01)
+  ep60 step0/237 total=3.130e-01 mse=2.829e-01 latent=3.429e-01 pde=2.011e-03 tpde=3.268e-03 ss=0.25
+  ep60 step50/237 total=4.243e-01 mse=4.101e-01 latent=4.383e-01 pde=3.220e-03 tpde=4.169e-03 ss=0.25
+  ep60 step100/237 total=2.007e-01 mse=1.576e-01 latent=2.437e-01 pde=1.666e-03 tpde=2.795e-03 ss=0.25
+  ep60 step150/237 total=2.798e-01 mse=2.428e-01 latent=3.167e-01 pde=2.779e-03 tpde=3.132e-03 ss=0.25
+  ep60 step200/237 total=3.284e-01 mse=3.194e-01 latent=3.373e-01 pde=1.984e-03 tpde=2.382e-03 ss=0.25
+Epoch 60/80 | train total=3.3235e-01 mse=3.1268e-01 tpde=2.7318e-03 nt=0.0000e+00 | val_mse=3.5375e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 567s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_60
+  ep61 step0/237 total=1.766e-01 mse=1.314e-01 latent=2.217e-01 pde=1.946e-03 tpde=2.448e-03 ss=0.25
+  ep61 step50/237 total=3.225e-01 mse=2.868e-01 latent=3.580e-01 pde=1.823e-03 tpde=2.552e-03 ss=0.25
+  ep61 step100/237 total=4.014e-01 mse=3.414e-01 latent=4.613e-01 pde=2.460e-03 tpde=2.446e-03 ss=0.25
+  ep61 step150/237 total=3.672e-01 mse=3.537e-01 latent=3.805e-01 pde=1.913e-03 tpde=2.478e-03 ss=0.25
+  ep61 step200/237 total=3.527e-01 mse=3.543e-01 latent=3.511e-01 pde=1.991e-03 tpde=2.171e-03 ss=0.25
+Epoch 61/80 | train total=3.2766e-01 mse=3.0630e-01 tpde=2.8117e-03 nt=0.0000e+00 | val_mse=3.5105e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+  ep62 step0/237 total=2.872e-01 mse=2.678e-01 latent=3.063e-01 pde=2.038e-03 tpde=3.399e-03 ss=0.25
+  ep62 step50/237 total=3.540e-01 mse=3.411e-01 latent=3.668e-01 pde=2.332e-03 tpde=2.773e-03 ss=0.25
+  ep62 step100/237 total=2.681e-01 mse=2.544e-01 latent=2.817e-01 pde=2.011e-03 tpde=2.528e-03 ss=0.25
+  ep62 step150/237 total=2.545e-01 mse=2.351e-01 latent=2.738e-01 pde=2.240e-03 tpde=2.361e-03 ss=0.25
+  ep62 step200/237 total=2.852e-01 mse=2.725e-01 latent=2.978e-01 pde=1.722e-03 tpde=3.231e-03 ss=0.25
+Epoch 62/80 | train total=3.2677e-01 mse=3.0512e-01 tpde=2.8385e-03 nt=0.0000e+00 | val_mse=3.4906e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.4906e-01)
+  ep63 step0/237 total=4.249e-01 mse=4.519e-01 latent=3.977e-01 pde=2.058e-03 tpde=3.172e-03 ss=0.25
+  ep63 step50/237 total=3.939e-01 mse=3.697e-01 latent=4.179e-01 pde=1.920e-03 tpde=4.161e-03 ss=0.25
+  ep63 step100/237 total=2.447e-01 mse=1.961e-01 latent=2.932e-01 pde=2.064e-03 tpde=2.351e-03 ss=0.25
+  ep63 step150/237 total=2.915e-01 mse=2.728e-01 latent=3.102e-01 pde=1.817e-03 tpde=3.179e-03 ss=0.25
+  ep63 step200/237 total=3.040e-01 mse=2.941e-01 latent=3.139e-01 pde=1.771e-03 tpde=2.270e-03 ss=0.25
+Epoch 63/80 | train total=3.2522e-01 mse=3.0360e-01 tpde=2.7394e-03 nt=0.0000e+00 | val_mse=3.4282e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 570s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.4282e-01)
+  ep64 step0/237 total=2.640e-01 mse=2.757e-01 latent=2.520e-01 pde=2.610e-03 tpde=3.861e-03 ss=0.25
+  ep64 step50/237 total=4.014e-01 mse=3.848e-01 latent=4.179e-01 pde=2.033e-03 tpde=2.719e-03 ss=0.25
+  ep64 step100/237 total=2.188e-01 mse=1.879e-01 latent=2.495e-01 pde=1.784e-03 tpde=2.746e-03 ss=0.25
+  ep64 step150/237 total=2.667e-01 mse=2.247e-01 latent=3.086e-01 pde=2.600e-03 tpde=2.277e-03 ss=0.25
+  ep64 step200/237 total=3.283e-01 mse=3.445e-01 latent=3.120e-01 pde=2.137e-03 tpde=2.573e-03 ss=0.25
+Epoch 64/80 | train total=3.2313e-01 mse=3.0101e-01 tpde=2.7701e-03 nt=0.0000e+00 | val_mse=3.4846e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+  ep65 step0/237 total=3.120e-01 mse=2.591e-01 latent=3.646e-01 pde=2.104e-03 tpde=3.172e-03 ss=0.25
+  ep65 step50/237 total=3.645e-01 mse=3.438e-01 latent=3.851e-01 pde=2.471e-03 tpde=3.658e-03 ss=0.25
+  ep65 step100/237 total=2.862e-01 mse=2.727e-01 latent=2.997e-01 pde=1.780e-03 tpde=2.240e-03 ss=0.25
+  ep65 step150/237 total=4.068e-01 mse=3.896e-01 latent=4.239e-01 pde=1.941e-03 tpde=2.344e-03 ss=0.25
+  ep65 step200/237 total=2.570e-01 mse=2.247e-01 latent=2.892e-01 pde=2.295e-03 tpde=2.741e-03 ss=0.25
+Epoch 65/80 | train total=3.2282e-01 mse=2.9947e-01 tpde=2.7618e-03 nt=0.0000e+00 | val_mse=3.4945e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 570s
+  ep66 step0/237 total=3.358e-01 mse=3.097e-01 latent=3.618e-01 pde=2.140e-03 tpde=2.420e-03 ss=0.25
+  ep66 step50/237 total=3.129e-01 mse=2.832e-01 latent=3.425e-01 pde=1.680e-03 tpde=2.178e-03 ss=0.25
+  ep66 step100/237 total=2.758e-01 mse=2.502e-01 latent=3.012e-01 pde=3.312e-03 tpde=2.700e-03 ss=0.25
+  ep66 step150/237 total=3.864e-01 mse=4.043e-01 latent=3.684e-01 pde=2.828e-03 tpde=3.010e-03 ss=0.25
+  ep66 step200/237 total=2.854e-01 mse=2.663e-01 latent=3.044e-01 pde=1.774e-03 tpde=2.353e-03 ss=0.25
+Epoch 66/80 | train total=3.2216e-01 mse=2.9931e-01 tpde=2.9570e-03 nt=0.0000e+00 | val_mse=3.4831e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 567s
+  ep67 step0/237 total=4.133e-01 mse=3.924e-01 latent=4.339e-01 pde=2.912e-03 tpde=7.452e-03 ss=0.25
+  ep67 step50/237 total=2.191e-01 mse=2.068e-01 latent=2.312e-01 pde=3.630e-03 tpde=3.004e-03 ss=0.25
+  ep67 step100/237 total=2.164e-01 mse=1.913e-01 latent=2.414e-01 pde=1.694e-03 tpde=2.336e-03 ss=0.25
+  ep67 step150/237 total=4.300e-01 mse=3.947e-01 latent=4.651e-01 pde=2.290e-03 tpde=3.525e-03 ss=0.25
+  ep67 step200/237 total=3.010e-01 mse=2.725e-01 latent=3.293e-01 pde=1.835e-03 tpde=2.473e-03 ss=0.25
+Epoch 67/80 | train total=3.2020e-01 mse=2.9714e-01 tpde=2.8204e-03 nt=0.0000e+00 | val_mse=3.4861e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 570s
+  ep68 step0/237 total=2.720e-01 mse=2.696e-01 latent=2.742e-01 pde=1.759e-03 tpde=2.300e-03 ss=0.25
+  ep68 step50/237 total=2.695e-01 mse=2.428e-01 latent=2.961e-01 pde=2.131e-03 tpde=2.427e-03 ss=0.25
+  ep68 step100/237 total=1.878e-01 mse=1.823e-01 latent=1.932e-01 pde=1.988e-03 tpde=2.599e-03 ss=0.25
+  ep68 step150/237 total=2.571e-01 mse=2.203e-01 latent=2.938e-01 pde=2.144e-03 tpde=2.874e-03 ss=0.25
+  ep68 step200/237 total=3.523e-01 mse=3.340e-01 latent=3.706e-01 pde=1.945e-03 tpde=2.335e-03 ss=0.25
+Epoch 68/80 | train total=3.2067e-01 mse=2.9885e-01 tpde=2.9171e-03 nt=0.0000e+00 | val_mse=3.4933e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 570s
+  ep69 step0/237 total=2.473e-01 mse=2.176e-01 latent=2.768e-01 pde=2.243e-03 tpde=2.226e-03 ss=0.25
+  ep69 step50/237 total=4.051e-01 mse=4.112e-01 latent=3.989e-01 pde=2.884e-03 tpde=3.226e-03 ss=0.25
+  ep69 step100/237 total=2.760e-01 mse=2.552e-01 latent=2.966e-01 pde=2.587e-03 tpde=2.678e-03 ss=0.25
+  ep69 step150/237 total=2.672e-01 mse=2.192e-01 latent=3.150e-01 pde=1.664e-03 tpde=2.245e-03 ss=0.25
+  ep69 step200/237 total=3.311e-01 mse=3.070e-01 latent=3.551e-01 pde=2.793e-03 tpde=2.079e-03 ss=0.25
+Epoch 69/80 | train total=3.1834e-01 mse=2.9525e-01 tpde=2.9903e-03 nt=0.0000e+00 | val_mse=3.4498e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+  ep70 step0/237 total=4.390e-01 mse=4.481e-01 latent=4.296e-01 pde=2.522e-03 tpde=2.283e-03 ss=0.25
+  ep70 step50/237 total=3.869e-01 mse=3.641e-01 latent=4.096e-01 pde=1.826e-03 tpde=3.505e-03 ss=0.25
+  ep70 step100/237 total=3.031e-01 mse=2.678e-01 latent=3.383e-01 pde=1.886e-03 tpde=3.429e-03 ss=0.25
+  ep70 step150/237 total=2.046e-01 mse=1.718e-01 latent=2.371e-01 pde=2.620e-03 tpde=2.829e-03 ss=0.25
+  ep70 step200/237 total=4.144e-01 mse=4.163e-01 latent=4.125e-01 pde=1.980e-03 tpde=2.425e-03 ss=0.25
+Epoch 70/80 | train total=3.1435e-01 mse=2.8913e-01 tpde=2.8812e-03 nt=0.0000e+00 | val_mse=3.4539e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 566s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_70
+  ep71 step0/237 total=4.003e-01 mse=3.672e-01 latent=4.333e-01 pde=2.148e-03 tpde=2.764e-03 ss=0.25
+  ep71 step50/237 total=3.057e-01 mse=2.901e-01 latent=3.212e-01 pde=1.678e-03 tpde=2.589e-03 ss=0.25
+  ep71 step100/237 total=1.597e-01 mse=1.192e-01 latent=2.001e-01 pde=2.204e-03 tpde=2.480e-03 ss=0.25
+  ep71 step150/237 total=3.005e-01 mse=2.854e-01 latent=3.154e-01 pde=1.750e-03 tpde=2.489e-03 ss=0.25
+  ep71 step200/237 total=2.331e-01 mse=1.934e-01 latent=2.726e-01 pde=2.091e-03 tpde=2.647e-03 ss=0.25
+Epoch 71/80 | train total=3.1511e-01 mse=2.9135e-01 tpde=2.8827e-03 nt=0.0000e+00 | val_mse=3.4127e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 570s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.4127e-01)
+  ep72 step0/237 total=3.679e-01 mse=3.468e-01 latent=3.890e-01 pde=2.296e-03 tpde=2.392e-03 ss=0.25
+  ep72 step50/237 total=2.592e-01 mse=2.415e-01 latent=2.768e-01 pde=2.016e-03 tpde=3.033e-03 ss=0.25
+  ep72 step100/237 total=2.605e-01 mse=2.162e-01 latent=3.046e-01 pde=2.088e-03 tpde=3.404e-03 ss=0.25
+  ep72 step150/237 total=2.340e-01 mse=2.195e-01 latent=2.484e-01 pde=2.061e-03 tpde=2.884e-03 ss=0.25
+  ep72 step200/237 total=1.835e-01 mse=1.501e-01 latent=2.168e-01 pde=1.669e-03 tpde=2.409e-03 ss=0.25
+Epoch 72/80 | train total=3.1555e-01 mse=2.9165e-01 tpde=2.8874e-03 nt=0.0000e+00 | val_mse=3.4471e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+  ep73 step0/237 total=3.335e-01 mse=3.298e-01 latent=3.372e-01 pde=1.905e-03 tpde=2.955e-03 ss=0.25
+  ep73 step50/237 total=3.908e-01 mse=3.738e-01 latent=4.077e-01 pde=1.946e-03 tpde=3.772e-03 ss=0.25
+  ep73 step100/237 total=4.169e-01 mse=4.245e-01 latent=4.092e-01 pde=1.923e-03 tpde=2.644e-03 ss=0.25
+  ep73 step150/237 total=4.330e-01 mse=3.950e-01 latent=4.710e-01 pde=2.001e-03 tpde=2.122e-03 ss=0.25
+  ep73 step200/237 total=3.215e-01 mse=3.061e-01 latent=3.368e-01 pde=2.137e-03 tpde=3.018e-03 ss=0.25
+Epoch 73/80 | train total=3.1332e-01 mse=2.8898e-01 tpde=2.7718e-03 nt=0.0000e+00 | val_mse=3.4300e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 565s
+  ep74 step0/237 total=2.953e-01 mse=2.420e-01 latent=3.485e-01 pde=1.947e-03 tpde=3.438e-03 ss=0.25
+  ep74 step50/237 total=2.568e-01 mse=2.443e-01 latent=2.691e-01 pde=3.131e-03 tpde=2.486e-03 ss=0.25
+  ep74 step100/237 total=3.050e-01 mse=2.705e-01 latent=3.394e-01 pde=2.224e-03 tpde=3.858e-03 ss=0.25
+  ep74 step150/237 total=2.972e-01 mse=2.817e-01 latent=3.122e-01 pde=1.270e-02 tpde=2.828e-03 ss=0.25
+  ep74 step200/237 total=3.301e-01 mse=3.327e-01 latent=3.273e-01 pde=2.970e-03 tpde=6.234e-03 ss=0.25
+Epoch 74/80 | train total=3.1496e-01 mse=2.9181e-01 tpde=2.9434e-03 nt=0.0000e+00 | val_mse=3.4512e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 569s
+  ep75 step0/237 total=3.289e-01 mse=3.154e-01 latent=3.423e-01 pde=1.796e-03 tpde=3.458e-03 ss=0.25
+  ep75 step50/237 total=2.034e-01 mse=1.580e-01 latent=2.486e-01 pde=2.133e-03 tpde=2.755e-03 ss=0.25
+  ep75 step100/237 total=4.394e-01 mse=4.346e-01 latent=4.441e-01 pde=1.857e-03 tpde=2.634e-03 ss=0.25
+  ep75 step150/237 total=2.075e-01 mse=1.645e-01 latent=2.503e-01 pde=1.760e-03 tpde=3.021e-03 ss=0.25
+  ep75 step200/237 total=1.513e-01 mse=1.413e-01 latent=1.612e-01 pde=2.661e-03 tpde=2.760e-03 ss=0.25
+Epoch 75/80 | train total=3.1246e-01 mse=2.8732e-01 tpde=2.8642e-03 nt=0.0000e+00 | val_mse=3.4104e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 571s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.4104e-01)
+  ep76 step0/237 total=3.668e-01 mse=3.170e-01 latent=4.165e-01 pde=1.703e-03 tpde=2.221e-03 ss=0.25
+  ep76 step50/237 total=4.676e-01 mse=4.581e-01 latent=4.770e-01 pde=2.262e-03 tpde=4.029e-03 ss=0.25
+  ep76 step100/237 total=2.059e-01 mse=1.542e-01 latent=2.574e-01 pde=2.287e-03 tpde=2.864e-03 ss=0.25
+  ep76 step150/237 total=2.744e-01 mse=2.547e-01 latent=2.941e-01 pde=1.899e-03 tpde=3.125e-03 ss=0.25
+  ep76 step200/237 total=2.223e-01 mse=1.785e-01 latent=2.659e-01 pde=1.722e-03 tpde=3.176e-03 ss=0.25
+Epoch 76/80 | train total=3.0830e-01 mse=2.8294e-01 tpde=2.8683e-03 nt=0.0000e+00 | val_mse=3.3708e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 571s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.3708e-01)
+  ep77 step0/237 total=3.899e-01 mse=4.000e-01 latent=3.797e-01 pde=2.342e-03 tpde=2.590e-03 ss=0.25
+  ep77 step50/237 total=2.859e-01 mse=2.503e-01 latent=3.214e-01 pde=1.679e-03 tpde=2.287e-03 ss=0.25
+  ep77 step100/237 total=1.325e-01 mse=1.083e-01 latent=1.565e-01 pde=2.106e-03 tpde=2.288e-03 ss=0.25
+  ep77 step150/237 total=4.096e-01 mse=3.761e-01 latent=4.429e-01 pde=3.958e-03 tpde=3.799e-03 ss=0.25
+  ep77 step200/237 total=4.000e-01 mse=4.006e-01 latent=3.993e-01 pde=1.632e-03 tpde=2.287e-03 ss=0.25
+Epoch 77/80 | train total=3.1021e-01 mse=2.8543e-01 tpde=2.8771e-03 nt=0.0000e+00 | val_mse=3.4168e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 568s
+  ep78 step0/237 total=3.985e-01 mse=3.659e-01 latent=4.311e-01 pde=1.911e-03 tpde=2.238e-03 ss=0.25
+  ep78 step50/237 total=4.203e-01 mse=3.677e-01 latent=4.727e-01 pde=1.974e-03 tpde=3.786e-03 ss=0.25
+  ep78 step100/237 total=3.729e-01 mse=3.579e-01 latent=3.877e-01 pde=1.861e-03 tpde=2.200e-03 ss=0.25
+  ep78 step150/237 total=2.455e-01 mse=2.254e-01 latent=2.655e-01 pde=2.372e-03 tpde=2.098e-03 ss=0.25
+  ep78 step200/237 total=2.336e-01 mse=2.222e-01 latent=2.448e-01 pde=2.893e-03 tpde=3.071e-03 ss=0.25
+Epoch 78/80 | train total=3.0748e-01 mse=2.8109e-01 tpde=2.8644e-03 nt=0.0000e+00 | val_mse=3.3652e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 574s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model
+  -> best (val_mse=3.3652e-01)
+  ep79 step0/237 total=2.339e-01 mse=2.240e-01 latent=2.436e-01 pde=2.206e-03 tpde=2.880e-03 ss=0.25
+  ep79 step50/237 total=3.663e-01 mse=3.464e-01 latent=3.860e-01 pde=1.921e-03 tpde=3.332e-03 ss=0.25
+  ep79 step100/237 total=2.096e-01 mse=1.623e-01 latent=2.568e-01 pde=1.858e-03 tpde=2.403e-03 ss=0.25
+  ep79 step150/237 total=3.030e-01 mse=2.870e-01 latent=3.189e-01 pde=2.251e-03 tpde=2.219e-03 ss=0.25
+  ep79 step200/237 total=3.420e-01 mse=3.054e-01 latent=3.786e-01 pde=2.142e-03 tpde=2.431e-03 ss=0.25
+Epoch 79/80 | train total=3.0472e-01 mse=2.7897e-01 tpde=2.9107e-03 nt=0.0000e+00 | val_mse=3.4138e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 575s
+  ep80 step0/237 total=2.208e-01 mse=1.908e-01 latent=2.506e-01 pde=2.542e-03 tpde=2.097e-03 ss=0.25
+  ep80 step50/237 total=2.301e-01 mse=2.107e-01 latent=2.494e-01 pde=1.857e-03 tpde=2.444e-03 ss=0.25
+  ep80 step100/237 total=2.363e-01 mse=2.049e-01 latent=2.677e-01 pde=1.644e-03 tpde=2.270e-03 ss=0.25
+  ep80 step150/237 total=2.451e-01 mse=2.357e-01 latent=2.544e-01 pde=1.811e-03 tpde=2.520e-03 ss=0.25
+  ep80 step200/237 total=2.550e-01 mse=2.162e-01 latent=2.936e-01 pde=1.719e-03 tpde=2.467e-03 ss=0.25
+Epoch 80/80 | train total=3.0319e-01 mse=2.7764e-01 tpde=2.9246e-03 nt=0.0000e+00 | val_mse=3.4378e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | 572s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/epoch_80
+=== [arm2_random] PHASE3 no-context fixed-K (RAND=1) Mon 29 Jun 2026 09:39:20 AM UTC ===
+resuming from /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p2/best_model  (no_context_prob=1.0)
+[rank2] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank0] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank1] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank3] FDM physics residual loss enabled (lambda_pde=0.02)
+[rank0] ABLATION random-init backbone (frozen) for resume -> cuda:0
+[rank2] ABLATION random-init backbone (frozen) for resume -> cuda:2
+[rank1] ABLATION random-init backbone (frozen) for resume -> cuda:1
+[rank3] ABLATION random-init backbone (frozen) for resume -> cuda:3
+proj params 8,336,008  lora params 10,092,544
+  ep1 step0/237 total=5.554e-01 mse=4.474e-01 latent=6.634e-01 pde=1.870e-03 tpde=2.701e-03 ss=0.02
+  ep1 step50/237 total=3.556e-01 mse=2.671e-01 latent=4.441e-01 pde=2.461e-03 tpde=2.415e-03 ss=0.02
+  ep1 step100/237 total=2.981e-01 mse=2.175e-01 latent=3.787e-01 pde=1.772e-03 tpde=2.538e-03 ss=0.02
+  ep1 step150/237 total=4.242e-01 mse=3.551e-01 latent=4.934e-01 pde=9.142e-03 tpde=2.679e-03 ss=0.02
+  ep1 step200/237 total=3.292e-01 mse=2.770e-01 latent=3.813e-01 pde=2.008e-03 tpde=2.686e-03 ss=0.02
+Epoch 1/60 | train total=3.4086e-01 mse=2.7487e-01 tpde=2.7724e-03 nt=0.0000e+00 | val_mse=3.5191e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 183s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.5191e-01)
+  ep2 step0/237 total=2.324e-01 mse=1.883e-01 latent=2.763e-01 pde=2.547e-03 tpde=2.979e-03 ss=0.03
+  ep2 step50/237 total=2.643e-01 mse=2.206e-01 latent=3.079e-01 pde=2.136e-03 tpde=2.955e-03 ss=0.03
+  ep2 step100/237 total=2.317e-01 mse=1.996e-01 latent=2.637e-01 pde=2.609e-03 tpde=2.749e-03 ss=0.03
+  ep2 step150/237 total=3.411e-01 mse=2.888e-01 latent=3.934e-01 pde=2.169e-03 tpde=3.248e-03 ss=0.03
+  ep2 step200/237 total=3.202e-01 mse=2.720e-01 latent=3.685e-01 pde=2.467e-03 tpde=2.807e-03 ss=0.03
+Epoch 2/60 | train total=3.0349e-01 mse=2.5407e-01 tpde=3.1774e-03 nt=0.0000e+00 | val_mse=3.4290e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.4290e-01)
+  ep3 step0/237 total=3.014e-01 mse=2.527e-01 latent=3.501e-01 pde=2.378e-03 tpde=3.303e-03 ss=0.05
+  ep3 step50/237 total=2.629e-01 mse=2.084e-01 latent=3.173e-01 pde=1.859e-03 tpde=3.243e-03 ss=0.05
+  ep3 step100/237 total=2.413e-01 mse=1.885e-01 latent=2.942e-01 pde=2.187e-03 tpde=2.783e-03 ss=0.05
+  ep3 step150/237 total=3.700e-01 mse=3.137e-01 latent=4.263e-01 pde=1.601e-03 tpde=2.190e-03 ss=0.05
+  ep3 step200/237 total=2.477e-01 mse=1.840e-01 latent=3.113e-01 pde=1.843e-03 tpde=2.497e-03 ss=0.05
+Epoch 3/60 | train total=2.9358e-01 mse=2.4674e-01 tpde=3.2558e-03 nt=0.0000e+00 | val_mse=3.4353e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep4 step0/237 total=3.417e-01 mse=2.762e-01 latent=4.071e-01 pde=1.715e-03 tpde=2.793e-03 ss=0.07
+  ep4 step50/237 total=2.492e-01 mse=1.993e-01 latent=2.990e-01 pde=1.953e-03 tpde=8.168e-03 ss=0.07
+  ep4 step100/237 total=2.180e-01 mse=1.748e-01 latent=2.612e-01 pde=2.192e-03 tpde=5.891e-03 ss=0.07
+  ep4 step150/237 total=2.926e-01 mse=2.553e-01 latent=3.299e-01 pde=2.595e-03 tpde=3.161e-03 ss=0.07
+  ep4 step200/237 total=2.370e-01 mse=1.842e-01 latent=2.898e-01 pde=2.509e-03 tpde=3.252e-03 ss=0.07
+Epoch 4/60 | train total=2.9025e-01 mse=2.4491e-01 tpde=3.3042e-03 nt=0.0000e+00 | val_mse=3.3969e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3969e-01)
+  ep5 step0/237 total=3.372e-01 mse=2.826e-01 latent=3.917e-01 pde=2.392e-03 tpde=4.000e-03 ss=0.08
+  ep5 step50/237 total=3.360e-01 mse=2.883e-01 latent=3.836e-01 pde=2.837e-03 tpde=3.645e-03 ss=0.08
+  ep5 step100/237 total=2.895e-01 mse=2.498e-01 latent=3.292e-01 pde=2.566e-03 tpde=3.257e-03 ss=0.08
+  ep5 step150/237 total=3.252e-01 mse=2.840e-01 latent=3.663e-01 pde=2.082e-03 tpde=2.744e-03 ss=0.08
+  ep5 step200/237 total=2.674e-01 mse=2.256e-01 latent=3.092e-01 pde=2.832e-03 tpde=2.739e-03 ss=0.08
+Epoch 5/60 | train total=2.8449e-01 mse=2.4043e-01 tpde=3.2061e-03 nt=0.0000e+00 | val_mse=3.4026e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep6 step0/237 total=3.892e-01 mse=3.216e-01 latent=4.566e-01 pde=2.080e-03 tpde=3.604e-03 ss=0.10
+  ep6 step50/237 total=3.237e-01 mse=2.642e-01 latent=3.831e-01 pde=2.338e-03 tpde=3.099e-03 ss=0.10
+  ep6 step100/237 total=2.551e-01 mse=2.032e-01 latent=3.069e-01 pde=1.736e-03 tpde=2.484e-03 ss=0.10
+  ep6 step150/237 total=2.722e-01 mse=2.081e-01 latent=3.364e-01 pde=1.697e-03 tpde=2.761e-03 ss=0.10
+  ep6 step200/237 total=3.435e-01 mse=2.839e-01 latent=4.030e-01 pde=2.703e-03 tpde=5.074e-03 ss=0.10
+Epoch 6/60 | train total=2.7936e-01 mse=2.3648e-01 tpde=3.2779e-03 nt=0.0000e+00 | val_mse=3.3684e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3684e-01)
+  ep7 step0/237 total=2.639e-01 mse=2.644e-01 latent=2.633e-01 pde=2.091e-03 tpde=2.404e-03 ss=0.12
+  ep7 step50/237 total=2.735e-01 mse=2.226e-01 latent=3.244e-01 pde=2.099e-03 tpde=3.121e-03 ss=0.12
+  ep7 step100/237 total=2.681e-01 mse=2.377e-01 latent=2.985e-01 pde=2.244e-03 tpde=5.598e-03 ss=0.12
+  ep7 step150/237 total=2.932e-01 mse=2.488e-01 latent=3.374e-01 pde=2.461e-03 tpde=2.658e-03 ss=0.12
+  ep7 step200/237 total=3.670e-01 mse=3.223e-01 latent=4.115e-01 pde=1.829e-03 tpde=3.485e-03 ss=0.12
+Epoch 7/60 | train total=2.7918e-01 mse=2.3647e-01 tpde=3.2662e-03 nt=0.0000e+00 | val_mse=3.3653e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3653e-01)
+  ep8 step0/237 total=2.104e-01 mse=1.614e-01 latent=2.592e-01 pde=1.875e-03 tpde=2.996e-03 ss=0.13
+  ep8 step50/237 total=2.501e-01 mse=2.264e-01 latent=2.737e-01 pde=2.597e-03 tpde=3.456e-03 ss=0.13
+  ep8 step100/237 total=2.153e-01 mse=1.863e-01 latent=2.441e-01 pde=2.009e-03 tpde=3.190e-03 ss=0.13
+  ep8 step150/237 total=2.336e-01 mse=1.803e-01 latent=2.868e-01 pde=2.226e-03 tpde=2.790e-03 ss=0.13
+  ep8 step200/237 total=3.017e-01 mse=2.629e-01 latent=3.403e-01 pde=2.722e-03 tpde=3.261e-03 ss=0.13
+Epoch 8/60 | train total=2.7654e-01 mse=2.3500e-01 tpde=3.1532e-03 nt=0.0000e+00 | val_mse=3.3372e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3372e-01)
+  ep9 step0/237 total=3.418e-01 mse=2.892e-01 latent=3.942e-01 pde=2.162e-03 tpde=3.316e-03 ss=0.15
+  ep9 step50/237 total=2.769e-01 mse=2.205e-01 latent=3.333e-01 pde=2.665e-03 tpde=2.431e-03 ss=0.15
+  ep9 step100/237 total=2.394e-01 mse=1.983e-01 latent=2.804e-01 pde=2.389e-03 tpde=2.877e-03 ss=0.15
+  ep9 step150/237 total=1.905e-01 mse=1.476e-01 latent=2.332e-01 pde=1.670e-03 tpde=2.454e-03 ss=0.15
+  ep9 step200/237 total=3.014e-01 mse=2.762e-01 latent=3.266e-01 pde=1.781e-03 tpde=2.387e-03 ss=0.15
+Epoch 9/60 | train total=2.7652e-01 mse=2.3529e-01 tpde=3.1693e-03 nt=0.0000e+00 | val_mse=3.3480e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep10 step0/237 total=4.702e-01 mse=4.519e-01 latent=4.883e-01 pde=1.908e-03 tpde=2.970e-03 ss=0.17
+  ep10 step50/237 total=2.251e-01 mse=1.884e-01 latent=2.617e-01 pde=1.940e-03 tpde=2.561e-03 ss=0.17
+  ep10 step100/237 total=1.861e-01 mse=1.584e-01 latent=2.136e-01 pde=1.692e-03 tpde=2.423e-03 ss=0.17
+  ep10 step150/237 total=2.672e-01 mse=2.054e-01 latent=3.289e-01 pde=2.378e-03 tpde=3.325e-03 ss=0.17
+  ep10 step200/237 total=3.002e-01 mse=2.252e-01 latent=3.752e-01 pde=1.601e-03 tpde=2.476e-03 ss=0.17
+Epoch 10/60 | train total=2.7127e-01 mse=2.2944e-01 tpde=3.0497e-03 nt=0.0000e+00 | val_mse=3.3429e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 179s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/epoch_10
+  ep11 step0/237 total=2.904e-01 mse=2.580e-01 latent=3.227e-01 pde=2.149e-03 tpde=2.878e-03 ss=0.18
+  ep11 step50/237 total=2.429e-01 mse=1.975e-01 latent=2.882e-01 pde=2.035e-03 tpde=2.614e-03 ss=0.18
+  ep11 step100/237 total=2.474e-01 mse=2.029e-01 latent=2.918e-01 pde=1.676e-03 tpde=2.486e-03 ss=0.18
+  ep11 step150/237 total=3.365e-01 mse=2.780e-01 latent=3.949e-01 pde=2.470e-03 tpde=3.823e-03 ss=0.18
+  ep11 step200/237 total=2.389e-01 mse=2.055e-01 latent=2.721e-01 pde=1.672e-03 tpde=2.334e-03 ss=0.18
+Epoch 11/60 | train total=2.7457e-01 mse=2.3299e-01 tpde=3.0595e-03 nt=0.0000e+00 | val_mse=3.3337e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3337e-01)
+  ep12 step0/237 total=2.253e-01 mse=2.085e-01 latent=2.419e-01 pde=2.319e-03 tpde=3.489e-03 ss=0.20
+  ep12 step50/237 total=3.052e-01 mse=2.606e-01 latent=3.496e-01 pde=3.838e-03 tpde=4.261e-03 ss=0.20
+  ep12 step100/237 total=3.672e-01 mse=3.225e-01 latent=4.118e-01 pde=2.124e-03 tpde=2.722e-03 ss=0.20
+  ep12 step150/237 total=3.503e-01 mse=3.125e-01 latent=3.880e-01 pde=2.014e-03 tpde=2.898e-03 ss=0.20
+  ep12 step200/237 total=2.619e-01 mse=2.403e-01 latent=2.833e-01 pde=1.751e-03 tpde=2.387e-03 ss=0.20
+Epoch 12/60 | train total=2.7221e-01 mse=2.3096e-01 tpde=3.0340e-03 nt=0.0000e+00 | val_mse=3.3189e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3189e-01)
+  ep13 step0/237 total=2.594e-01 mse=2.121e-01 latent=3.066e-01 pde=1.723e-03 tpde=2.087e-03 ss=0.22
+  ep13 step50/237 total=3.070e-01 mse=2.455e-01 latent=3.685e-01 pde=2.209e-03 tpde=3.305e-03 ss=0.22
+  ep13 step100/237 total=1.935e-01 mse=1.627e-01 latent=2.242e-01 pde=2.151e-03 tpde=3.275e-03 ss=0.22
+  ep13 step150/237 total=1.503e-01 mse=1.378e-01 latent=1.628e-01 pde=1.834e-03 tpde=2.453e-03 ss=0.22
+  ep13 step200/237 total=3.278e-01 mse=2.569e-01 latent=3.985e-01 pde=2.329e-03 tpde=3.801e-03 ss=0.22
+Epoch 13/60 | train total=2.7185e-01 mse=2.3050e-01 tpde=3.0398e-03 nt=0.0000e+00 | val_mse=3.3280e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep14 step0/237 total=2.822e-01 mse=2.387e-01 latent=3.255e-01 pde=2.039e-03 tpde=2.885e-03 ss=0.23
+  ep14 step50/237 total=2.817e-01 mse=2.351e-01 latent=3.282e-01 pde=1.907e-03 tpde=2.880e-03 ss=0.23
+  ep14 step100/237 total=1.959e-01 mse=1.543e-01 latent=2.374e-01 pde=1.803e-03 tpde=2.251e-03 ss=0.23
+  ep14 step150/237 total=2.725e-01 mse=2.128e-01 latent=3.320e-01 pde=3.577e-03 tpde=2.556e-03 ss=0.23
+  ep14 step200/237 total=3.395e-01 mse=2.746e-01 latent=4.043e-01 pde=2.001e-03 tpde=3.464e-03 ss=0.23
+Epoch 14/60 | train total=2.6988e-01 mse=2.2904e-01 tpde=2.9799e-03 nt=0.0000e+00 | val_mse=3.3076e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.3076e-01)
+  ep15 step0/237 total=2.960e-01 mse=2.701e-01 latent=3.218e-01 pde=2.171e-03 tpde=2.666e-03 ss=0.25
+  ep15 step50/237 total=2.331e-01 mse=1.823e-01 latent=2.837e-01 pde=1.887e-03 tpde=2.521e-03 ss=0.25
+  ep15 step100/237 total=2.262e-01 mse=1.993e-01 latent=2.530e-01 pde=2.047e-03 tpde=3.177e-03 ss=0.25
+  ep15 step150/237 total=2.618e-01 mse=2.364e-01 latent=2.871e-01 pde=1.993e-03 tpde=2.249e-03 ss=0.25
+  ep15 step200/237 total=2.311e-01 mse=1.805e-01 latent=2.815e-01 pde=1.868e-03 tpde=2.767e-03 ss=0.25
+Epoch 15/60 | train total=2.7123e-01 mse=2.3088e-01 tpde=2.9438e-03 nt=0.0000e+00 | val_mse=3.2970e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2970e-01)
+  ep16 step0/237 total=2.251e-01 mse=1.905e-01 latent=2.596e-01 pde=2.042e-03 tpde=2.435e-03 ss=0.25
+  ep16 step50/237 total=2.163e-01 mse=1.977e-01 latent=2.348e-01 pde=1.758e-03 tpde=3.479e-03 ss=0.25
+  ep16 step100/237 total=2.809e-01 mse=2.441e-01 latent=3.175e-01 pde=1.858e-03 tpde=2.386e-03 ss=0.25
+  ep16 step150/237 total=3.217e-01 mse=2.998e-01 latent=3.435e-01 pde=1.763e-03 tpde=2.177e-03 ss=0.25
+  ep16 step200/237 total=2.405e-01 mse=1.808e-01 latent=3.002e-01 pde=1.845e-03 tpde=2.105e-03 ss=0.25
+Epoch 16/60 | train total=2.6648e-01 mse=2.2499e-01 tpde=2.9387e-03 nt=0.0000e+00 | val_mse=3.3186e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep17 step0/237 total=2.458e-01 mse=1.993e-01 latent=2.922e-01 pde=1.981e-03 tpde=2.603e-03 ss=0.25
+  ep17 step50/237 total=2.799e-01 mse=2.182e-01 latent=3.416e-01 pde=2.170e-03 tpde=3.358e-03 ss=0.25
+  ep17 step100/237 total=2.256e-01 mse=1.640e-01 latent=2.872e-01 pde=1.864e-03 tpde=2.701e-03 ss=0.25
+  ep17 step150/237 total=1.581e-01 mse=1.156e-01 latent=2.004e-01 pde=2.062e-03 tpde=3.479e-03 ss=0.25
+  ep17 step200/237 total=3.173e-01 mse=2.850e-01 latent=3.493e-01 pde=2.164e-03 tpde=2.525e-03 ss=0.25
+Epoch 17/60 | train total=2.6406e-01 mse=2.2145e-01 tpde=2.9633e-03 nt=0.0000e+00 | val_mse=3.3239e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 179s
+  ep18 step0/237 total=2.941e-01 mse=2.603e-01 latent=3.277e-01 pde=2.429e-03 tpde=2.462e-03 ss=0.25
+  ep18 step50/237 total=3.111e-01 mse=2.966e-01 latent=3.254e-01 pde=1.774e-03 tpde=3.553e-03 ss=0.25
+  ep18 step100/237 total=2.725e-01 mse=2.325e-01 latent=3.124e-01 pde=2.261e-03 tpde=2.500e-03 ss=0.25
+  ep18 step150/237 total=3.170e-01 mse=2.842e-01 latent=3.496e-01 pde=1.751e-03 tpde=3.058e-03 ss=0.25
+  ep18 step200/237 total=2.909e-01 mse=2.817e-01 latent=2.998e-01 pde=2.293e-03 tpde=2.839e-03 ss=0.25
+Epoch 18/60 | train total=2.6107e-01 mse=2.1961e-01 tpde=2.9546e-03 nt=0.0000e+00 | val_mse=3.3009e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep19 step0/237 total=2.937e-01 mse=2.245e-01 latent=3.627e-01 pde=2.394e-03 tpde=3.136e-03 ss=0.25
+  ep19 step50/237 total=2.597e-01 mse=2.096e-01 latent=3.098e-01 pde=1.770e-03 tpde=2.705e-03 ss=0.25
+  ep19 step100/237 total=2.698e-01 mse=2.379e-01 latent=3.015e-01 pde=2.321e-03 tpde=2.629e-03 ss=0.25
+  ep19 step150/237 total=2.463e-01 mse=1.746e-01 latent=3.177e-01 pde=2.528e-03 tpde=4.024e-03 ss=0.25
+  ep19 step200/237 total=2.987e-01 mse=2.429e-01 latent=3.544e-01 pde=2.489e-03 tpde=3.176e-03 ss=0.25
+Epoch 19/60 | train total=2.6031e-01 mse=2.1701e-01 tpde=2.9742e-03 nt=0.0000e+00 | val_mse=3.2857e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2857e-01)
+  ep20 step0/237 total=3.421e-01 mse=3.138e-01 latent=3.702e-01 pde=2.534e-03 tpde=3.221e-03 ss=0.25
+  ep20 step50/237 total=3.619e-01 mse=3.224e-01 latent=4.013e-01 pde=1.696e-03 tpde=2.435e-03 ss=0.25
+  ep20 step100/237 total=2.028e-01 mse=1.618e-01 latent=2.437e-01 pde=2.349e-03 tpde=2.978e-03 ss=0.25
+  ep20 step150/237 total=1.982e-01 mse=1.713e-01 latent=2.249e-01 pde=1.951e-03 tpde=2.962e-03 ss=0.25
+  ep20 step200/237 total=2.911e-01 mse=2.181e-01 latent=3.639e-01 pde=1.561e-03 tpde=2.077e-03 ss=0.25
+Epoch 20/60 | train total=2.5620e-01 mse=2.1384e-01 tpde=2.9342e-03 nt=0.0000e+00 | val_mse=3.2728e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 179s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2728e-01)
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/epoch_20
+  ep21 step0/237 total=1.703e-01 mse=1.584e-01 latent=1.821e-01 pde=1.987e-03 tpde=2.762e-03 ss=0.25
+  ep21 step50/237 total=3.626e-01 mse=3.003e-01 latent=4.248e-01 pde=1.711e-03 tpde=2.309e-03 ss=0.25
+  ep21 step100/237 total=3.230e-01 mse=2.821e-01 latent=3.638e-01 pde=1.784e-03 tpde=2.009e-03 ss=0.25
+  ep21 step150/237 total=3.016e-01 mse=2.139e-01 latent=3.892e-01 pde=1.877e-03 tpde=2.179e-03 ss=0.25
+  ep21 step200/237 total=2.300e-01 mse=1.779e-01 latent=2.819e-01 pde=1.604e-03 tpde=2.829e-03 ss=0.25
+Epoch 21/60 | train total=2.5216e-01 mse=2.0797e-01 tpde=2.8991e-03 nt=0.0000e+00 | val_mse=3.2691e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2691e-01)
+  ep22 step0/237 total=1.736e-01 mse=1.061e-01 latent=2.410e-01 pde=1.875e-03 tpde=3.197e-03 ss=0.25
+  ep22 step50/237 total=2.344e-01 mse=1.664e-01 latent=3.024e-01 pde=1.700e-03 tpde=2.222e-03 ss=0.25
+  ep22 step100/237 total=2.760e-01 mse=2.001e-01 latent=3.518e-01 pde=1.890e-03 tpde=2.623e-03 ss=0.25
+  ep22 step150/237 total=2.685e-01 mse=2.316e-01 latent=3.051e-01 pde=2.263e-03 tpde=2.825e-03 ss=0.25
+  ep22 step200/237 total=2.413e-01 mse=1.713e-01 latent=3.112e-01 pde=2.280e-03 tpde=2.769e-03 ss=0.25
+Epoch 22/60 | train total=2.5051e-01 mse=2.0603e-01 tpde=2.9102e-03 nt=0.0000e+00 | val_mse=3.2711e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep23 step0/237 total=2.688e-01 mse=2.184e-01 latent=3.190e-01 pde=1.722e-03 tpde=2.560e-03 ss=0.25
+  ep23 step50/237 total=2.577e-01 mse=2.138e-01 latent=3.016e-01 pde=1.746e-03 tpde=2.436e-03 ss=0.25
+  ep23 step100/237 total=1.538e-01 mse=1.381e-01 latent=1.693e-01 pde=2.150e-03 tpde=2.697e-03 ss=0.25
+  ep23 step150/237 total=2.264e-01 mse=1.919e-01 latent=2.608e-01 pde=2.122e-03 tpde=3.758e-03 ss=0.25
+  ep23 step200/237 total=1.848e-01 mse=1.575e-01 latent=2.119e-01 pde=2.089e-03 tpde=2.434e-03 ss=0.25
+Epoch 23/60 | train total=2.4975e-01 mse=2.0471e-01 tpde=2.8955e-03 nt=0.0000e+00 | val_mse=3.2811e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep24 step0/237 total=2.130e-01 mse=1.547e-01 latent=2.710e-01 pde=2.065e-03 tpde=2.638e-03 ss=0.25
+  ep24 step50/237 total=2.388e-01 mse=1.933e-01 latent=2.841e-01 pde=2.144e-03 tpde=3.289e-03 ss=0.25
+  ep24 step100/237 total=3.852e-01 mse=3.233e-01 latent=4.469e-01 pde=2.455e-03 tpde=2.947e-03 ss=0.25
+  ep24 step150/237 total=2.540e-01 mse=1.971e-01 latent=3.108e-01 pde=1.679e-03 tpde=2.397e-03 ss=0.25
+  ep24 step200/237 total=2.050e-01 mse=1.341e-01 latent=2.758e-01 pde=2.118e-03 tpde=2.508e-03 ss=0.25
+Epoch 24/60 | train total=2.4919e-01 mse=2.0449e-01 tpde=2.9010e-03 nt=0.0000e+00 | val_mse=3.2533e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2533e-01)
+  ep25 step0/237 total=2.284e-01 mse=1.686e-01 latent=2.881e-01 pde=1.940e-03 tpde=3.326e-03 ss=0.25
+  ep25 step50/237 total=1.618e-01 mse=1.133e-01 latent=2.103e-01 pde=1.735e-03 tpde=2.691e-03 ss=0.25
+  ep25 step100/237 total=2.703e-01 mse=2.140e-01 latent=3.263e-01 pde=2.046e-03 tpde=3.325e-03 ss=0.25
+  ep25 step150/237 total=2.315e-01 mse=1.705e-01 latent=2.924e-01 pde=2.162e-03 tpde=2.842e-03 ss=0.25
+  ep25 step200/237 total=1.836e-01 mse=1.385e-01 latent=2.285e-01 pde=1.678e-03 tpde=3.396e-03 ss=0.25
+Epoch 25/60 | train total=2.4444e-01 mse=1.9953e-01 tpde=2.9690e-03 nt=0.0000e+00 | val_mse=3.2444e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2444e-01)
+  ep26 step0/237 total=1.502e-01 mse=1.023e-01 latent=1.980e-01 pde=1.542e-03 tpde=2.192e-03 ss=0.25
+  ep26 step50/237 total=3.191e-01 mse=2.596e-01 latent=3.785e-01 pde=1.750e-03 tpde=3.318e-03 ss=0.25
+  ep26 step100/237 total=2.575e-01 mse=2.091e-01 latent=3.058e-01 pde=1.634e-03 tpde=3.034e-03 ss=0.25
+  ep26 step150/237 total=2.312e-01 mse=1.736e-01 latent=2.886e-01 pde=1.922e-03 tpde=2.719e-03 ss=0.25
+  ep26 step200/237 total=1.591e-01 mse=1.115e-01 latent=2.066e-01 pde=1.619e-03 tpde=2.982e-03 ss=0.25
+Epoch 26/60 | train total=2.4144e-01 mse=1.9582e-01 tpde=2.8639e-03 nt=0.0000e+00 | val_mse=3.2587e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep27 step0/237 total=2.969e-01 mse=2.365e-01 latent=3.571e-01 pde=1.997e-03 tpde=4.014e-03 ss=0.25
+  ep27 step50/237 total=2.723e-01 mse=2.253e-01 latent=3.191e-01 pde=2.570e-03 tpde=3.090e-03 ss=0.25
+  ep27 step100/237 total=1.592e-01 mse=1.393e-01 latent=1.791e-01 pde=2.139e-03 tpde=2.938e-03 ss=0.25
+  ep27 step150/237 total=2.354e-01 mse=1.765e-01 latent=2.943e-01 pde=1.921e-03 tpde=2.600e-03 ss=0.25
+  ep27 step200/237 total=2.666e-01 mse=2.093e-01 latent=3.236e-01 pde=2.572e-03 tpde=3.273e-03 ss=0.25
+Epoch 27/60 | train total=2.3868e-01 mse=1.9217e-01 tpde=2.9310e-03 nt=0.0000e+00 | val_mse=3.2547e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep28 step0/237 total=1.110e-01 mse=8.754e-02 latent=1.344e-01 pde=1.573e-03 tpde=2.336e-03 ss=0.25
+  ep28 step50/237 total=1.801e-01 mse=1.279e-01 latent=2.322e-01 pde=2.190e-03 tpde=4.505e-03 ss=0.25
+  ep28 step100/237 total=2.062e-01 mse=1.727e-01 latent=2.395e-01 pde=1.800e-03 tpde=3.261e-03 ss=0.25
+  ep28 step150/237 total=2.497e-01 mse=1.951e-01 latent=3.042e-01 pde=1.739e-03 tpde=3.208e-03 ss=0.25
+  ep28 step200/237 total=2.357e-01 mse=1.895e-01 latent=2.817e-01 pde=1.934e-03 tpde=2.399e-03 ss=0.25
+Epoch 28/60 | train total=2.3748e-01 mse=1.9098e-01 tpde=2.8604e-03 nt=0.0000e+00 | val_mse=3.2666e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep29 step0/237 total=2.732e-01 mse=2.013e-01 latent=3.449e-01 pde=1.735e-03 tpde=2.761e-03 ss=0.25
+  ep29 step50/237 total=2.109e-01 mse=1.762e-01 latent=2.455e-01 pde=1.746e-03 tpde=3.046e-03 ss=0.25
+  ep29 step100/237 total=2.495e-01 mse=1.579e-01 latent=3.409e-01 pde=1.688e-03 tpde=2.460e-03 ss=0.25
+  ep29 step150/237 total=2.832e-01 mse=2.261e-01 latent=3.401e-01 pde=2.705e-03 tpde=3.358e-03 ss=0.25
+  ep29 step200/237 total=2.185e-01 mse=1.937e-01 latent=2.432e-01 pde=1.926e-03 tpde=3.060e-03 ss=0.25
+Epoch 29/60 | train total=2.3921e-01 mse=1.9174e-01 tpde=2.9781e-03 nt=0.0000e+00 | val_mse=3.2635e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep30 step0/237 total=1.781e-01 mse=1.225e-01 latent=2.335e-01 pde=1.771e-03 tpde=2.725e-03 ss=0.25
+  ep30 step50/237 total=2.992e-01 mse=2.501e-01 latent=3.481e-01 pde=1.776e-03 tpde=2.738e-03 ss=0.25
+  ep30 step100/237 total=3.295e-01 mse=2.670e-01 latent=3.918e-01 pde=1.753e-03 tpde=2.613e-03 ss=0.25
+  ep30 step150/237 total=1.783e-01 mse=1.462e-01 latent=2.102e-01 pde=2.003e-03 tpde=3.036e-03 ss=0.25
+  ep30 step200/237 total=1.536e-01 mse=1.138e-01 latent=1.933e-01 pde=2.144e-03 tpde=2.545e-03 ss=0.25
+Epoch 30/60 | train total=2.3380e-01 mse=1.8580e-01 tpde=2.9031e-03 nt=0.0000e+00 | val_mse=3.2425e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2425e-01)
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/epoch_30
+  ep31 step0/237 total=2.571e-01 mse=1.942e-01 latent=3.198e-01 pde=2.245e-03 tpde=2.255e-03 ss=0.25
+  ep31 step50/237 total=1.901e-01 mse=1.405e-01 latent=2.396e-01 pde=1.654e-03 tpde=2.526e-03 ss=0.25
+  ep31 step100/237 total=2.429e-01 mse=1.906e-01 latent=2.951e-01 pde=1.627e-03 tpde=4.433e-03 ss=0.25
+  ep31 step150/237 total=1.743e-01 mse=1.358e-01 latent=2.127e-01 pde=2.206e-03 tpde=3.071e-03 ss=0.25
+  ep31 step200/237 total=2.129e-01 mse=1.418e-01 latent=2.839e-01 pde=1.885e-03 tpde=3.323e-03 ss=0.25
+Epoch 31/60 | train total=2.3422e-01 mse=1.8686e-01 tpde=2.8902e-03 nt=0.0000e+00 | val_mse=3.2472e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep32 step0/237 total=2.200e-01 mse=1.799e-01 latent=2.599e-01 pde=1.782e-03 tpde=3.706e-03 ss=0.25
+  ep32 step50/237 total=3.382e-01 mse=2.800e-01 latent=3.962e-01 pde=1.693e-03 tpde=2.044e-03 ss=0.25
+  ep32 step100/237 total=2.456e-01 mse=1.838e-01 latent=3.072e-01 pde=1.961e-03 tpde=2.712e-03 ss=0.25
+  ep32 step150/237 total=1.884e-01 mse=1.442e-01 latent=2.325e-01 pde=2.725e-03 tpde=2.712e-03 ss=0.25
+  ep32 step200/237 total=1.392e-01 mse=1.173e-01 latent=1.610e-01 pde=1.641e-03 tpde=2.418e-03 ss=0.25
+Epoch 32/60 | train total=2.3373e-01 mse=1.8520e-01 tpde=2.8311e-03 nt=0.0000e+00 | val_mse=3.2415e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2415e-01)
+  ep33 step0/237 total=2.116e-01 mse=1.816e-01 latent=2.416e-01 pde=1.662e-03 tpde=2.543e-03 ss=0.25
+  ep33 step50/237 total=2.557e-01 mse=1.925e-01 latent=3.189e-01 pde=1.615e-03 tpde=3.802e-03 ss=0.25
+  ep33 step100/237 total=1.936e-01 mse=1.478e-01 latent=2.392e-01 pde=1.913e-03 tpde=2.594e-03 ss=0.25
+  ep33 step150/237 total=2.439e-01 mse=1.905e-01 latent=2.972e-01 pde=1.763e-03 tpde=2.449e-03 ss=0.25
+  ep33 step200/237 total=2.626e-01 mse=2.208e-01 latent=3.044e-01 pde=2.005e-03 tpde=2.975e-03 ss=0.25
+Epoch 33/60 | train total=2.3007e-01 mse=1.8220e-01 tpde=2.8662e-03 nt=0.0000e+00 | val_mse=3.2515e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep34 step0/237 total=2.433e-01 mse=1.600e-01 latent=3.265e-01 pde=2.215e-03 tpde=3.703e-03 ss=0.25
+  ep34 step50/237 total=2.861e-01 mse=2.402e-01 latent=3.318e-01 pde=1.671e-03 tpde=2.663e-03 ss=0.25
+  ep34 step100/237 total=1.905e-01 mse=1.221e-01 latent=2.587e-01 pde=1.797e-03 tpde=2.582e-03 ss=0.25
+  ep34 step150/237 total=1.531e-01 mse=1.270e-01 latent=1.792e-01 pde=1.755e-03 tpde=2.453e-03 ss=0.25
+  ep34 step200/237 total=2.046e-01 mse=1.515e-01 latent=2.577e-01 pde=1.867e-03 tpde=3.127e-03 ss=0.25
+Epoch 34/60 | train total=2.2711e-01 mse=1.7818e-01 tpde=2.8920e-03 nt=0.0000e+00 | val_mse=3.2360e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2360e-01)
+  ep35 step0/237 total=2.300e-01 mse=2.026e-01 latent=2.572e-01 pde=1.740e-03 tpde=2.939e-03 ss=0.25
+  ep35 step50/237 total=2.461e-01 mse=2.004e-01 latent=2.918e-01 pde=1.699e-03 tpde=2.168e-03 ss=0.25
+  ep35 step100/237 total=2.439e-01 mse=1.708e-01 latent=3.169e-01 pde=1.816e-03 tpde=2.652e-03 ss=0.25
+  ep35 step150/237 total=1.733e-01 mse=1.321e-01 latent=2.143e-01 pde=1.606e-03 tpde=2.595e-03 ss=0.25
+  ep35 step200/237 total=1.642e-01 mse=1.283e-01 latent=1.999e-01 pde=1.800e-03 tpde=5.383e-03 ss=0.25
+Epoch 35/60 | train total=2.2759e-01 mse=1.7855e-01 tpde=2.8682e-03 nt=0.0000e+00 | val_mse=3.2249e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2249e-01)
+  ep36 step0/237 total=2.569e-01 mse=1.774e-01 latent=3.363e-01 pde=1.959e-03 tpde=2.931e-03 ss=0.25
+  ep36 step50/237 total=2.813e-01 mse=1.943e-01 latent=3.682e-01 pde=1.604e-03 tpde=2.171e-03 ss=0.25
+  ep36 step100/237 total=3.300e-01 mse=2.986e-01 latent=3.612e-01 pde=2.773e-03 tpde=2.719e-03 ss=0.25
+  ep36 step150/237 total=2.077e-01 mse=1.809e-01 latent=2.344e-01 pde=1.631e-03 tpde=2.462e-03 ss=0.25
+  ep36 step200/237 total=2.360e-01 mse=1.909e-01 latent=2.811e-01 pde=1.933e-03 tpde=3.245e-03 ss=0.25
+Epoch 36/60 | train total=2.2598e-01 mse=1.7634e-01 tpde=2.8997e-03 nt=0.0000e+00 | val_mse=3.2231e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2231e-01)
+  ep37 step0/237 total=2.186e-01 mse=1.351e-01 latent=3.019e-01 pde=2.092e-03 tpde=3.800e-03 ss=0.25
+  ep37 step50/237 total=3.292e-01 mse=2.950e-01 latent=3.631e-01 pde=2.799e-03 tpde=3.393e-03 ss=0.25
+  ep37 step100/237 total=2.464e-01 mse=2.000e-01 latent=2.927e-01 pde=1.757e-03 tpde=2.845e-03 ss=0.25
+  ep37 step150/237 total=3.150e-01 mse=2.465e-01 latent=3.833e-01 pde=1.778e-03 tpde=3.400e-03 ss=0.25
+  ep37 step200/237 total=1.705e-01 mse=1.369e-01 latent=2.040e-01 pde=3.141e-03 tpde=3.991e-03 ss=0.25
+Epoch 37/60 | train total=2.2147e-01 mse=1.7220e-01 tpde=2.9256e-03 nt=0.0000e+00 | val_mse=3.2243e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep38 step0/237 total=9.664e-02 mse=6.478e-02 latent=1.284e-01 pde=1.831e-03 tpde=2.290e-03 ss=0.25
+  ep38 step50/237 total=2.211e-01 mse=1.847e-01 latent=2.575e-01 pde=1.673e-03 tpde=2.409e-03 ss=0.25
+  ep38 step100/237 total=2.214e-01 mse=1.686e-01 latent=2.740e-01 pde=2.410e-03 tpde=3.199e-03 ss=0.25
+  ep38 step150/237 total=1.678e-01 mse=1.514e-01 latent=1.840e-01 pde=1.783e-03 tpde=2.824e-03 ss=0.25
+  ep38 step200/237 total=1.128e-01 mse=7.588e-02 latent=1.495e-01 pde=1.632e-03 tpde=2.562e-03 ss=0.25
+Epoch 38/60 | train total=2.2055e-01 mse=1.7028e-01 tpde=2.9585e-03 nt=0.0000e+00 | val_mse=3.2281e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep39 step0/237 total=2.057e-01 mse=1.594e-01 latent=2.520e-01 pde=1.649e-03 tpde=3.545e-03 ss=0.25
+  ep39 step50/237 total=2.402e-01 mse=1.681e-01 latent=3.123e-01 pde=1.872e-03 tpde=2.970e-03 ss=0.25
+  ep39 step100/237 total=2.369e-01 mse=1.730e-01 latent=3.006e-01 pde=2.160e-03 tpde=2.853e-03 ss=0.25
+  ep39 step150/237 total=2.373e-01 mse=1.821e-01 latent=2.925e-01 pde=1.818e-03 tpde=2.611e-03 ss=0.25
+  ep39 step200/237 total=2.558e-01 mse=1.952e-01 latent=3.162e-01 pde=1.781e-03 tpde=2.545e-03 ss=0.25
+Epoch 39/60 | train total=2.2129e-01 mse=1.7080e-01 tpde=2.9665e-03 nt=0.0000e+00 | val_mse=3.2129e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2129e-01)
+  ep40 step0/237 total=2.507e-01 mse=1.893e-01 latent=3.121e-01 pde=1.848e-03 tpde=3.402e-03 ss=0.25
+  ep40 step50/237 total=1.949e-01 mse=1.716e-01 latent=2.182e-01 pde=2.200e-03 tpde=2.291e-03 ss=0.25
+  ep40 step100/237 total=2.180e-01 mse=1.748e-01 latent=2.610e-01 pde=1.613e-03 tpde=3.654e-03 ss=0.25
+  ep40 step150/237 total=2.388e-01 mse=1.888e-01 latent=2.887e-01 pde=2.065e-03 tpde=2.706e-03 ss=0.25
+  ep40 step200/237 total=1.312e-01 mse=7.140e-02 latent=1.909e-01 pde=1.962e-03 tpde=2.390e-03 ss=0.25
+Epoch 40/60 | train total=2.1811e-01 mse=1.6763e-01 tpde=2.9550e-03 nt=0.0000e+00 | val_mse=3.2360e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/epoch_40
+  ep41 step0/237 total=2.518e-01 mse=2.102e-01 latent=2.932e-01 pde=1.802e-03 tpde=3.176e-03 ss=0.25
+  ep41 step50/237 total=2.170e-01 mse=1.498e-01 latent=2.840e-01 pde=1.564e-03 tpde=1.883e-03 ss=0.25
+  ep41 step100/237 total=1.664e-01 mse=1.382e-01 latent=1.945e-01 pde=1.718e-03 tpde=2.874e-03 ss=0.25
+  ep41 step150/237 total=2.276e-01 mse=1.915e-01 latent=2.635e-01 pde=2.431e-03 tpde=2.575e-03 ss=0.25
+  ep41 step200/237 total=2.246e-01 mse=1.779e-01 latent=2.712e-01 pde=2.177e-03 tpde=3.134e-03 ss=0.25
+Epoch 41/60 | train total=2.1662e-01 mse=1.6521e-01 tpde=3.0140e-03 nt=0.0000e+00 | val_mse=3.2398e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep42 step0/237 total=1.749e-01 mse=1.363e-01 latent=2.133e-01 pde=2.050e-03 tpde=2.877e-03 ss=0.25
+  ep42 step50/237 total=2.131e-01 mse=1.438e-01 latent=2.822e-01 pde=2.101e-03 tpde=2.846e-03 ss=0.25
+  ep42 step100/237 total=2.141e-01 mse=1.552e-01 latent=2.729e-01 pde=1.867e-03 tpde=3.622e-03 ss=0.25
+  ep42 step150/237 total=1.541e-01 mse=1.051e-01 latent=2.030e-01 pde=1.843e-03 tpde=2.403e-03 ss=0.25
+  ep42 step200/237 total=2.165e-01 mse=1.683e-01 latent=2.646e-01 pde=1.657e-03 tpde=2.546e-03 ss=0.25
+Epoch 42/60 | train total=2.1479e-01 mse=1.6364e-01 tpde=3.0439e-03 nt=0.0000e+00 | val_mse=3.2206e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep43 step0/237 total=2.285e-01 mse=1.865e-01 latent=2.705e-01 pde=1.885e-03 tpde=3.173e-03 ss=0.25
+  ep43 step50/237 total=1.846e-01 mse=1.488e-01 latent=2.204e-01 pde=2.077e-03 tpde=3.143e-03 ss=0.25
+  ep43 step100/237 total=2.989e-01 mse=2.014e-01 latent=3.964e-01 pde=2.182e-03 tpde=3.080e-03 ss=0.25
+  ep43 step150/237 total=1.322e-01 mse=1.145e-01 latent=1.497e-01 pde=2.387e-03 tpde=2.268e-03 ss=0.25
+  ep43 step200/237 total=2.847e-01 mse=2.090e-01 latent=3.603e-01 pde=2.116e-03 tpde=2.722e-03 ss=0.25
+Epoch 43/60 | train total=2.1401e-01 mse=1.6279e-01 tpde=2.9598e-03 nt=0.0000e+00 | val_mse=3.2393e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep44 step0/237 total=2.206e-01 mse=1.681e-01 latent=2.731e-01 pde=1.892e-03 tpde=2.099e-03 ss=0.25
+  ep44 step50/237 total=2.403e-01 mse=1.574e-01 latent=3.230e-01 pde=1.746e-03 tpde=4.125e-03 ss=0.25
+  ep44 step100/237 total=2.011e-01 mse=1.504e-01 latent=2.515e-01 pde=2.022e-03 tpde=3.232e-03 ss=0.25
+  ep44 step150/237 total=1.733e-01 mse=1.118e-01 latent=2.346e-01 pde=1.679e-03 tpde=2.937e-03 ss=0.25
+  ep44 step200/237 total=1.662e-01 mse=1.241e-01 latent=2.082e-01 pde=1.966e-03 tpde=2.265e-03 ss=0.25
+Epoch 44/60 | train total=2.1103e-01 mse=1.5939e-01 tpde=3.0410e-03 nt=0.0000e+00 | val_mse=3.2295e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep45 step0/237 total=1.463e-01 mse=1.211e-01 latent=1.714e-01 pde=2.287e-03 tpde=2.877e-03 ss=0.25
+  ep45 step50/237 total=2.440e-01 mse=1.739e-01 latent=3.140e-01 pde=1.590e-03 tpde=2.093e-03 ss=0.25
+  ep45 step100/237 total=2.646e-01 mse=1.766e-01 latent=3.525e-01 pde=2.097e-03 tpde=3.310e-03 ss=0.25
+  ep45 step150/237 total=2.551e-01 mse=1.880e-01 latent=3.221e-01 pde=1.711e-03 tpde=2.736e-03 ss=0.25
+  ep45 step200/237 total=2.282e-01 mse=1.499e-01 latent=3.063e-01 pde=1.750e-03 tpde=6.013e-03 ss=0.25
+Epoch 45/60 | train total=2.0932e-01 mse=1.5704e-01 tpde=3.0299e-03 nt=0.0000e+00 | val_mse=3.2010e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/best_model
+  -> best (val_mse=3.2010e-01)
+  ep46 step0/237 total=2.320e-01 mse=1.700e-01 latent=2.939e-01 pde=1.719e-03 tpde=2.586e-03 ss=0.25
+  ep46 step50/237 total=2.283e-01 mse=1.479e-01 latent=3.087e-01 pde=1.708e-03 tpde=3.493e-03 ss=0.25
+  ep46 step100/237 total=1.748e-01 mse=1.346e-01 latent=2.149e-01 pde=2.043e-03 tpde=3.016e-03 ss=0.25
+  ep46 step150/237 total=1.893e-01 mse=1.463e-01 latent=2.322e-01 pde=1.877e-03 tpde=5.796e-03 ss=0.25
+  ep46 step200/237 total=1.453e-01 mse=1.072e-01 latent=1.832e-01 pde=1.608e-03 tpde=2.484e-03 ss=0.25
+Epoch 46/60 | train total=2.0817e-01 mse=1.5586e-01 tpde=3.1180e-03 nt=0.0000e+00 | val_mse=3.2283e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 180s
+  ep47 step0/237 total=2.892e-01 mse=2.346e-01 latent=3.437e-01 pde=1.801e-03 tpde=3.067e-03 ss=0.25
+  ep47 step50/237 total=2.444e-01 mse=1.842e-01 latent=3.044e-01 pde=1.920e-03 tpde=2.626e-03 ss=0.25
+  ep47 step100/237 total=2.155e-01 mse=1.621e-01 latent=2.688e-01 pde=1.734e-03 tpde=2.968e-03 ss=0.25
+  ep47 step150/237 total=2.250e-01 mse=1.804e-01 latent=2.693e-01 pde=1.935e-03 tpde=3.326e-03 ss=0.25
+  ep47 step200/237 total=2.326e-01 mse=1.817e-01 latent=2.834e-01 pde=2.092e-03 tpde=2.228e-03 ss=0.25
+Epoch 47/60 | train total=2.0528e-01 mse=1.5261e-01 tpde=3.0384e-03 nt=0.0000e+00 | val_mse=3.2079e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep48 step0/237 total=3.760e-01 mse=3.151e-01 latent=4.367e-01 pde=1.870e-03 tpde=3.921e-03 ss=0.25
+  ep48 step50/237 total=1.935e-01 mse=1.497e-01 latent=2.371e-01 pde=1.789e-03 tpde=2.953e-03 ss=0.25
+  ep48 step100/237 total=2.208e-01 mse=1.417e-01 latent=2.998e-01 pde=1.840e-03 tpde=2.352e-03 ss=0.25
+  ep48 step150/237 total=2.170e-01 mse=1.550e-01 latent=2.789e-01 pde=1.623e-03 tpde=2.437e-03 ss=0.25
+  ep48 step200/237 total=2.891e-01 mse=2.074e-01 latent=3.707e-01 pde=2.038e-03 tpde=2.568e-03 ss=0.25
+Epoch 48/60 | train total=2.0773e-01 mse=1.5423e-01 tpde=3.0860e-03 nt=0.0000e+00 | val_mse=3.2229e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 181s
+  ep49 step0/237 total=2.220e-01 mse=1.816e-01 latent=2.623e-01 pde=2.078e-03 tpde=3.593e-03 ss=0.25
+  ep49 step50/237 total=2.346e-01 mse=1.746e-01 latent=2.946e-01 pde=1.759e-03 tpde=2.969e-03 ss=0.25
+  ep49 step100/237 total=1.736e-01 mse=9.851e-02 latent=2.485e-01 pde=1.553e-03 tpde=2.452e-03 ss=0.25
+  ep49 step150/237 total=2.436e-01 mse=1.720e-01 latent=3.150e-01 pde=1.958e-03 tpde=2.629e-03 ss=0.25
+  ep49 step200/237 total=2.701e-01 mse=2.087e-01 latent=3.315e-01 pde=1.892e-03 tpde=3.765e-03 ss=0.25
+Epoch 49/60 | train total=2.0649e-01 mse=1.5326e-01 tpde=3.1454e-03 nt=0.0000e+00 | val_mse=3.2030e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 210s
+  ep50 step0/237 total=1.581e-01 mse=1.035e-01 latent=2.126e-01 pde=1.848e-03 tpde=2.795e-03 ss=0.25
+  ep50 step50/237 total=2.180e-01 mse=1.613e-01 latent=2.746e-01 pde=2.169e-03 tpde=2.821e-03 ss=0.25
+  ep50 step100/237 total=2.095e-01 mse=1.627e-01 latent=2.563e-01 pde=1.564e-03 tpde=2.636e-03 ss=0.25
+  ep50 step150/237 total=2.157e-01 mse=1.553e-01 latent=2.760e-01 pde=2.085e-03 tpde=3.152e-03 ss=0.25
+  ep50 step200/237 total=2.088e-01 mse=1.761e-01 latent=2.414e-01 pde=1.782e-03 tpde=3.390e-03 ss=0.25
+Epoch 50/60 | train total=2.0197e-01 mse=1.4739e-01 tpde=3.0873e-03 nt=0.0000e+00 | val_mse=3.2068e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 303s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/epoch_50
+  ep51 step0/237 total=2.384e-01 mse=1.772e-01 latent=2.995e-01 pde=1.797e-03 tpde=2.849e-03 ss=0.25
+  ep51 step50/237 total=2.337e-01 mse=1.575e-01 latent=3.099e-01 pde=1.860e-03 tpde=3.068e-03 ss=0.25
+  ep51 step100/237 total=2.029e-01 mse=1.395e-01 latent=2.661e-01 pde=1.922e-03 tpde=2.785e-03 ss=0.25
+  ep51 step150/237 total=1.767e-01 mse=1.413e-01 latent=2.119e-01 pde=1.695e-03 tpde=4.329e-03 ss=0.25
+  ep51 step200/237 total=1.610e-01 mse=1.176e-01 latent=2.042e-01 pde=1.798e-03 tpde=3.053e-03 ss=0.25
+Epoch 51/60 | train total=1.9914e-01 mse=1.4493e-01 tpde=3.1423e-03 nt=0.0000e+00 | val_mse=3.2101e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 294s
+  ep52 step0/237 total=1.833e-01 mse=1.266e-01 latent=2.400e-01 pde=1.570e-03 tpde=2.230e-03 ss=0.25
+  ep52 step50/237 total=2.068e-01 mse=1.253e-01 latent=2.882e-01 pde=1.956e-03 tpde=2.191e-03 ss=0.25
+  ep52 step100/237 total=2.653e-01 mse=2.042e-01 latent=3.262e-01 pde=2.134e-03 tpde=3.786e-03 ss=0.25
+  ep52 step150/237 total=2.075e-01 mse=1.276e-01 latent=2.873e-01 pde=1.727e-03 tpde=3.282e-03 ss=0.25
+  ep52 step200/237 total=2.904e-01 mse=2.047e-01 latent=3.759e-01 pde=1.717e-03 tpde=3.071e-03 ss=0.25
+Epoch 52/60 | train total=2.0038e-01 mse=1.4615e-01 tpde=3.1220e-03 nt=0.0000e+00 | val_mse=3.2150e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 302s
+  ep53 step0/237 total=2.206e-01 mse=1.315e-01 latent=3.097e-01 pde=1.671e-03 tpde=2.079e-03 ss=0.25
+  ep53 step50/237 total=2.227e-01 mse=1.522e-01 latent=2.930e-01 pde=1.896e-03 tpde=3.569e-03 ss=0.25
+  ep53 step100/237 total=2.246e-01 mse=1.610e-01 latent=2.880e-01 pde=1.705e-03 tpde=3.064e-03 ss=0.25
+  ep53 step150/237 total=1.839e-01 mse=1.325e-01 latent=2.353e-01 pde=1.731e-03 tpde=2.620e-03 ss=0.25
+  ep53 step200/237 total=2.097e-01 mse=1.652e-01 latent=2.540e-01 pde=1.876e-03 tpde=3.636e-03 ss=0.25
+Epoch 53/60 | train total=1.9691e-01 mse=1.4298e-01 tpde=3.1642e-03 nt=0.0000e+00 | val_mse=3.2102e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 296s
+  ep54 step0/237 total=1.870e-01 mse=1.510e-01 latent=2.229e-01 pde=2.293e-03 tpde=3.396e-03 ss=0.25
+  ep54 step50/237 total=1.714e-01 mse=1.017e-01 latent=2.410e-01 pde=1.653e-03 tpde=2.162e-03 ss=0.25
+  ep54 step100/237 total=2.782e-01 mse=2.068e-01 latent=3.494e-01 pde=2.278e-03 tpde=2.176e-03 ss=0.25
+  ep54 step150/237 total=2.750e-01 mse=1.990e-01 latent=3.508e-01 pde=1.684e-03 tpde=2.631e-03 ss=0.25
+  ep54 step200/237 total=1.626e-01 mse=9.192e-02 latent=2.332e-01 pde=1.576e-03 tpde=2.107e-03 ss=0.25
+Epoch 54/60 | train total=1.9445e-01 mse=1.4017e-01 tpde=3.2182e-03 nt=0.0000e+00 | val_mse=3.2309e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 302s
+  ep55 step0/237 total=1.444e-01 mse=1.157e-01 latent=1.730e-01 pde=1.731e-03 tpde=2.763e-03 ss=0.25
+  ep55 step50/237 total=1.764e-01 mse=1.336e-01 latent=2.190e-01 pde=1.683e-03 tpde=2.355e-03 ss=0.25
+  ep55 step100/237 total=1.880e-01 mse=1.379e-01 latent=2.379e-01 pde=1.687e-03 tpde=3.052e-03 ss=0.25
+  ep55 step150/237 total=2.120e-01 mse=1.287e-01 latent=2.952e-01 pde=1.818e-03 tpde=2.547e-03 ss=0.25
+  ep55 step200/237 total=2.250e-01 mse=1.445e-01 latent=3.054e-01 pde=1.674e-03 tpde=2.812e-03 ss=0.25
+Epoch 55/60 | train total=1.9580e-01 mse=1.4108e-01 tpde=3.2094e-03 nt=0.0000e+00 | val_mse=3.2363e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 304s
+  ep56 step0/237 total=1.724e-01 mse=1.299e-01 latent=2.147e-01 pde=1.592e-03 tpde=2.395e-03 ss=0.25
+  ep56 step50/237 total=1.795e-01 mse=1.328e-01 latent=2.260e-01 pde=1.716e-03 tpde=3.009e-03 ss=0.25
+  ep56 step100/237 total=2.365e-01 mse=1.838e-01 latent=2.890e-01 pde=1.875e-03 tpde=3.011e-03 ss=0.25
+  ep56 step150/237 total=2.023e-01 mse=1.130e-01 latent=2.915e-01 pde=1.731e-03 tpde=2.909e-03 ss=0.25
+  ep56 step200/237 total=1.576e-01 mse=9.869e-02 latent=2.163e-01 pde=1.632e-03 tpde=3.138e-03 ss=0.25
+Epoch 56/60 | train total=1.9567e-01 mse=1.4228e-01 tpde=3.2093e-03 nt=0.0000e+00 | val_mse=3.2229e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 292s
+  ep57 step0/237 total=1.871e-01 mse=1.403e-01 latent=2.339e-01 pde=1.602e-03 tpde=2.973e-03 ss=0.25
+  ep57 step50/237 total=2.302e-01 mse=1.930e-01 latent=2.672e-01 pde=1.663e-03 tpde=2.914e-03 ss=0.25
+  ep57 step100/237 total=2.294e-01 mse=1.474e-01 latent=3.112e-01 pde=1.849e-03 tpde=2.730e-03 ss=0.25
+  ep57 step150/237 total=1.590e-01 mse=1.244e-01 latent=1.934e-01 pde=1.624e-03 tpde=2.471e-03 ss=0.25
+  ep57 step200/237 total=2.148e-01 mse=1.786e-01 latent=2.508e-01 pde=1.646e-03 tpde=3.619e-03 ss=0.25
+Epoch 57/60 | train total=1.9192e-01 mse=1.3750e-01 tpde=3.2627e-03 nt=0.0000e+00 | val_mse=3.2422e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 299s
+  ep58 step0/237 total=1.580e-01 mse=1.223e-01 latent=1.936e-01 pde=1.680e-03 tpde=4.526e-03 ss=0.25
+  ep58 step50/237 total=1.612e-01 mse=1.297e-01 latent=1.927e-01 pde=1.620e-03 tpde=2.604e-03 ss=0.25
+  ep58 step100/237 total=1.614e-01 mse=8.170e-02 latent=2.411e-01 pde=1.957e-03 tpde=2.658e-03 ss=0.25
+  ep58 step150/237 total=1.445e-01 mse=1.193e-01 latent=1.696e-01 pde=1.591e-03 tpde=2.514e-03 ss=0.25
+  ep58 step200/237 total=1.803e-01 mse=1.393e-01 latent=2.213e-01 pde=1.969e-03 tpde=2.971e-03 ss=0.25
+Epoch 58/60 | train total=1.9185e-01 mse=1.3839e-01 tpde=3.2189e-03 nt=0.0000e+00 | val_mse=3.2468e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 293s
+  ep59 step0/237 total=1.830e-01 mse=1.104e-01 latent=2.554e-01 pde=1.639e-03 tpde=2.593e-03 ss=0.25
+  ep59 step50/237 total=2.354e-01 mse=1.791e-01 latent=2.915e-01 pde=1.960e-03 tpde=2.813e-03 ss=0.25
+  ep59 step100/237 total=1.750e-01 mse=1.098e-01 latent=2.400e-01 pde=1.586e-03 tpde=2.968e-03 ss=0.25
+  ep59 step150/237 total=1.681e-01 mse=1.134e-01 latent=2.226e-01 pde=1.842e-03 tpde=3.400e-03 ss=0.25
+  ep59 step200/237 total=1.968e-01 mse=1.463e-01 latent=2.472e-01 pde=1.599e-03 tpde=2.607e-03 ss=0.25
+Epoch 59/60 | train total=1.9001e-01 mse=1.3570e-01 tpde=3.1917e-03 nt=0.0000e+00 | val_mse=3.2240e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 306s
+  ep60 step0/237 total=1.582e-01 mse=9.967e-02 latent=2.166e-01 pde=1.768e-03 tpde=4.852e-03 ss=0.25
+  ep60 step50/237 total=2.448e-01 mse=1.902e-01 latent=2.992e-01 pde=1.841e-03 tpde=2.606e-03 ss=0.25
+  ep60 step100/237 total=1.278e-01 mse=8.758e-02 latent=1.679e-01 pde=1.648e-03 tpde=3.448e-03 ss=0.25
+  ep60 step150/237 total=1.998e-01 mse=1.515e-01 latent=2.480e-01 pde=1.891e-03 tpde=4.471e-03 ss=0.25
+  ep60 step200/237 total=1.676e-01 mse=1.135e-01 latent=2.216e-01 pde=1.948e-03 tpde=2.339e-03 ss=0.25
+Epoch 60/60 | train total=1.8792e-01 mse=1.3345e-01 tpde=3.2692e-03 nt=0.0000e+00 | val_mse=3.2262e-01 | lr_p=3.00e-05 lr_l=1.00e-05 | 315s
+GSPDEModel saved to /home/zfc5231/work/BBBB_qwen_pde_branch/paper/GS/L1/ablation/ckpt_arm2_random_p3/epoch_60
+=== [arm2_random] two-stage fixed-K complete Mon 29 Jun 2026 01:05:57 PM UTC ===

@@ -1,0 +1,278 @@
+=== [a2a4] STAGE 1 withcontext (warm from 1D_p, lr 1e-4/2e-5) start Tue 23 Jun 2026 05:37:00 AM UTC ===
+============================================================
+1D_a2a4 V2 PDE Model Training
+  Phase:      phase2
+  World size: 8
+  Batch/rank: 4  | grad_accum=2
+  Eff batch:  64
+  Epochs:     60
+  no_ctx:     train=0.00  val=0.00
+============================================================
+======================================================================
+PHASE2: V2PDEModel training (DDP)
+======================================================================
+[rank5] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank5] Loaded special_tokens.pt from 1D_p ckpt
+[rank5] Loaded output_projector.pt from 1D_p ckpt
+[rank5] Loaded dual_head.pt from 1D_p ckpt
+[rank5] input_proj re-initialized (param_dim: 1→2)
+[rank3] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank3] Loaded special_tokens.pt from 1D_p ckpt
+[rank3] Loaded output_projector.pt from 1D_p ckpt
+[rank3] Loaded dual_head.pt from 1D_p ckpt
+[rank3] input_proj re-initialized (param_dim: 1→2)
+[rank6] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+  Warm-starting from 1D_p ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/1D_p_multisolution/qwen_pde/checkpoints_pde/best_model
+[rank1] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank6] Loaded special_tokens.pt from 1D_p ckpt
+[rank6] Loaded output_projector.pt from 1D_p ckpt
+[rank6] Loaded dual_head.pt from 1D_p ckpt
+[rank6] input_proj re-initialized (param_dim: 1→2)
+[rank0] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank2] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank1] Loaded special_tokens.pt from 1D_p ckpt
+[rank1] Loaded output_projector.pt from 1D_p ckpt
+[rank1] Loaded dual_head.pt from 1D_p ckpt
+[rank1] input_proj re-initialized (param_dim: 1→2)
+[rank4] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank7] Loaded UNet from Phase 1 ckpt: /home/zfc5231/work/BBBB_qwen_pde_branch/paper/a2a4/code/checkpoints/unet_best.pt
+[rank0] Loaded special_tokens.pt from 1D_p ckpt
+[rank0] Loaded output_projector.pt from 1D_p ckpt
+[rank0] Loaded dual_head.pt from 1D_p ckpt
+[rank0] input_proj re-initialized (param_dim: 1→2)
+[rank2] Loaded special_tokens.pt from 1D_p ckpt
+[rank2] Loaded output_projector.pt from 1D_p ckpt
+[rank2] Loaded dual_head.pt from 1D_p ckpt
+[rank2] input_proj re-initialized (param_dim: 1→2)
+[rank4] Loaded special_tokens.pt from 1D_p ckpt
+[rank4] Loaded output_projector.pt from 1D_p ckpt
+[rank4] Loaded dual_head.pt from 1D_p ckpt
+[rank4] input_proj re-initialized (param_dim: 1→2)
+[rank7] Loaded special_tokens.pt from 1D_p ckpt
+[rank7] Loaded output_projector.pt from 1D_p ckpt
+[rank7] Loaded dual_head.pt from 1D_p ckpt
+[rank7] input_proj re-initialized (param_dim: 1→2)
+[rank3] Loaded LoRA from 1D_p ckpt
+[rank5] Loaded LoRA from 1D_p ckpt
+[rank0] Loaded LoRA from 1D_p ckpt
+  k-distribution (train): {1: 1606, 3: 16291, 4: 122, 5: 3084}
+    k=1: target_draws≈ 6294  (29.8%)  repeats/sample=3.92x
+    k=3: target_draws≈ 6294  (29.8%)  repeats/sample=0.39x
+    k=4: target_draws≈  122  (0.6%)  repeats/sample=1.00x
+    k=5: target_draws≈ 8393  (39.8%)  repeats/sample=2.72x
+  epoch_draws=10551 (half of N_train=21103)
+  Projector params: 15,710,984
+  LoRA params:      10,092,544
+[rank6] Loaded LoRA from 1D_p ckpt
+[rank1] Loaded LoRA from 1D_p ckpt
+[rank2] Loaded LoRA from 1D_p ckpt
+[rank7] Loaded LoRA from 1D_p ckpt
+[rank4] Loaded LoRA from 1D_p ckpt
+[phase2] Ep   1/60 | tot=1.5728e+00 mse=1.4821e+00 pde=0.0000e+00 ce=9.0692e-02 | val_mse=5.6229e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.000 | 571.6s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=5.6229e-01)
+[phase2] Ep   2/60 | tot=5.2122e-01 mse=4.9220e-01 pde=0.0000e+00 ce=2.9021e-02 | val_mse=4.7874e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.000 | 543.5s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.7874e-01)
+[phase2] Ep   3/60 | tot=4.2184e-01 mse=4.0575e-01 pde=0.0000e+00 ce=1.6092e-02 | val_mse=2.6741e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.000 | 471.4s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=2.6741e-01)
+[phase2] Ep   4/60 | tot=3.8998e-01 mse=3.7272e-01 pde=0.0000e+00 ce=1.7256e-02 | val_mse=1.6283e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.000 | 733.1s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.6283e-01)
+[phase2] Ep   5/60 | tot=4.2087e-01 mse=4.0057e-01 pde=0.0000e+00 ce=2.0307e-02 | val_mse=3.5576e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.000 | 731.3s
+[phase2] Ep   6/60 | tot=3.2518e-01 mse=3.1155e-01 pde=2.5310e-02 ce=1.3583e-02 | val_mse=2.2969e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.002 | 728.4s
+[phase2] Ep   7/60 | tot=3.3155e-01 mse=3.1616e-01 pde=2.2294e-02 ce=1.5301e-02 | val_mse=2.4935e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.004 | 738.0s
+[phase2] Ep   8/60 | tot=2.8368e-01 mse=2.7138e-01 pde=2.0301e-02 ce=1.2184e-02 | val_mse=1.6607e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.006 | 740.1s
+[phase2] Ep   9/60 | tot=2.7934e-01 mse=2.6530e-01 pde=1.8296e-02 ce=1.3894e-02 | val_mse=1.6026e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.008 | 744.8s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.6026e-01)
+[phase2] Ep  10/60 | tot=2.4332e-01 mse=2.3293e-01 pde=1.6165e-02 ce=1.0220e-02 | val_mse=2.4250e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.010 | 730.0s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_10
+[phase2] Ep  11/60 | tot=2.1427e-01 mse=2.0527e-01 pde=1.3782e-02 ce=8.8320e-03 | val_mse=1.6158e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.012 | 722.4s
+[phase2] Ep  12/60 | tot=2.8554e-01 mse=2.7612e-01 pde=1.2715e-02 ce=9.2431e-03 | val_mse=1.3320e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.014 | 672.7s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.3320e-01)
+[phase2] Ep  13/60 | tot=2.2569e-01 mse=2.1666e-01 pde=1.0771e-02 ce=8.8552e-03 | val_mse=1.9621e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.016 | 679.1s
+[phase2] Ep  14/60 | tot=2.2297e-01 mse=2.1472e-01 pde=1.0460e-02 ce=8.0656e-03 | val_mse=1.0842e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.018 | 623.8s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=1.0842e-01)
+[phase2] Ep  15/60 | tot=2.3531e-01 mse=2.2457e-01 pde=8.4978e-03 ce=1.0566e-02 | val_mse=9.7618e-02 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.020 | 625.6s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=9.7618e-02)
+[phase2] Ep  16/60 | tot=1.9864e-01 mse=1.9117e-01 pde=7.1773e-03 ce=7.3151e-03 | val_mse=1.5201e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.022 | 616.3s
+[phase2] Ep  17/60 | tot=3.1818e-01 mse=3.0861e-01 pde=7.1590e-03 ce=9.3991e-03 | val_mse=1.6173e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.024 | 616.6s
+[phase2] Ep  18/60 | tot=2.8665e-01 mse=2.7898e-01 pde=6.9400e-03 ce=7.4901e-03 | val_mse=1.7701e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.026 | 623.3s
+[phase2] Ep  19/60 | tot=2.0768e-01 mse=2.0003e-01 pde=6.1157e-03 ce=7.4792e-03 | val_mse=1.2327e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.028 | 622.5s
+[phase2] Ep  20/60 | tot=2.4481e-01 mse=2.3778e-01 pde=6.1015e-03 ce=6.8528e-03 | val_mse=1.4813e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.030 | 635.2s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_20
+[phase2] Ep  21/60 | tot=1.8990e-01 mse=1.8272e-01 pde=5.5590e-03 ce=7.0013e-03 | val_mse=1.7637e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.032 | 625.2s
+[phase2] Ep  22/60 | tot=1.5027e-01 mse=1.4368e-01 pde=5.5482e-03 ce=6.4038e-03 | val_mse=1.2838e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.034 | 617.2s
+[phase2] Ep  23/60 | tot=1.4651e-01 mse=1.4200e-01 pde=5.2859e-03 ce=4.3268e-03 | val_mse=1.2308e-01 | lr_p=1.00e-04 lr_l=2.00e-05 | λ_pde=0.036 | 619.7s
+[phase2] Ep  24/60 | tot=1.9932e-01 mse=1.9292e-01 pde=5.1529e-03 ce=6.2037e-03 | val_mse=1.3751e-01 | lr_p=3.00e-05 lr_l=6.00e-06 [LR↓] | λ_pde=0.038 | 618.0s
+[phase2] Ep  25/60 | tot=1.2790e-01 mse=1.2219e-01 pde=4.9912e-03 ce=5.5192e-03 | val_mse=5.4891e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.040 | 626.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=5.4891e-02)
+[phase2] Ep  26/60 | tot=1.0291e-01 mse=9.6018e-02 pde=5.1542e-03 ce=6.6736e-03 | val_mse=5.3261e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.042 | 627.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=5.3261e-02)
+[phase2] Ep  27/60 | tot=5.9656e-02 mse=5.4214e-02 pde=4.8764e-03 ce=5.2277e-03 | val_mse=4.7459e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.044 | 532.5s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.7459e-02)
+[phase2] Ep  28/60 | tot=7.8768e-02 mse=7.3715e-02 pde=4.6009e-03 ce=4.8416e-03 | val_mse=4.9449e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.046 | 425.9s
+[phase2] Ep  29/60 | tot=8.3326e-02 mse=7.6786e-02 pde=4.8286e-03 ce=6.3083e-03 | val_mse=4.3322e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.048 | 422.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.3322e-02)
+[phase2] Ep  30/60 | tot=6.7392e-02 mse=6.2624e-02 pde=4.8133e-03 ce=4.5275e-03 | val_mse=4.5600e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 434.1s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_30
+[phase2] Ep  31/60 | tot=1.0488e-01 mse=9.9771e-02 pde=4.9891e-03 ce=4.8560e-03 | val_mse=7.1693e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 427.0s
+[phase2] Ep  32/60 | tot=9.4013e-02 mse=8.6088e-02 pde=4.9958e-03 ce=7.6757e-03 | val_mse=6.9855e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 431.0s
+[phase2] Ep  33/60 | tot=7.9850e-02 mse=7.4304e-02 pde=5.0912e-03 ce=5.2912e-03 | val_mse=5.4626e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 429.2s
+[phase2] Ep  34/60 | tot=9.1948e-02 mse=8.6847e-02 pde=4.9679e-03 ce=4.8524e-03 | val_mse=4.8534e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 410.9s
+[phase2] Ep  35/60 | tot=9.9925e-02 mse=9.4025e-02 pde=4.9169e-03 ce=5.6538e-03 | val_mse=4.6484e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 434.8s
+[phase2] Ep  36/60 | tot=1.1542e-01 mse=1.0897e-01 pde=4.8368e-03 ce=6.2104e-03 | val_mse=4.9541e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 428.5s
+[phase2] Ep  37/60 | tot=7.6554e-02 mse=7.2151e-02 pde=4.7646e-03 ce=4.1651e-03 | val_mse=5.8645e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 433.1s
+[phase2] Ep  38/60 | tot=8.1236e-02 mse=7.5228e-02 pde=4.4873e-03 ce=5.7827e-03 | val_mse=4.1144e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 424.0s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.1144e-02)
+[phase2] Ep  39/60 | tot=5.6937e-02 mse=5.2755e-02 pde=4.7809e-03 ce=3.9430e-03 | val_mse=4.6480e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 415.7s
+[phase2] Ep  40/60 | tot=9.2677e-02 mse=8.7374e-02 pde=4.9323e-03 ce=5.0559e-03 | val_mse=4.0666e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 434.7s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.0666e-02)
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_40
+[phase2] Ep  41/60 | tot=9.3077e-02 mse=8.8436e-02 pde=4.6829e-03 ce=4.4077e-03 | val_mse=4.1776e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 422.9s
+[phase2] Ep  42/60 | tot=9.6249e-02 mse=9.0612e-02 pde=4.9145e-03 ce=5.3910e-03 | val_mse=6.4406e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 432.3s
+[phase2] Ep  43/60 | tot=7.4718e-02 mse=6.9391e-02 pde=4.9169e-03 ce=5.0811e-03 | val_mse=4.0242e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 430.9s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.0242e-02)
+[phase2] Ep  44/60 | tot=8.4063e-02 mse=7.9147e-02 pde=4.7200e-03 ce=4.6806e-03 | val_mse=4.7487e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 427.5s
+[phase2] Ep  45/60 | tot=8.2665e-02 mse=7.7075e-02 pde=4.7843e-03 ce=5.3507e-03 | val_mse=4.0107e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 590.4s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=4.0107e-02)
+[phase2] Ep  46/60 | tot=1.1126e-01 mse=1.0492e-01 pde=4.9709e-03 ce=6.0878e-03 | val_mse=4.3759e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 666.2s
+[phase2] Ep  47/60 | tot=8.7499e-02 mse=8.1588e-02 pde=4.4906e-03 ce=5.6873e-03 | val_mse=4.3800e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 663.1s
+[phase2] Ep  48/60 | tot=8.0353e-02 mse=7.4265e-02 pde=4.9614e-03 ce=5.8391e-03 | val_mse=4.1590e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 625.9s
+[phase2] Ep  49/60 | tot=9.8825e-02 mse=9.3295e-02 pde=4.6315e-03 ce=5.2991e-03 | val_mse=4.0996e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 641.0s
+[phase2] Ep  50/60 | tot=7.8605e-02 mse=7.3569e-02 pde=4.6306e-03 ce=4.8049e-03 | val_mse=4.2236e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 662.5s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_50
+[phase2] Ep  51/60 | tot=7.1476e-02 mse=6.6573e-02 pde=4.9563e-03 ce=4.6554e-03 | val_mse=5.6821e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 664.7s
+[phase2] Ep  52/60 | tot=1.0190e-01 mse=9.6902e-02 pde=5.2269e-03 ce=4.7319e-03 | val_mse=4.1979e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 662.1s
+[phase2] Ep  53/60 | tot=8.4465e-02 mse=7.6467e-02 pde=4.5128e-03 ce=7.7716e-03 | val_mse=3.4806e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 664.1s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=3.4806e-02)
+[phase2] Ep  54/60 | tot=8.2869e-02 mse=7.9090e-02 pde=4.7765e-03 ce=3.5407e-03 | val_mse=2.8595e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 668.4s
+V2PDEModel saved to ./checkpoints_pde_s1/best_model
+  -> Best model saved (val_mse=2.8595e-02)
+[phase2] Ep  55/60 | tot=7.6545e-02 mse=7.0498e-02 pde=4.5422e-03 ce=5.8197e-03 | val_mse=4.8921e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 669.6s
+[phase2] Ep  56/60 | tot=3.6426e-02 mse=3.1836e-02 pde=4.4459e-03 ce=4.3669e-03 | val_mse=3.5297e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 656.8s
+[phase2] Ep  57/60 | tot=7.5268e-02 mse=6.9571e-02 pde=5.2622e-03 ce=5.4330e-03 | val_mse=4.4660e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 653.2s
+[phase2] Ep  58/60 | tot=1.0495e-01 mse=9.9562e-02 pde=4.5709e-03 ce=5.1616e-03 | val_mse=4.2816e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 661.0s
+[phase2] Ep  59/60 | tot=1.0082e-01 mse=9.6959e-02 pde=5.1979e-03 ce=3.6002e-03 | val_mse=3.8516e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 644.4s
+[phase2] Ep  60/60 | tot=7.2567e-02 mse=6.7946e-02 pde=4.7641e-03 ce=4.3827e-03 | val_mse=3.9963e-02 | lr_p=3.00e-05 lr_l=6.00e-06 | λ_pde=0.050 | 636.8s
+V2PDEModel saved to ./checkpoints_pde_s1/epoch_60
+phase2 done. best_val_mse=2.8595e-02
+=== [a2a4] STAGE 2 nocontext (from stage1, lr 2e-5/5e-6) start Tue 23 Jun 2026 03:22:58 PM UTC ===
+============================================================
+1D_a2a4 V2 PDE Model Training
+  Phase:      phase2
+  World size: 8
+  Batch/rank: 4  | grad_accum=2
+  Eff batch:  64
+  Epochs:     60
+  no_ctx:     train=1.00  val=1.00
+============================================================
+======================================================================
+PHASE2: V2PDEModel training (DDP)
+======================================================================
+  Resuming from: ./checkpoints_pde_s1/best_model
+  k-distribution (train): {1: 1606, 3: 16291, 4: 122, 5: 3084}
+    k=1: target_draws≈ 6294  (29.8%)  repeats/sample=3.92x
+    k=3: target_draws≈ 6294  (29.8%)  repeats/sample=0.39x
+    k=4: target_draws≈  122  (0.6%)  repeats/sample=1.00x
+    k=5: target_draws≈ 8393  (39.8%)  repeats/sample=2.72x
+  epoch_draws=10551 (half of N_train=21103)
+  Projector params: 15,710,984
+  LoRA params:      10,092,544
+[phase2] Ep   1/60 | tot=1.7188e-01 mse=1.5764e-01 pde=0.0000e+00 ce=1.4247e-02 | val_mse=3.8081e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.000 | 382.0s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=3.8081e-02)
+[phase2] Ep   2/60 | tot=9.9063e-02 mse=8.9591e-02 pde=0.0000e+00 ce=9.4719e-03 | val_mse=3.5921e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.000 | 373.9s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=3.5921e-02)
+[phase2] Ep   3/60 | tot=7.1188e-02 mse=6.7788e-02 pde=0.0000e+00 ce=3.3999e-03 | val_mse=2.9621e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.000 | 381.4s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=2.9621e-02)
+[phase2] Ep   4/60 | tot=5.6718e-02 mse=5.2294e-02 pde=0.0000e+00 ce=4.4239e-03 | val_mse=2.7224e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.000 | 373.5s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=2.7224e-02)
+[phase2] Ep   5/60 | tot=1.0621e-01 mse=9.7649e-02 pde=0.0000e+00 ce=8.5590e-03 | val_mse=7.2611e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.000 | 381.4s
+[phase2] Ep   6/60 | tot=6.5133e-02 mse=6.0552e-02 pde=7.8189e-03 ce=4.5648e-03 | val_mse=2.3603e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.002 | 372.9s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=2.3603e-02)
+[phase2] Ep   7/60 | tot=7.5336e-02 mse=7.0870e-02 pde=7.1917e-03 ce=4.4375e-03 | val_mse=3.0293e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.004 | 373.8s
+[phase2] Ep   8/60 | tot=6.4991e-02 mse=6.1663e-02 pde=7.2623e-03 ce=3.2848e-03 | val_mse=2.5578e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.006 | 373.5s
+[phase2] Ep   9/60 | tot=6.0470e-02 mse=5.3968e-02 pde=6.6992e-03 ce=6.4485e-03 | val_mse=2.9527e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.008 | 367.4s
+[phase2] Ep  10/60 | tot=5.9316e-02 mse=5.5637e-02 pde=6.9221e-03 ce=3.6106e-03 | val_mse=4.2398e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.010 | 379.5s
+V2PDEModel saved to ./checkpoints_pde/epoch_10
+[phase2] Ep  11/60 | tot=7.2491e-02 mse=6.8735e-02 pde=6.4713e-03 ce=3.6782e-03 | val_mse=3.5722e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.012 | 376.8s
+[phase2] Ep  12/60 | tot=7.0273e-02 mse=6.7362e-02 pde=6.0924e-03 ce=2.8262e-03 | val_mse=3.9267e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.014 | 382.3s
+[phase2] Ep  13/60 | tot=4.9811e-02 mse=4.6433e-02 pde=6.3942e-03 ce=3.2763e-03 | val_mse=2.6728e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.016 | 378.3s
+[phase2] Ep  14/60 | tot=6.6429e-02 mse=6.3100e-02 pde=5.9163e-03 ce=3.2225e-03 | val_mse=2.0558e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.018 | 373.5s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=2.0558e-02)
+[phase2] Ep  15/60 | tot=6.6720e-02 mse=6.1642e-02 pde=5.5425e-03 ce=4.9666e-03 | val_mse=2.4190e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.020 | 378.8s
+[phase2] Ep  16/60 | tot=5.1582e-02 mse=4.8365e-02 pde=5.2141e-03 ce=3.1026e-03 | val_mse=2.7303e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.022 | 369.8s
+[phase2] Ep  17/60 | tot=9.5721e-02 mse=9.2304e-02 pde=5.9405e-03 ce=3.2744e-03 | val_mse=2.3276e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.024 | 378.8s
+[phase2] Ep  18/60 | tot=5.7370e-02 mse=5.4071e-02 pde=5.4675e-03 ce=3.1568e-03 | val_mse=2.2872e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.026 | 371.7s
+[phase2] Ep  19/60 | tot=6.9073e-02 mse=6.6303e-02 pde=5.2675e-03 ce=2.6224e-03 | val_mse=4.8248e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.028 | 368.3s
+[phase2] Ep  20/60 | tot=5.1179e-02 mse=4.7788e-02 pde=5.5319e-03 ce=3.2252e-03 | val_mse=2.7446e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.030 | 377.8s
+V2PDEModel saved to ./checkpoints_pde/epoch_20
+[phase2] Ep  21/60 | tot=4.9392e-02 mse=4.5866e-02 pde=5.0661e-03 ce=3.3636e-03 | val_mse=3.2253e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.032 | 375.9s
+[phase2] Ep  22/60 | tot=5.7234e-02 mse=5.4265e-02 pde=4.6443e-03 ce=2.8109e-03 | val_mse=2.6532e-02 | lr_p=2.00e-05 lr_l=5.00e-06 | λ_pde=0.034 | 373.5s
+[phase2] Ep  23/60 | tot=5.0710e-02 mse=4.8672e-02 pde=4.7197e-03 ce=1.8681e-03 | val_mse=2.3910e-02 | lr_p=6.00e-06 lr_l=1.50e-06 [LR↓] | λ_pde=0.036 | 374.0s
+[phase2] Ep  24/60 | tot=4.4349e-02 mse=4.1926e-02 pde=4.8731e-03 ce=2.2378e-03 | val_mse=1.8766e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.038 | 379.4s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.8766e-02)
+[phase2] Ep  25/60 | tot=4.4801e-02 mse=4.2012e-02 pde=4.5354e-03 ce=2.6074e-03 | val_mse=1.9873e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.040 | 371.4s
+[phase2] Ep  26/60 | tot=4.2089e-02 mse=3.8310e-02 pde=4.9982e-03 ce=3.5697e-03 | val_mse=1.9017e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.042 | 371.0s
+[phase2] Ep  27/60 | tot=2.0447e-02 mse=1.7795e-02 pde=4.4700e-03 ce=2.4552e-03 | val_mse=2.0139e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.044 | 376.1s
+[phase2] Ep  28/60 | tot=2.8989e-02 mse=2.6691e-02 pde=4.0374e-03 ce=2.1129e-03 | val_mse=2.3900e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.046 | 376.8s
+[phase2] Ep  29/60 | tot=3.8123e-02 mse=3.5210e-02 pde=4.1416e-03 ce=2.7135e-03 | val_mse=1.9316e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.048 | 377.8s
+[phase2] Ep  30/60 | tot=3.5697e-02 mse=3.3234e-02 pde=4.5087e-03 ce=2.2378e-03 | val_mse=2.3468e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.050 | 379.4s
+V2PDEModel saved to ./checkpoints_pde/epoch_30
+[phase2] Ep  31/60 | tot=5.9434e-02 mse=5.6838e-02 pde=4.7531e-03 ce=2.3575e-03 | val_mse=2.3865e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.050 | 380.2s
+[phase2] Ep  32/60 | tot=5.0956e-02 mse=4.6181e-02 pde=4.6602e-03 ce=4.5417e-03 | val_mse=2.1199e-02 | lr_p=6.00e-06 lr_l=1.50e-06 | λ_pde=0.050 | 375.9s
+[phase2] Ep  33/60 | tot=2.9319e-02 mse=2.6851e-02 pde=4.6935e-03 ce=2.2332e-03 | val_mse=1.9919e-02 | lr_p=1.80e-06 lr_l=4.50e-07 [LR↓] | λ_pde=0.050 | 367.7s
+[phase2] Ep  34/60 | tot=4.2748e-02 mse=4.0280e-02 pde=4.4204e-03 ce=2.2475e-03 | val_mse=1.8555e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 373.9s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.8555e-02)
+[phase2] Ep  35/60 | tot=4.6273e-02 mse=4.3684e-02 pde=4.5445e-03 ce=2.3614e-03 | val_mse=1.8640e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 381.3s
+[phase2] Ep  36/60 | tot=6.8259e-02 mse=6.4971e-02 pde=4.3608e-03 ce=3.0696e-03 | val_mse=1.9281e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 382.4s
+[phase2] Ep  37/60 | tot=2.2802e-02 mse=2.0622e-02 pde=4.5223e-03 ce=1.9539e-03 | val_mse=1.8807e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 385.6s
+[phase2] Ep  38/60 | tot=2.8621e-02 mse=2.5865e-02 pde=4.1958e-03 ce=2.5457e-03 | val_mse=1.7542e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 389.7s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.7542e-02)
+[phase2] Ep  39/60 | tot=2.4092e-02 mse=2.2190e-02 pde=4.6460e-03 ce=1.6704e-03 | val_mse=1.8752e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 386.7s
+[phase2] Ep  40/60 | tot=3.4124e-02 mse=3.1483e-02 pde=4.6329e-03 ce=2.4101e-03 | val_mse=1.6325e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 386.9s
+V2PDEModel saved to ./checkpoints_pde/best_model
+  -> Best model saved (val_mse=1.6325e-02)
+V2PDEModel saved to ./checkpoints_pde/epoch_40
+[phase2] Ep  41/60 | tot=5.1739e-02 mse=4.9377e-02 pde=4.3565e-03 ce=2.1441e-03 | val_mse=1.8300e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 391.6s
+[phase2] Ep  42/60 | tot=4.9365e-02 mse=4.6715e-02 pde=4.7007e-03 ce=2.4149e-03 | val_mse=1.6910e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 391.4s
+[phase2] Ep  43/60 | tot=2.8578e-02 mse=2.5829e-02 pde=4.5043e-03 ce=2.5236e-03 | val_mse=1.7965e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 389.0s
+[phase2] Ep  44/60 | tot=4.7242e-02 mse=4.5026e-02 pde=4.3412e-03 ce=1.9989e-03 | val_mse=1.8741e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 391.1s
+[phase2] Ep  45/60 | tot=4.3056e-02 mse=4.0322e-02 pde=4.4961e-03 ce=2.5086e-03 | val_mse=1.7329e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 388.7s
+[phase2] Ep  46/60 | tot=6.8160e-02 mse=6.4610e-02 pde=4.7221e-03 ce=3.3139e-03 | val_mse=1.8105e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 387.5s
+[phase2] Ep  47/60 | tot=3.8525e-02 mse=3.5369e-02 pde=4.4071e-03 ce=2.9352e-03 | val_mse=1.8523e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 382.5s
+[phase2] Ep  48/60 | tot=4.0778e-02 mse=3.7374e-02 pde=4.7328e-03 ce=3.1682e-03 | val_mse=1.8986e-02 | lr_p=1.80e-06 lr_l=4.50e-07 | λ_pde=0.050 | 384.4s
+[phase2] Ep  49/60 | tot=3.9426e-02 mse=3.6673e-02 pde=4.3130e-03 ce=2.5368e-03 | val_mse=1.7851e-02 | lr_p=5.40e-07 lr_l=1.35e-07 [LR↓] | λ_pde=0.050 | 372.8s
+[phase2] Ep  50/60 | tot=2.8620e-02 mse=2.6296e-02 pde=4.2629e-03 ce=2.1111e-03 | val_mse=1.7034e-02 | lr_p=5.40e-07 lr_l=1.35e-07 | λ_pde=0.050 | 374.4s
+V2PDEModel saved to ./checkpoints_pde/epoch_50
+[phase2] Ep  51/60 | tot=3.2085e-02 mse=2.9536e-02 pde=4.4915e-03 ce=2.3248e-03 | val_mse=1.7009e-02 | lr_p=5.40e-07 lr_l=1.35e-07 | λ_pde=0.050 | 395.0s
+[phase2] Ep  52/60 | tot=3.1890e-02 mse=2.9158e-02 pde=4.5683e-03 ce=2.5033e-03 | val_mse=1.8115e-02 | lr_p=5.40e-07 lr_l=1.35e-07 | λ_pde=0.050 | 371.5s
+[phase2] Ep  53/60 | tot=5.0698e-02 mse=4.4524e-02 pde=4.3219e-03 ce=5.9577e-03 | val_mse=1.7163e-02 | lr_p=5.40e-07 lr_l=1.35e-07 | λ_pde=0.050 | 381.8s
+[phase2] Ep  54/60 | tot=3.6668e-02 mse=3.4574e-02 pde=4.5711e-03 ce=1.8647e-03 | val_mse=1.7650e-02 | lr_p=5.40e-07 lr_l=1.35e-07 | λ_pde=0.050 | 379.1s
+[phase2] Ep  55/60 | tot=4.4771e-02 mse=4.1686e-02 pde=4.1706e-03 ce=2.8766e-03 | val_mse=1.6783e-02 | lr_p=5.40e-07 lr_l=1.35e-07 | λ_pde=0.050 | 383.1s
+[early-stop] no val_mse improvement for 15 epochs (best=1.6325e-02); stopping at epoch 55/60
+phase2 done. best_val_mse=1.6325e-02
+=== [a2a4] two-stage complete Tue 23 Jun 2026 09:10:48 PM UTC ===
