@@ -2,6 +2,8 @@
 
 Code for **PatternFormer: Learning Multiple Solution Patterns in Reaction–Diffusion Systems**.
 
+Paper: [arXiv:2608.12286](https://arxiv.org/abs/2608.12286).
+
 Start with the [paper figure guide](docs/EXPERIMENTS.md) to find an experiment by its
 main-text or supplementary figure number. Use saved experiment outputs to assemble
 figures, or load trained checkpoints to run inference and numerical refinement.
@@ -50,9 +52,14 @@ Original experiment logs: [logs/](logs/README.md).
 ## Citation
 
 ```bibtex
-@article{patternformer,
-  title  = {PatternFormer: Learning Multiple Solution Patterns in Reaction--Diffusion Systems},
-  author = {Chang, Zhipeng and Yin, Wenpeng and Hao, Wenrui},
-  year   = {2025}
+@misc{chang2026patternformer,
+  title         = {PatternFormer: Learning Multiple Solution Patterns in Reaction--Diffusion Systems},
+  author        = {Zhipeng Chang and Wenpeng Yin and Wenrui Hao},
+  year          = {2026},
+  eprint        = {2608.12286},
+  archivePrefix = {arXiv},
+  primaryClass  = {math-ph},
+  doi           = {10.48550/arXiv.2608.12286},
+  url           = {https://arxiv.org/abs/2608.12286}
 }
 ```
